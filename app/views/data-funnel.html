@@ -4,8 +4,21 @@
   Question page
 {% endblock %}
 
+
+
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/">Back</a>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -28,43 +41,43 @@
             </span>
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-1" name="research-theme" type="checkbox" value="births" {{ checked("research-theme", "Births & Mortality") }}>
+                <input class="govuk-checkboxes__input" id="theme-1" name="research-theme" type="checkbox" value="Births & Mortality" {{ checked("research-theme", "Births & Mortality") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-1">
                   Births & Mortality
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-2" name="research-theme" type="checkbox" value="business" {{ checked("research-theme", "Business Change") }}>
+                <input class="govuk-checkboxes__input" id="theme-2" name="research-theme" type="checkbox" value="Business Change" {{ checked("research-theme", "Business Change") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-2">
                   Business Change
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-3" name="research-theme" type="checkbox" value="crime" {{ checked("research-theme", "Crime & Justice") }}>
+                <input class="govuk-checkboxes__input" id="theme-3" name="research-theme" type="checkbox" value="Crime & Justice" {{ checked("research-theme", "Crime & Justice") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-3">
                   Crime & Justice
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-4" name="research-theme" type="checkbox" value="output" {{ checked("research-theme", "Economic output & Productivity") }}>
+                <input class="govuk-checkboxes__input" id="theme-4" name="research-theme" type="checkbox" value="Economic output & Productivity" {{ checked("research-theme", "Economic output & Productivity") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-4">
                   Economic output & Productivity
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-5" name="research-theme" type="checkbox" value="education" {{ checked("research-theme", "Births & Mortality") }}>
+                <input class="govuk-checkboxes__input" id="theme-5" name="research-theme" type="checkbox" value="Education & Skills" {{ checked("research-theme", "Education & Skills") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-5">
                   Education & Skills
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-6" name="research-theme" type="checkbox" value="employment" {{ checked("research-theme", "Births & Mortality") }}>
+                <input class="govuk-checkboxes__input" id="theme-6" name="research-theme" type="checkbox" value="Employment" {{ checked("research-theme", "Employment") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-6">
                   Employment
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-7" name="research-theme" type="checkbox" value="health" {{ checked("research-theme", "Births & Mortality") }}>
+                <input class="govuk-checkboxes__input" id="theme-7" name="research-theme" type="checkbox" value="Health, Social care & Wellbeing" {{ checked("research-theme", "Health, Social care & Wellbeing") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="theme-7">
                   Health, Social care & Wellbeing
                 </label>
@@ -112,6 +125,10 @@
 
 
         <button class="govuk-button">Continue</button>
+
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
 
       </form>
 

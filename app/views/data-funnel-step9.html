@@ -5,7 +5,18 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/data-funnel-step8">Back</a>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/data-funnel-step8">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -20,35 +31,53 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <span class="govuk-caption-xl">Step 9 of 12</span>
               <h1 class="govuk-fieldset__heading">
-                Another question about the type of data
+                Which dependant variables will you need?
               </h1>
             </legend>
             <span id="waste-hint" class="govuk-hint">
-              Please select all of the options that are suitable.
+              Please choose all of the options that are required.
             </span>
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-1" name="waste" type="checkbox" value="births">
-                <label class="govuk-label govuk-checkboxes__label" for="theme-1">
-                  Answer one
+                <input class="govuk-checkboxes__input" id="variable-1" name="variables2" type="checkbox" value="Early Years Foundation" {{ checked("variables2", "Early Years Foundation") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-1">
+                  Early Years Foundation (EYFS)
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-2" name="waste" type="checkbox" value="business">
-                <label class="govuk-label govuk-checkboxes__label" for="theme-2">
-                  Answer two
+                <input class="govuk-checkboxes__input" id="variable-2" name="variables2" type="checkbox" value="Key Stage 1" {{ checked("variables2", "Key Stage 1") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-2">
+                  Key Stage 1
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-3" name="waste" type="checkbox" value="crime">
-                <label class="govuk-label govuk-checkboxes__label" for="theme-3">
-                  Answer three
+                <input class="govuk-checkboxes__input" id="variable-3" name="variables2" type="checkbox" value="Key Stage 2" {{ checked("variables2", "Key Stage 2") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-3">
+                  Key Stage 2
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="theme-4" name="waste" type="checkbox" value="output">
-                <label class="govuk-label govuk-checkboxes__label" for="theme-4">
-                  Answer four
+                <input class="govuk-checkboxes__input" id="variable-4" name="variables2" type="checkbox" value="Key Stage 3" {{ checked("variables2", "Key Stage 3") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-4">
+                  Key Stage 3
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-5" name="variables2" type="checkbox" value="Key Stage 4" {{ checked("variables2", "Key Stage 4") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-5">
+                  Key Stage 4
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-6" name="variables2" type="checkbox" value="Key Stage 5" {{ checked("variables2", "Key Stage 5") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-6">
+                  Key Stage 5
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-7" name="variables" type="checkbox" value="Phonics" {{ checked("variables2", "Phonics") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-7">
+                  Phonics
                 </label>
               </div>
             </div>
@@ -58,6 +87,10 @@
 
 
         <button class="govuk-button">Continue</button>
+
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
 
       </form>
 
