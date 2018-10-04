@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        NPD Modernisation Prototypes
+      </h1>{{releaseVersion | log }}
+      <p>
+        These prototypes have been built using the <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>.
+        They are not functional and no data is held or submitted to any external sources.
+      </p>
+
+      <h2 class="govuk-heading-m">Data Funnel Prototype</h2>
+
+      <p>An idea to allow easier filtering of the data available and to help differentiate between standard and bespoke extracts.</p>
+
+      <p><a href="/data-funnel.html">Choose your data</a></p>
+    </div>
+</div>
+
+{% endblock %}

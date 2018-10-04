@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/data-funnel-step8" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 7 of 12</span>
+              <h1 class="govuk-fieldset__heading">
+                Research theme
+              </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+              Please select the themes which best suit your research project.
+            </span>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-1" name="research-theme" type="checkbox" value="births" {{ checked("research-theme", "Births & Mortality") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-1">
+                  Births & Mortality
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-2" name="research-theme" type="checkbox" value="business" {{ checked("research-theme", "Business Change") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-2">
+                  Business Change
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-3" name="research-theme" type="checkbox" value="crime" {{ checked("research-theme", "Crime & Justice") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-3">
+                  Crime & Justice
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-4" name="research-theme" type="checkbox" value="output" {{ checked("research-theme", "Economic output & Productivity") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-4">
+                  Economic output & Productivity
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-5" name="research-theme" type="checkbox" value="education" {{ checked("research-theme", "Births & Mortality") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-5">
+                  Education & Skills
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-6" name="research-theme" type="checkbox" value="employment" {{ checked("research-theme", "Births & Mortality") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-6">
+                  Employment
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-7" name="research-theme" type="checkbox" value="health" {{ checked("research-theme", "Births & Mortality") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="theme-7">
+                  Health, Social care & Wellbeing
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-8" name="research-theme" type="checkbox" value="labour">
+                <label class="govuk-label govuk-checkboxes__label" for="theme-8">
+                  Labour Market
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-9" name="research-theme" type="checkbox" value="migration">
+                <label class="govuk-label govuk-checkboxes__label" for="theme-9">
+                  Migration
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-10" name="research-theme" type="checkbox" value="finances">
+                <label class="govuk-label govuk-checkboxes__label" for="theme-10">
+                  Personal & Household finances
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-11" name="waste" type="checkbox" value="population">
+                <label class="govuk-label govuk-checkboxes__label" for="theme-11">
+                  Population
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-12" name="research-theme" type="checkbox" value="sector">
+                <label class="govuk-label govuk-checkboxes__label" for="theme-12">
+                  Sector Specific
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="theme-13" name="research-theme" type="checkbox" value="economy">
+                <label class="govuk-label govuk-checkboxes__label" for="theme-13">
+                  UK Economy
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
