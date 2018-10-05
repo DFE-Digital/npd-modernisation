@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/data-funnel-step8" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 6 of 12</span>
+              <h1 class="govuk-fieldset__heading">
+                Research methodology
+              </h1>
+            </legend>
+            <span class="govuk-hint">We will use this information to assess how you will use ONS data.</span>
+            <p>Please describe the methodology of your project. Please give details about how any ONS data will be matched or linked and a description of the statistical techniques that will be employed.</p>
+            <br />
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="ons-data">
+                How does ONS data contribute to your project?
+              </label>
+              <span id="ons-data-hint" class="govuk-hint">
+                It's important to tell us if you're using data from other sources.
+              </span>
+              <textarea class="govuk-textarea" id="ons-data" name="ons-data" rows="7" aria-describedby="ons-data-hint"></textarea>
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="ons-conclusion">
+                How do you expect to reach useful conclusions?
+              </label>
+              <span id="ons-conclusion-hint" class="govuk-hint">
+                Please add details about your research methods.
+              </span>
+              <textarea class="govuk-textarea" id="ons-conclusion" name="ons-conclusion" rows="7" aria-describedby="ons-conclusion-hint"></textarea>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button">Continue</button>
+
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

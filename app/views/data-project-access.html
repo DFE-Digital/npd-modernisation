@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/data-project-title" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 4 of 12</span>
+              <h1 class="govuk-fieldset__heading">
+                How would you like to access the data?
+              </h1>
+            </legend>
+            <span class="govuk-hint">You can access the data in either a secure lab or host a secure environment yourself.</span>
+            <br />
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="access-1" name="access" type="radio" value="government-gateway" aria-describedby="access-1-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="access-1">
+                  UK Data Service - Secure Lab
+                </label>
+                <span id="access-1-item-hint" class="govuk-hint govuk-radios__hint">
+                  We have secure labs located around the country.
+                </span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="access-2" name="access" type="radio" value="govuk-verify" aria-describedby="access-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="access-2">
+                  Sign in with GOV.UK Verify
+                </label>
+                <span id="access-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  You&#39;ll have an account if you&#39;ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.
+                </span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button">Continue</button>
+
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

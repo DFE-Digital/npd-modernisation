@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/data-funnel-step8" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 5 of 12</span>
+              <h1 class="govuk-fieldset__heading">
+                Project details
+              </h1>
+            </legend>
+            <span class="govuk-hint">What is your projects purpose and benefit?</span>
+
+            <br />
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="width-40">
+                Project title
+              </label>
+              <input class="govuk-input govuk-input--width-40" id="width-40" name="width-40" type="text">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="project-abstract">
+                Project abstract
+              </label>
+              <span id="project-abstract-hint" class="govuk-hint">
+                Please provide a short description of the project and its benefits. (Approx 100 words.)
+              </span>
+              <textarea class="govuk-textarea" id="project-abstract" name="project-abstract" rows="5" aria-describedby="project-abstract-hint"></textarea>
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="project-purpose">
+                Project purpose
+              </label>
+              <span id="project-purpose-hint" class="govuk-hint">
+                Please provide a detailed description of the aims of the research and if it forms part of a larger study.
+              </span>
+              <textarea class="govuk-textarea" id="project-purpose" name="project-purpose" rows="7" aria-describedby="project-purpose-hint"></textarea>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button">Continue</button>
+
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
