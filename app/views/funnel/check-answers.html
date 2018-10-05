@@ -5,14 +5,25 @@ Check your answers
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/data-funnel-step11">Back</a>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/funnel/dates">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">Step 12 of 12</span>
+      <span class="govuk-caption-xl">Step 6 of 7</span>
       <h1 class="govuk-heading-l">
         Please check the options you've chosen before proceeding
       </h1>
@@ -21,6 +32,7 @@ Check your answers
         Research data options
       </h2>
 
+      <form class="form" action="/funnel/results-standard" method="post">
       <dl class="app-check-your-answers app-check-your-answers--long">
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
@@ -31,12 +43,12 @@ Check your answers
               {% for feature in data['research-theme'] %}
                 <li>{{ feature }}</li>
               {% else %}
-                <li>No features selected</li>
+                <li>Nothing selected</li>
               {% endfor %}
             </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/data-funnel">
+            <a href="/funnel/theme">
               Change <span class="govuk-visually-hidden">research themes</span>
             </a>
           </dd>
@@ -50,12 +62,12 @@ Check your answers
               {% for feature in data['variables1'] %}
                 <li>{{ feature }}</li>
               {% else %}
-                <li>No features selected</li>
+                <li>Nothing selected</li>
               {% endfor %}
             </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/data-funnel-step8">
+            <a href="/funnel/independant-variables">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>
@@ -69,12 +81,12 @@ Check your answers
               {% for feature in data['variables2'] %}
                 <li>{{ feature }}</li>
               {% else %}
-                <li>No features selected</li>
+                <li>Nothing selected</li>
               {% endfor %}
             </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/data-funnel-step9">
+            <a href="/funnel/dependant-variables">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>
@@ -88,12 +100,12 @@ Check your answers
               {% for feature in data['variables3'] %}
                 <li>{{ feature }}</li>
               {% else %}
-                <li>No features selected</li>
+                <li>Nothing selected</li>
               {% endfor %}
             </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/data-funnel-step10">
+            <a href="/funnel/co-variates">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>
@@ -109,7 +121,7 @@ Check your answers
             <p><strong>{{ data['dob-day2'] }}/{{ data['dob-month2'] }}/{{ data['dob-year2'] }}</strong></p>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/data-funnel-step11">
+            <a href="/funnel/dates">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>
@@ -120,6 +132,8 @@ Check your answers
       <div>
           <a href="#">Cancel application</a>
       </div>
+
+    </form>
 
     </div>
 
