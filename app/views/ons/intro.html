@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/ons/team" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 1 of XX</span>
+              <h1 class="govuk-fieldset__heading">
+                Research Project <br /> Application
+              </h1>
+            </legend>
+            <br />
+            <p>Accredited Researchers who require access to unpublished data, protected under the SRSA (2007), will need to submit a Research Project Application.</p>
+            <p><strong>Your application must contain the following information;</strong><p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>A summary of your research proposal</li>
+                <li>An explanation of how this project would serve “the public good”</li>
+                <li>The data required for analysis </li>
+                <li>The names of all Accredited Researchers who will work on the project</li>
+                <li>An estimate of the time required for the project to be completed </li>
+                <li>Details of how and where the results of the project will be published upon completion</li>
+              </ul>
+
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Does your project serve the public good?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p><strong>The primary purpose of all Research projects must be to serve the public good in one or more of the following ways:</strong></p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>To provide an evidence base for public policy decision-making</li>
+                    <li>To provide an evidence base for public service delivery</li>
+                    <li>To provide an evidence base for decisions which are likely to significantly benefit the UK economy, society or quality of life of people in the UK</li>
+                    <li>To replicate, validate or challenge Official Statistics</li>
+                    <li>To replicate, validate or challenge existing research</li>
+                    <li>To significantly extend understanding of social or economic trends or events by improving knowledge or challenging widely accepted analyses</li>
+                    <li>To improve the quality, coverage or presentation of existing statistical information</li>
+                  </ul>
+                </div>
+              </details>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button govuk-button--start">Start now</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          More information
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Accredited Researcher Application
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Apply for basic DBS check
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

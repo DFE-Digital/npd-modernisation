@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/ons/team2" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 2 of XX</span>
+              <h1 class="govuk-fieldset__heading">
+                Research team lead
+              </h1>
+              <span class="govuk-hint">The lead Researcher will be our primary contact for the project and have overall responsibility for the Team and Project content</span>
+            </legend>
+            <br />
+            <h2 class="govuk-heading-m">Research team lead</h2>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="first-name">
+                First name
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="last-name">
+                Last name
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="last-name" name="last-name" type="text" value="{{ data['last-name'] }}">
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                Email address
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text" value="{{ data['email'] }}">
+            </div>
+            <div class="govuk-form-group">
+              <p>Are they an accredited researcher?</p>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="accredited-1" name="accredited" type="radio" value="yes" {{ checked("accredited", "yes") }}>
+                  <label class="govuk-label govuk-radios__label" for="accredited-1">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="accredited-2" name="accredited" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}
