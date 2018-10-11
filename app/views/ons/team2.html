@@ -38,21 +38,17 @@
               <h1 class="govuk-fieldset__heading">
                 Research team members
               </h1>
-              <span class="govuk-hint">Please tell us about the rest of the team that will be using the data</span>
+              <span class="govuk-hint">Please tell us about the rest of the team that will be using the data.</span>
             </legend>
             <br />
             <h2 class="govuk-heading-m">Research team member</h2>
+            <p>To add researchers to your project they must already have an <a href="">account with the ONS</a>.</p>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="first-name2">
-                First name
+              <label class="govuk-label" for="research-name2">
+                Researcher's name
               </label>
-              <input class="govuk-input govuk-input--width-20" id="first-name2" name="first-name2" type="text" value="{{ data['first-name2'] }}">
-            </div>
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="last-name2">
-                Last name
-              </label>
-              <input class="govuk-input govuk-input--width-20" id="last-name2" name="last-name2" type="text" value="{{ data['last-name2'] }}">
+              <input class="govuk-input govuk-input--width-20" id="research-name2" name="research-name2" type="text" value="{{ data['research-name2'] }}">
+              <span class="govuk-hint govuk-!-margin-top-2">Start typing the researcher's name and choose them from the list.</span>
             </div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="email2">
@@ -61,7 +57,7 @@
               <input class="govuk-input govuk-input--width-20" id="email2" name="email2" type="text" value="{{ data['email2'] }}">
             </div>
             <div class="govuk-form-group">
-              <p>Are they an accredited researcher?</p>
+              <p>Set as secondary contact?</p>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
@@ -100,7 +96,7 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li><strong>Team lead</strong></li>
-            <li>{{ data['first-name'] }} {{ data['last-name'] }} <span style="float: right"><a href="">Delete</a></span></li>
+            <li>{{ data['lead-name'] }} <span style="float: right"><a href="">Edit</a></span></li>
           </ul>
         </nav>
       </aside>
