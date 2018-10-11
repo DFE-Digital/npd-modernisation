@@ -16,7 +16,7 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/data-funnel-step10">Back</a>
+<a class="govuk-back-link" href="/funnel/data-funnel-step10">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -24,7 +24,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/data-check-answers" method="post">
+      <form class="form" action="/funnel/data-check-answers" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
@@ -40,14 +40,6 @@
 
             <p><strong>From</strong></p>
             <div class="govuk-date-input" id="dob">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob-day1">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day1" name="dob-day1" type="number" pattern="[0-9]*" value="{{ data['dob-day1'] }}">
-                </div>
-              </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="dob-month1">
@@ -68,14 +60,6 @@
             <br /><br />
             <p><strong>To</strong></p>
             <div class="govuk-date-input" id="dob">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob-day2">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day2" name="dob-day2" type="number" pattern="[0-9]*" value="{{ data['dob-day2'] }}">
-                </div>
-              </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="dob-month2">
