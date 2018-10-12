@@ -4,6 +4,9 @@
   Question page
 {% endblock %}
 
+{% set serviceName %}
+  Research Project Application
+{% endset%}
 
 
 {% block beforeContent %}
@@ -18,7 +21,7 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/">Back</a>
+<a class="govuk-back-link" href="/ons/method">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,17 +29,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/data-project-title" method="post">
+      <form class="form" action="/ons/access" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <span class="govuk-caption-xl">Step 4 of 12</span>
+              <span class="govuk-caption-xl">Step 7 of XX</span>
               <h1 class="govuk-fieldset__heading">
                 How would you like to access the data?
               </h1>
             </legend>
-            <span class="govuk-hint">You can access the data in either a secure lab or host a secure environment yourself.</span>
+            <span class="govuk-hint">You can access the data in a secure lab or access via a secure <abbr title="Virtual Private Network">VPN</abbr>.</span>
             <br />
             <div class="govuk-radios">
               <div class="govuk-radios__item">
@@ -45,23 +48,21 @@
                   UK Data Service - Secure Lab
                 </label>
                 <span id="access-1-item-hint" class="govuk-hint govuk-radios__hint">
-                  We have secure labs located around the country.
+                  Secure lab located at the University of Essex.
                 </span>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="access-2" name="access" type="radio" value="govuk-verify" aria-describedby="access-2-item-hint">
                 <label class="govuk-label govuk-radios__label govuk-label--s" for="access-2">
-                  Sign in with GOV.UK Verify
+                  ONS - Secure Research Service
                 </label>
                 <span id="access-2-item-hint" class="govuk-hint govuk-radios__hint">
-                  You&#39;ll have an account if you&#39;ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.
+                  Labs available in London, Newport (Gwent), Titchfield, Belfast and Glasgow or remote access via VPN.
                 </span>
               </div>
             </div>
           </fieldset>
         </div>
-
-
 
         <button class="govuk-button">Continue</button>
 
