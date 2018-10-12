@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/funnel/data-check-answers">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Step 7 of 7</span>
+      <h1 class="govuk-heading-l">
+        Your results
+      </h1>
+
+      <form class="form" action="/funnel/" method="post">
+        <h2 class="govuk-heading-m">
+          The following standard extracts from the National Pupil Database should be suitable for your research.
+        </h2>
+        <span class="govuk-hint">Please select which standard extracts you would like to use.</span>
+
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="extract-1" name="standard-extract" type="checkbox" value="Early Years Foundation" {{ checked("standard-extract", "Early Years Foundation") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="extract-1">
+              Absence 2013 3 Term
+            </label>
+            <span class="govuk-hint govuk-!-padding-left-3 govuk-!-font-size-14">3 term absence data for the 2012/2013 academic year</span>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="extract-2" name="standard-extract" type="checkbox" value="Key Stage 1" {{ checked("standard-extract", "Key Stage 1") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="extract-2">
+              Autumn Census 2013
+            </label>
+            <span class="govuk-hint govuk-!-padding-left-3 govuk-!-font-size-14">Autumn Census Schools data for the 2012/2013 academic year</span>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="extract-3" name="standard-extract" type="checkbox" value="Key Stage 2" {{ checked("standard-extract", "Key Stage 2") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="extract-3">
+              KS4 Pupil 2013 KS3 KS2 KS1 Census
+            </label>
+            <span class="govuk-hint govuk-!-padding-left-3 govuk-!-font-size-14">‘Final’ Key Stage 4 Pupil data for the 2012/2012 academic year matched to Key Stage 3, Key Stage 2 and Key Stage 1 prior attainment, and Spring Census 2012 data.</span>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="extract-4" name="standard-extract" type="checkbox" value="Key Stage 3" {{ checked("standard-extract", "Key Stage 3") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="extract-4">
+              KS4 Pupil 2014 KS3 KS2 KS1 Census
+            </label>
+            <span class="govuk-hint govuk-!-padding-left-3 govuk-!-font-size-14">‘Final’ Key Stage 4 Pupil data for the 2013/2014 academic year matched to Key Stage 3, Key Stage 2 and Key Stage 1 prior attainment, and Spring Census 2014 data.</span>
+          </div>
+        </div>
+        <br><br>
+
+
+        <button class="govuk-button">Continue</button>
+        <div>
+            <a href="#">Cancel application</a>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}
