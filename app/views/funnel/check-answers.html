@@ -23,7 +23,7 @@ Check your answers
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">Step 6 of 7</span>
+      <span class="govuk-caption-xl">Step 5 of 6</span>
       <h1 class="govuk-heading-l">
         Please check the options you've chosen before proceeding
       </h1>
@@ -34,25 +34,6 @@ Check your answers
 
       <form class="form" action="/funnel/results-standard" method="post">
       <dl class="app-check-your-answers app-check-your-answers--long">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Theme
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            <ul class="govuk-list govuk-list--bullet">
-              {% for feature in data['research-theme'] %}
-                <li>{{ feature }}</li>
-              {% else %}
-                <li>Nothing selected</li>
-              {% endfor %}
-            </ul>
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="/funnel/theme">
-              Change <span class="govuk-visually-hidden">research themes</span>
-            </a>
-          </dd>
-        </div>
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
             Independant variables
@@ -116,9 +97,9 @@ Check your answers
           </dt>
           <dd class="app-check-your-answers__answer">
             <p>From</p>
-            <p><strong>{{ data['dob-day1'] }}/{{ data['dob-month1'] }}/{{ data['dob-year1'] }}</strong></p>
+            <p><strong>{{ data['dob-month1'] }}/{{ data['dob-year1'] }}</strong></p>
             <p>To</p>
-            <p><strong>{{ data['dob-day2'] }}/{{ data['dob-month2'] }}/{{ data['dob-year2'] }}</strong></p>
+            <p><strong>{{ data['dob-month2'] }}/{{ data['dob-year2'] }}</strong></p>
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="/funnel/dates">

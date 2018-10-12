@@ -16,7 +16,7 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/funnel/theme">Back</a>
+<a class="govuk-back-link" href="/">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -29,13 +29,13 @@
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <span class="govuk-caption-xl">Step 2 of 7</span>
+              <span class="govuk-caption-xl">Step 1 of 6</span>
               <h1 class="govuk-fieldset__heading">
                 Which independant variables do you need?
               </h1>
             </legend>
             <span id="waste-hint" class="govuk-hint">
-              Please choose all of the options that are needed.
+              Select the variable(s) that you plan to manipulate.
             </span>
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
@@ -45,41 +45,43 @@
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-2" name="variables1" type="checkbox" value="Ethinicity" {{ checked("variables1", "Ethinicity") }}>
+                <input class="govuk-checkboxes__input" id="variable-2" name="variables1" type="checkbox" value="Absence & Exclusion" {{ checked("variables1", "Absence & Exclusion") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-2">
-                  Ethinicity
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-3" name="variables1" type="checkbox" value="Free School Meals" {{ checked("variables1", "Free School Meals") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-3">
-                  Free School Meals
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-4" name="variables1" type="checkbox" value="IDAC" {{ checked("variables1", "IDAC") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-4">
-                  Income Deprivation Affecting Children (IDAC)
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-5" name="variables1" type="checkbox" value="Absence & Exclusion" {{ checked("variables1", "Absence & Exclusion") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-5">
                   Absence & Exclusion
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-6" name="variables1" type="checkbox" value="Regional" {{ checked("variables1", "Regional") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-6">
-                  Regional
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-7" name="variables1" type="checkbox" value="Distance to School" {{ checked("variables1", "Distance to School") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-7">
+                <input class="govuk-checkboxes__input" id="variable-3" name="variables1" type="checkbox" value="Distance to School" {{ checked("variables1", "Distance to School") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-3">
                   Distance to School
                 </label>
               </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-4" name="variables1" type="checkbox" value="Ethinicity" {{ checked("variables1", "Ethinicity") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-4">
+                  Ethinicity
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-5" name="variables1" type="checkbox" value="Free School Meals" {{ checked("variables1", "Free School Meals") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-5">
+                  Free School Meals
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-6" name="variables1" type="checkbox" value="IDAC" {{ checked("variables1", "IDAC") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-6">
+                  Income Deprivation Affecting Children (IDAC)
+                </label>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="variable-7" name="variables1" type="checkbox" value="Regional" {{ checked("variables1", "Regional") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="variable-7">
+                  Regional
+                </label>
+              </div>
+
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="variable-8" name="variables1" type="checkbox" value="Registration" {{ checked("variables1", "Registration") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-8">
