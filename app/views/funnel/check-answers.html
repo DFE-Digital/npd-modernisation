@@ -5,9 +5,6 @@ Check your answers
 {% endblock %}
 
 {% block beforeContent %}
-<<<<<<< HEAD:app/views/funnel/data-check-answers.html
-  <a class="govuk-back-link" href="/funnel/data-funnel-step11">Back</a>
-=======
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
   alpha
@@ -20,7 +17,6 @@ Check your answers
 </div>
 
 <a class="govuk-back-link" href="/funnel/dates">Back</a>
->>>>>>> 3cd3a9e3cc42f789a6287fe18329f011398a7a57:app/views/funnel/check-answers.html
 {% endblock %}
 
 {% block content %}
@@ -41,28 +37,6 @@ Check your answers
       <dl class="app-check-your-answers app-check-your-answers--long">
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
-<<<<<<< HEAD:app/views/funnel/data-check-answers.html
-=======
-            Theme
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            <ul class="govuk-list govuk-list--bullet">
-              {% for feature in data['research-theme'] %}
-                <li>{{ feature }}</li>
-              {% else %}
-                <li>Nothing selected</li>
-              {% endfor %}
-            </ul>
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="/funnel/theme">
-              Change <span class="govuk-visually-hidden">research themes</span>
-            </a>
-          </dd>
-        </div>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
->>>>>>> 3cd3a9e3cc42f789a6287fe18329f011398a7a57:app/views/funnel/check-answers.html
             Independant variables
           </dt>
           <dd class="app-check-your-answers__answer">
@@ -124,9 +98,9 @@ Check your answers
           </dt>
           <dd class="app-check-your-answers__answer">
             <p>From</p>
-            <p><strong>{{ data['dob-day1'] }}/{{ data['dob-month1'] }}/{{ data['dob-year1'] }}</strong></p>
+            <p><strong>{{ data['dob-month1'] }}/{{ data['dob-year1'] }}</strong></p>
             <p>To</p>
-            <p><strong>{{ data['dob-day2'] }}/{{ data['dob-month2'] }}/{{ data['dob-year2'] }}</strong></p>
+            <p><strong>{{ data['dob-month2'] }}/{{ data['dob-year2'] }}</strong></p>
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="/funnel/dates">
