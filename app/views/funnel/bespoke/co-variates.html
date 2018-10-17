@@ -16,7 +16,7 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/funnel/data-funnel-step9">Back</a>
+<a class="govuk-back-link" href="/funnel/bespoke/dependant-variables">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -24,12 +24,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/funnel/data-funnel-step11" method="post">
-
+      <form class="form" action="/funnel/bespoke/dates" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <span class="govuk-caption-xl">Step 3 of 12</span>
+              <span class="govuk-caption-xl">Step 3 of 6</span>
               <h1 class="govuk-fieldset__heading">
                 Choose your covariates
               </h1>
@@ -63,7 +62,7 @@
                 </label>
               </div>
               <div class="govuk-checkboxes__item {{ checked("variables1", "Free School Meals") }}">
-                <input class="govuk-checkboxes__input" id="variable-5" name="variables3" type="checkbox" value="Free School Meals" {{ checked("variables1", "Free School Meals") }}>
+                <input class="govuk-checkboxes__input" id="variable-5" name="variables3" type="checkbox" value="Free School Meals" {{ checked("variables3", "Free School Meals") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-5">
                   Free School Meals
                 </label>

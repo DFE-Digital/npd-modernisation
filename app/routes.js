@@ -3,17 +3,12 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-router.post('/funnel/data-funnel-step9', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
+router.post('/funnel/dependant-variables', function (req, res) {
 
-  let highrisk = req.session.data['high-risk']
-
-  if (highrisk === 'true') {
-    res.redirect('/funnel/bespoke/bespoke-funnel-step9')
+  if (req.session.data['variables1'].includes('Risk')) {
+    res.redirect('/funnel/bespoke/dependant-variables')
   } else {
-    res.redirect('/funnel/data-funnel-step9')
+    res.redirect('/funnel/dependant-variables')
   }
 })
 
