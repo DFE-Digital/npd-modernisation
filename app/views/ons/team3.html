@@ -44,10 +44,10 @@
             <h2 class="govuk-heading-m">Research team member</h2>
             <p>To add researchers to your project they must already have an <a href="">account with the ONS</a>.</p>
             <div class="govuk-form-group">
-              <label class="govuk-label" for="research-name2">
+              <label class="govuk-label" for="research-name3">
                 Researcher's name
               </label>
-              <input class="govuk-input govuk-input--width-20" id="research-name2" name="research-name2" type="text" value="{{ data['research-name2'] }}">
+              <input class="govuk-input govuk-input--width-20" id="research-name3" name="research-name3" type="text" value="{{ data['research-name3'] }}">
               <span class="govuk-hint govuk-!-margin-top-2">Start typing the researcher's name and choose them from the list.</span>
             </div>
             <div class="govuk-form-group">
@@ -96,12 +96,12 @@
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li><strong>Team lead</strong></li>
-            <li>{{ data['first-name'] }} {{ data['last-name'] }} <span style="float: right"><a href="">Delete</a></span></li>
+            <li>{{ data['lead-name'] }} <span style="float: right"><a href="">Delete</a></span></li>
           </ul>
 
           <ul class="govuk-list govuk-!-font-size-16">
             <li><strong>Team members</strong></li>
-            <li>{{ data['first-name2'] }} {{ data['last-name2'] }} <span style="float: right"><a href="">Delete</a></span></li>
+            <li>{{ data['research-name2'] }} <span style="float: right"><a href="">Delete</a></span></li>
           </ul>
         </nav>
       </aside>
