@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD Data Explorer
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/funnel/step-2" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 1 of 6</span>
+          <h1 class="govuk-heading-xl">
+            NPD Data Explorer
+            <span id="waste-hint" class="govuk-hint">
+              Find out more about the types of data within the National Pupil Database
+            </span>
+          </h1>
+
+          <h3 class="govuk-heading-m">What is the Data Explorer?</h3>
+          <p>You can use the Data Explorer to find out more detailed information about the data within the NPD. You can also use it to see which extracts of data will be suitable for your research project.<p>
+
+          <h3 class="govuk-heading-m">What is the National Pupil Database?</h3>
+          <p>The NPD is one of the richest education datasets in the world holding a wide range of information about pupils and students.</p>
+
+          <p>Data types in the NPD include, but aren't limited to:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Pupils test and exam results</li>
+            <li>Prior attainment</li>
+            <li>Results from further education colleges and independent schools</li>
+            <li>Gender</li>
+            <li>Ethnicity</li>
+            <li>Free school meals</li>
+            <li>Absence and exclusion data</li>
+            <li>Special educational needs information</li>
+          </ul>
+
+        </div>
+
+
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

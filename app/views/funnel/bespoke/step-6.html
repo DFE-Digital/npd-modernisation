@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/funnel/bespoke/step-5">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Step 6 of 6</span>
+      <h1 class="govuk-heading-l">
+        Your results
+      </h1>
+
+      <form class="form" action="/funnel/" method="post">
+        <h2 class="govuk-heading-m">
+          The following data batches from the National Pupil Database should be suitable for your research.
+        </h2>
+
+        <p>The batches of data below contain the information that you requested. You can explore an example of the data to get a better understanding of the structure and how you might use it in your research.</p>
+
+        <div class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+          <h3 class="govuk-heading-s">
+            NPD Batch 1 - <strong class="govuk-tag govuk-tag-low">Low Risk</strong>
+          </h3>
+          <span class="govuk-body"><strong>Categories chosen:</strong> Attainment and exam information, Age, Location and mobility.</span>
+          <span class="govuk-hint">Data from School Census, EYFSP, KS2, KS4, KS5, PLAMS, NCCIS</span>
+          <a href="" target="_blank">Download this data example</a>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <h3 class="govuk-heading-s">
+            NPD Bespoke batch - <strong class="govuk-tag govuk-tag-high">High Risk</strong>
+          </h3>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              This data is extremely sensitive and identifiable. If you want to apply for this data then you will face a longer lead time and higher scrutiny of your application
+            </strong>
+          </div>
+          <span class="govuk-body"><strong>Categories chosen:</strong> Personally identifying data.</span>
+          <span class="govuk-hint">Data from School Census, Alternative Provision, EYSFP, KS2 - KS5</span>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <h3 class="govuk-heading-m">What next?</h3>
+          <p>If you are confident that the data shown above is suitable for your research project then you can make an application to gain access to the data</p>
+
+        </div>
+
+        <button class="govuk-button">Start application</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

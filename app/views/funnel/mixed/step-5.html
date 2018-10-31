@@ -16,13 +16,13 @@ Check your answers
   </p>
 </div>
 
-<a class="govuk-back-link" href="/funnel/dates">Back</a>
+<a class="govuk-back-link" href="/funnel/mixed/step-4">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
-    <form class="form" action="/funnel/results-standard" method="post">
+    <form class="form" action="/funnel/mixed/step-6" method="post">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">Step 5 of 6</span>
       <h1 class="govuk-heading-l">
@@ -33,27 +33,7 @@ Check your answers
         Research data options
       </h2>
 
-      <form class="form" action="/funnel/results-standard" method="post">
       <dl class="app-check-your-answers app-check-your-answers--long">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Independent variables
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            <ul class="govuk-list govuk-list--bullet">
-              {% for feature in data['variables1'] %}
-                <li>{{ feature }}</li>
-              {% else %}
-                <li>Nothing selected</li>
-              {% endfor %}
-            </ul>
-          </dd>
-          <dd class="app-check-your-answers__change">
-            <a href="/funnel/independant-variables">
-              Change <span class="govuk-visually-hidden">options</span>
-            </a>
-          </dd>
-        </div>
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
             Dependent variables
@@ -68,14 +48,14 @@ Check your answers
             </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/funnel/dependant-variables">
+            <a href="/funnel/step-2">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>
         </div>
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
-            Covariates
+            Independent variables
           </dt>
           <dd class="app-check-your-answers__answer">
             <ul class="govuk-list govuk-list--bullet">
@@ -87,7 +67,7 @@ Check your answers
             </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/funnel/co-variates">
+            <a href="/funnel/step-3">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>
@@ -111,9 +91,6 @@ Check your answers
       </dl>
 
       <button class="govuk-button">Continue</button>
-      <div>
-          <a href="#">Cancel application</a>
-      </div>
 
     </form>
 

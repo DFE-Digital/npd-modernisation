@@ -18,3 +18,34 @@ $govuk-global-styles: true;
   opacity: 0.4;
   pointer-events: none;
 }
+
+.govuk-tag-low {
+  border: 3px solid #85994B;
+  background-color: white;
+  color: #0B0C0C;
+}
+
+.govuk-tag-moderate {
+  border: 3px solid #FFBF47;
+  background-color: white;
+  color: #0B0C0C;
+  color: #0B0C0C;
+}
+
+.govuk-tag-mixed {
+  border: 3px solid #F47738;
+  background-color: white;
+  color: #0B0C0C;
+}
+
+.govuk-tag-significant {
+  border: 3px solid #DF3034;
+  background-color: white;
+  color: #0B0C0C;
+}
+
+.govuk-tag-high {
+  border: 3px solid #B10E1E;
+  background-color: white;
+  color: #0B0C0C;
+}

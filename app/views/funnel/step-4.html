@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page
+  NPD Data Explorer
 {% endblock %}
 
 {% block beforeContent %}
@@ -16,25 +16,34 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/funnel/bespoke/co-variates">Back</a>
+<a class="govuk-back-link" href="/funnel/step-3">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/funnel/bespoke/check-answers" method="post">
+      <form class="form" action="/funnel/step-5" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <span class="govuk-caption-xl">Step 4 of 6</span>
               <h1 class="govuk-fieldset__heading">
-                Which dates would you like the data to cover?
+                Which years would you like the data to cover?
               </h1>
             </legend>
             <span id="waste-hint" class="govuk-hint">
-              We don't have data pre 1977.
+              Some of the data within the NPD goes back to 1995.
             </span>
+
+            <p>The English school year generally runs from September to July of the following year. Most schools operate a three-term school year:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Autumn term - <strong>September to December</strong></li>
+              <li>Spring term - <strong>January to April</strong></li>
+              <li>Summer term - <strong>April to July</strong></li>
+            </ul>
+
+            <h3 class="govuk-heading-m">Please specify which dates you need.</h3>
 
             <p><strong>From</strong></p>
             <div class="govuk-date-input" id="dob">
@@ -78,13 +87,7 @@
           </fieldset>
         </div>
 
-
-
         <button class="govuk-button">Continue</button>
-
-        <div>
-            <a href="#">Cancel application</a>
-        </div>
 
       </form>
 

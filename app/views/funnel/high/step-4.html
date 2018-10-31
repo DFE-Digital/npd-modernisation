@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD Data Explorer
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/funnel/step-3">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/funnel/high/step-5" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <span class="govuk-caption-xl">Step 4 of 6</span>
+              <h1 class="govuk-fieldset__heading">
+                Which years would you like the data to cover?
+              </h1>
+            </legend>
+            <span id="waste-hint" class="govuk-hint">
+              Some of the data within the NPD goes back to 1995.
+            </span>
+
+            <p>The English school year generally runs from September to July of the following year. Most schools operate a three-term school year:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Autumn term - <strong>September to December</strong></li>
+              <li>Spring term - <strong>January to April</strong></li>
+              <li>Summer term - <strong>April to July</strong></li>
+            </ul>
+
+            <h3 class="govuk-heading-m">Please specify which dates you need.</h3>
+
+            <p><strong>From</strong></p>
+            <div class="govuk-date-input" id="dob">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-month1">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month1" name="dob-month1" type="number" pattern="[0-9]*" value="{{ data['dob-month1'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-year1">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year1" name="dob-year1" type="number" pattern="[0-9]*" value="{{ data['dob-year1'] }}">
+                </div>
+              </div>
+            </div>
+            <br /><br />
+            <p><strong>To</strong></p>
+            <div class="govuk-date-input" id="dob">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-month2">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month2" name="dob-month2" type="number" pattern="[0-9]*" value="{{ data['dob-month2'] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-year2">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year2" name="dob-year2" type="number" pattern="[0-9]*" value="{{ data['dob-year2'] }}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
