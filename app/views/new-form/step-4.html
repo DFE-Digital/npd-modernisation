@@ -25,20 +25,70 @@
       <form class="form" action="/new-form/step-4" method="post">
 
         <div class="govuk-form-group">
+          <h2 class="govuk-heading-l">Application to access DfE data extracts through the ONS Secure Research Service</h2>
 
-          <div class="govuk-box-highlight incomplete">
-            <h2 class="govuk-heading-m">Application to access DfE data extracts through the ONS Secure Research Service</h2>
-            <p class="govuk-!-margin-bottom-0">You can now continue with your application.</p>
+          <p>Please continue with your application. Progress will save automatically.</p>
+
+          <div class="govuk-form-group govuk-!-margin-top-9">
+            <label class="govuk-label" for="applicant-telephone">
+              Your telephone number
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="applicant-telephone" name="applicant-telephone" type="tel" aria-describedby="applicant-telephone-hint" value="{{ data['applicant-telephone'] }}">
           </div>
 
-          <p>Your unique reference number can be used at any time to return to your application.</a>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation">
+              Name of your oganisation
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="organisation" name="organisation" type="text" aria-describedby="organisation-hint" value="{{ data['organisation'] }}">
+          </div>
 
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation-type">
+              Type of organisation
+            </label>
+            <span id="organisation-type-hint" class="govuk-hint">
+              Please indicate the nature of the organisation (e.g. academic organisation, independent think tank, commercial organisation)
+            </span>
+            <input class="govuk-input govuk-input--width-20" id="organisation-type" name="organisation-type" type="text" aria-describedby="organisation-type-hint" value="{{ data['organisation-type'] }}">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="organisation-url">
+              Website address of organisation
+            </label>
+            <span id="organisation-url-hint" class="govuk-hint">
+              Please start with https://
+            </span>
+            <input class="govuk-input govuk-input--width-20" id="organisation-url" name="organisation-url" type="text" aria-describedby="organisation-url-hint" value="{{ data['organisation-type'] }}">
+          </div>
         </div>
 
         <button class="govuk-button">Continue</button>
 
       </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:<strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">DR76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
