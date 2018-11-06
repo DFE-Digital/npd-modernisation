@@ -14,11 +14,163 @@ $govuk-global-styles: true;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+// Alignment
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+// Checkboxes
 .checked {
   opacity: 0.4;
   pointer-events: none;
 }
 
+.govuk-checkboxes-small {
+
+  .govuk-checkboxes__item {
+      min-height: 40px;
+      margin-bottom: 0px;
+      padding: 0 0 0 20px;
+  }
+
+  .govuk-checkboxes__label {
+      padding: 0px 15px 5px;
+  }
+
+  .govuk-checkboxes__input {
+      width: 20px;
+      height: 20px;
+  }
+
+  .govuk-checkboxes__input + .govuk-checkboxes__label::before {
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+  }
+
+  .govuk-checkboxes__input + .govuk-checkboxes__label::after {
+      top: 5px;
+      left: 4px;
+      width: 9px;
+      height: 4px;
+      border-width: 0 0 3px 3px;
+  }
+}
+
+// Cards - Adapted from Home Office
+.card {
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.card__body {
+  display: block;
+  background-color: govuk-colour("grey-3");
+  padding: 1em;
+  text-decoration: none;
+
+  span {
+    display: block;
+  }
+}
+
+a.card__body {
+  color: $govuk-link-colour;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.card__footer {
+  display: block;
+  background-color: govuk-colour("grey-4");
+  padding: 1em;
+}
+
+// Pagination - Home Office
+nav {
+  clear: both;
+}
+.pagination .pagination_list-items {
+
+  li {
+    display: inline-block;
+    a {
+      color: govuk-colour("blue");
+      display: inline-block;
+      padding: 15px 5px 10px 5px;
+      margin-right: 15px;
+      text-decoration: none;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+    &.active a,
+    &.active a:hover {
+      color: govuk-colour("blue");
+      -webkit-box-shadow: inset 0px -5px 0px 0px govuk-colour("blue");
+      -moz-box-shadow: inset 0px -5px 0px 0px govuk-colour("blue");
+      box-shadow: inset 0px -5px 0px 0px govuk-colour("blue");
+    }
+  }
+}
+
+.padding {
+  padding-left: 15px;
+}
+
+.pagination {
+  padding: 0;
+  text-align: right;
+}
+.pagination__item {
+  display: inline-block;
+  list-style: none;
+}
+.pagination__link {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  //border: 1px solid $border-colour;
+
+  &:hover, &:focus {
+    background: govuk-colour("grey-4");
+    outline: 3px solid $govuk-focus-colour;
+  }
+
+  &.current {
+    color: $govuk-text-colour;
+    font-weight: 700;
+    border: none;
+    pointer-events: none;
+    cursor: default;
+
+    &:hover, &:focus {
+      color: $govuk-text-colour;
+      background: none;
+    }
+  }
+}
+
+.pagination__summary {
+  padding: 8px 0  ;
+
+  @media (min-width: 642px) {
+    float: left;
+  }
+}
+
+// Tags
 .govuk-tag-low {
   border: 3px solid #85994B;
   background-color: white;
@@ -48,4 +200,14 @@ $govuk-global-styles: true;
   border: 3px solid #B10E1E;
   background-color: white;
   color: #0B0C0C;
+}
+
+// Buttons
+
+.govuk-button-search {
+  background-color: govuk-colour("blue");
+
+  &:hover, &:focus {
+    background-color: govuk-colour("blue");
+  }
 }
