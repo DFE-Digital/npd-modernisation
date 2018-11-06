@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form/step-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/funnel/step-2" method="post">
+
+        <div class="govuk-form-group">
+
+          <div class="govuk-box-highlight incomplete">
+            <h2 class="govuk-heading-l">Request received</h2>
+            <p>Your unique reference number is <strong class="govuk-tag">DR76547</strong></p>
+            <p>We will now send you a confirmation email.</p>
+            <p>Please make a note of your reference number. You can use this to get updates on your application.</p>
+
+          </div>
+
+          <h1 class="govuk-heading-m">
+            Verify your email address
+          </h1>
+
+          <p>To continue your application you need to verify your email address. If you haven't received an email from us you can <a href="#0">request a new one</a>.
+
+
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
