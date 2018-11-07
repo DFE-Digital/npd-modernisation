@@ -15,8 +15,7 @@ $govuk-global-styles: true;
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .checked {
-  opacity: 0.4;
-  pointer-events: none;
+  display: block !important;
 }
 
 .govuk-tag-low {
@@ -69,7 +68,8 @@ $govuk-global-styles: true;
   color: white;
 
   .govuk-heading-l,
-  .govuk-heading-m {
+  .govuk-heading-m,
+  .govuk-heading-s {
     color: white;
   }
 
@@ -139,4 +139,30 @@ $govuk-global-styles: true;
     background: govuk-colour("grey-2");
     box-shadow: 3px -3px 0 #fff, 6px -6px 0 govuk-colour("grey-2");
   }
+}
+
+// Panels
+
+.panel-border-wide {
+    border-left-width: 10px;
+}
+.panel {
+  h2.govuk-heading-m {
+    margin-bottom: 0.6em;
+  }
+}
+
+.panel-border-wide.alert-default {
+  border-left: 10px solid govuk-colour("blue");
+  background-color: #eaf4f9;
+}
+
+.panel-border-wide.alert-success {
+  border-color: #28a197;
+  background-color: #eaf6f5;
+}
+
+.panel-border-wide.alert-error {
+  border-color: #c42b2b;
+  background-color: #f9eaea;
 }
