@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form/step-12">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form/step-14" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 10 of 10</span>
+          <h2 class="govuk-heading-l">Processing the data</h2>
+
+          <h3 class="govuk-heading-m">What condition(s) are you relying on for processing data under the general data protection regulations (GDPR)?</h3>
+
+          <div class="govuk-inset-text">You’ve stated you’re matching data. Under the GDPR you need to state under what conditions the data was consented to.</div>
+
+          <div class="govuk-body">
+            <strong>Consent</strong>
+            <p class="govuk-!-font-size-16">The individual has given clear consent for organisation to process their individual data for a specific purpose. If relying on consent, please ensure you understand the changes in DPA2018 and GDPR, and provide adequate evidence such as a copy of the consent form and privacy notices that have been used for the project. Usually, to comply, consent would need to be opt-in.</p>
+
+            <p class="govuk-!-font-size-16">‘Consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by clear affirmative action (e.g. opt-in), signifies agreement to the processing of personal data relating to him or her (General Data Protection Regulation Article 4: 11) </p>
+          </div>
+
+          <div class="govuk-body">
+            <strong>Explicit consent for sensitive data</strong>
+            <p class="govuk-!-font-size-16">The data subject has given explicit consent to the processing of those individual data for one or more specified purposes. If you are relying on consent, please ensure you understand the changes in DPA2018 and GDPR, and provide adequate evidence (e.g. a copy of the consent form and privacy notices that have been used for the project).</p>
+          </div>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <div class="govuk-character-count" data-module="character-count" data-maxwords="150">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="consent">
+                State how consent was granted for the organisation to process personal data. Please be as specific as possible.
+              </label>
+              <textarea class="govuk-textarea js-character-count " id="consent" name="consent" rows="7">{{ data['consent'] }}</textarea>
+            </div>
+          </div>
+
+
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Application to access DfE data extracts through the ONS Secure Research Service</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">DR76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
