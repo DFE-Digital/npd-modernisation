@@ -95,6 +95,75 @@ a.card__body {
   padding: 1em;
 }
 
+<<<<<<< HEAD
+=======
+.govuk-checkboxes-small {
+
+  .govuk-checkboxes__item {
+      min-height: 40px;
+      margin-bottom: 0px;
+      padding: 0 0 0 20px;
+  }
+
+  .govuk-checkboxes__label {
+      padding: 0px 15px 5px;
+  }
+
+  .govuk-checkboxes__input {
+      width: 20px;
+      height: 20px;
+  }
+
+  .govuk-checkboxes__input + .govuk-checkboxes__label::before {
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+  }
+
+  .govuk-checkboxes__input + .govuk-checkboxes__label::after {
+      top: 5px;
+      left: 4px;
+      width: 9px;
+      height: 4px;
+      border-width: 0 0 3px 3px;
+  }
+}
+
+// Cards - Adapted from Home Office
+.card {
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.card__body {
+  display: block;
+  background-color: govuk-colour("grey-3");
+  padding: 1em;
+  text-decoration: none;
+
+  span {
+    display: block;
+  }
+}
+
+a.card__body {
+  color: $govuk-link-colour;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.card__footer {
+  display: block;
+  background-color: govuk-colour("grey-4");
+  padding: 1em;
+}
+
+>>>>>>> a23cfe0577f14621515094814cbc5d00d22a3736
 // Pagination - Home Office
 nav {
   clear: both;
