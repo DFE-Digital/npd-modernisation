@@ -59,8 +59,8 @@ Check your answers
           </dt>
           <dd class="app-check-your-answers__answer">
             <ul class="govuk-list govuk-list--bullet">
-              {% for feature in data['variables3'] %}
-                <li>{{ feature }}</li>
+              {% for item in data['variables3'] %}
+                <li>{{ item }}</li>
               {% else %}
                 <li>Nothing selected</li>
               {% endfor %}
@@ -77,13 +77,16 @@ Check your answers
             Dates
           </dt>
           <dd class="app-check-your-answers__answer">
-            <p>From</p>
-            <p><strong>{{ data['dob-month1'] }}/{{ data['dob-year1'] }}</strong></p>
-            <p>To</p>
-            <p><strong>{{ data['dob-month2'] }}/{{ data['dob-year2'] }}</strong></p>
+            <ul class="govuk-list govuk-list--bullet">
+              {% for item in data['dates'] %}
+                <li>{{ item }}</li>
+              {% else %}
+                <li>Nothing selected</li>
+              {% endfor %}
+            </ul>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/funnel/dates">
+            <a href="/funnel/step-4">
               Change <span class="govuk-visually-hidden">options</span>
             </a>
           </dd>

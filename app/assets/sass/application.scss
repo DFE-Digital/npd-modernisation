@@ -160,7 +160,6 @@ a.card__body {
   padding: 1em;
 }
 
->>>>>>> a23cfe0577f14621515094814cbc5d00d22a3736
 // Pagination - Home Office
 nav {
   clear: both;
@@ -948,4 +947,15 @@ nav {
 
 .app-step-nav__substep--optional:after {
   border-left-style: dotted;
+}
+
+// Carousel
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
 }

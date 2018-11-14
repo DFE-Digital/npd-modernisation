@@ -16,28 +16,27 @@ Check your answers
   </p>
 </div>
 
-<a class="govuk-back-link" href="/funnel/significant/step-5">Back</a>
+<a class="govuk-back-link" href="/funnel/significant/step-4">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-xl">Step 6 of 6</span>
-      <h1 class="govuk-heading-l">
-        Your results
+      <h1 class="govuk-heading-xl">
+        NPD Data Categories
+        <span id="dates-hint" class="govuk-hint">
+          Find out more about the types of data within the National Pupil Database
+        </span>
       </h1>
 
       <form class="form" action="/new-application" method="post">
-        <h2 class="govuk-heading-m">
-          The following data batches from the National Pupil Database should be suitable for your research.
-        </h2>
 
-        <p>The batches of data below contain the information that you requested. You can explore an example of the data to get a better understanding of the structure and how you might use it in your research.</p>
+        <p>The batches of data below contain match the choices you made. You can explore an example of each batch to get a better understanding of the structure and how you might use it in your research.</p>
 
-        <div class="govuk-!-padding-top-9 govuk-!-padding-bottom-9">
+        <div class="govuk-!-padding-top-3 govuk-!-padding-bottom-9">
           <h3 class="govuk-heading-s">
-            NPD Batch 1 - <strong class="govuk-tag govuk-tag-low">Low Risk</strong>
+            NPD Batch 1 - <strong class="govuk-tag govuk-tag-low">Open data</strong>
           </h3>
           <span class="govuk-body"><strong>Categories chosen:</strong> Attainment and exam information, Age, Location and mobility.</span>
           <span class="govuk-hint">Data from School Census, EYFSP, KS2, KS4, KS5, PLAMS, NCCIS</span>
@@ -47,7 +46,7 @@ Check your answers
           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
           <h3 class="govuk-heading-s">
-            NPD Batch 2 - <strong class="govuk-tag govuk-tag-moderate">Moderate Risk</strong>
+            NPD Batch 2 - <strong class="govuk-tag govuk-tag-moderate">Remote lab</strong>
           </h3>
           <span class="govuk-body"><strong>Categories chosen:</strong> Ethnicity, Socio-economic status, Special educational needs.</span>
           <span class="govuk-hint">Data from School Census, EYFSP, KS2, KS4, KS5, PLAMS, NCCIS</span>
@@ -57,7 +56,7 @@ Check your answers
           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
           <h3 class="govuk-heading-s">
-            NPD Batch 4 - <strong class="govuk-tag govuk-tag-significant">Significant Risk</strong>
+            NPD Batch 4 - <strong class="govuk-tag govuk-tag-significant">Physical lab</strong>
           </h3>
           <span class="govuk-body"><strong>Categories chosen:</strong> Special category pupils.</span>
           <span class="govuk-hint">Data from School Census, Alternative Provision, EYSFP, KS2 - KS5, PLAMS, NCCIS, ISP</span>
@@ -75,6 +74,55 @@ Check your answers
 
       </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Your choices
+        </h2>
+        <div class="">
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Education stage</strong></p>
+          <a href="/funnel/step-2" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for feature in data['variables2'] %}
+              <li>{{ feature }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Categories</strong></p>
+          <a href="/funnel/step-3" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['variables3'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Years</strong></p>
+          <a href="/funnel/significant/step-4" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['dates'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
     </div>
 
   </div>

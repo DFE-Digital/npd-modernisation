@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  NPD Data Explorer
+  NPD Data Categories
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,67 +23,185 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/funnel/step-5" method="post">
+      <form class="form" action="/funnel/step-6" method="post">
         <div class="govuk-form-group">
+          <h1 class="govuk-heading-xl">
+            NPD Data Categories
+            <span id="dates-hint" class="govuk-hint">
+              Find out more about the types of data within the National Pupil Database
+            </span>
+          </h1>
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <span class="govuk-caption-xl">Step 4 of 6</span>
-              <h1 class="govuk-fieldset__heading">
-                Which years would you like the data to cover?
+              <h1 class="govuk-heading-m govuk-!-margin-bottom-0">
+                Which years would you need your data to cover?
               </h1>
             </legend>
-            <span id="waste-hint" class="govuk-hint">
-              Some of the data within the NPD goes back to 1995.
-            </span>
 
-            <p>The English school year generally runs from September to July of the following year. Most schools operate a three-term school year:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Autumn term - <strong>September to December</strong></li>
-              <li>Spring term - <strong>January to April</strong></li>
-              <li>Summer term - <strong>April to July</strong></li>
-            </ul>
+            <div class="govuk-inset-text">
+              <p>The English school year generally runs from September to July of the following year. Most schools operate a three-term school year:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Autumn term - <strong>September to December</strong></li>
+                <li>Spring term - <strong>January to April</strong></li>
+                <li>Summer term - <strong>April to July</strong></li>
+              </ul>
+            </div>
 
-            <h3 class="govuk-heading-m">Please specify which dates you need.</h3>
+            <h3 class="govuk-heading-s">Please specify which years you are interested in.</h3>
 
-            <p><strong>From</strong></p>
-            <div class="govuk-date-input" id="dob">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob-month1">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month1" name="dob-month1" type="number" pattern="[0-9]*" value="{{ data['dob-month1'] }}">
-                </div>
+            <div class="govuk-checkboxes govuk-grid-column-one-third govuk-!-padding-left-0">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-1" name="dates" type="checkbox" value="2018" {{ checked("dates", "2018") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-1">
+                  2018
+                </label>
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob-year1">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year1" name="dob-year1" type="number" pattern="[0-9]*" value="{{ data['dob-year1'] }}">
-                </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-2" name="dates" type="checkbox" value="2017" {{ checked("dates", "2017") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-2">
+                  2017
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-3" name="dates" type="checkbox" value="2016" {{ checked("dates", "2016") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-3">
+                  2016
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-4" name="dates" type="checkbox" value="2015" {{ checked("dates", "2015") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-4">
+                  2015
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-5" name="dates" type="checkbox" value="2014" {{ checked("dates", "2014") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-5">
+                  2014
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-6" name="dates" type="checkbox" value="2013" {{ checked("dates", "2013") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-6">
+                  2013
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-7" name="dates" type="checkbox" value="2012" {{ checked("dates", "2012") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-7">
+                  2012
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-8" name="dates" type="checkbox" value="2011" {{ checked("dates", "2011") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-8">
+                  2011
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-9" name="dates" type="checkbox" value="2010" {{ checked("dates", "2010") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-9">
+                  2010
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-10" name="dates" type="checkbox" value="2009" {{ checked("dates", "2009") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-10">
+                  2009
+                </label>
               </div>
             </div>
-            <br /><br />
-            <p><strong>To</strong></p>
-            <div class="govuk-date-input" id="dob">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob-month2">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month2" name="dob-month2" type="number" pattern="[0-9]*" value="{{ data['dob-month2'] }}">
-                </div>
+
+            <div class="govuk-checkboxes govuk-grid-column-one-third govuk-!-padding-left-0">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-11" name="dates" type="checkbox" value="2008" {{ checked("dates", "2008") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-11">
+                  2008
+                </label>
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="dob-year2">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year2" name="dob-year2" type="number" pattern="[0-9]*" value="{{ data['dob-year2'] }}">
-                </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-12" name="dates" type="checkbox" value="2007" {{ checked("dates", "2007") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-12">
+                  2007
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-13" name="dates" type="checkbox" value="2006" {{ checked("dates", "2006") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-13">
+                  2006
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-14" name="dates" type="checkbox" value="2005" {{ checked("dates", "2005") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-14">
+                  2005
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-15" name="dates" type="checkbox" value="2004" {{ checked("dates", "2004") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-15">
+                  2004
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-16" name="dates" type="checkbox" value="2003" {{ checked("dates", "2003") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-16">
+                  2003
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-17" name="dates" type="checkbox" value="2002" {{ checked("dates", "2002") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-17">
+                  2002
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-18" name="dates" type="checkbox" value="2001" {{ checked("dates", "2001") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-18">
+                  2001
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-19" name="dates" type="checkbox" value="2000" {{ checked("dates", "2000") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-19">
+                  2000
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-20" name="dates" type="checkbox" value="1999" {{ checked("dates", "1999") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-20">
+                  1999
+                </label>
               </div>
             </div>
+
+            <div class="govuk-checkboxes govuk-grid-column-one-third govuk-!-padding-left-0">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-21" name="dates" type="checkbox" value="1998" {{ checked("dates", "1998") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-21">
+                  1998
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-22" name="dates" type="checkbox" value="1997" {{ checked("dates", "1997") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-22">
+                  1997
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-23" name="dates" type="checkbox" value="1996" {{ checked("dates", "1996") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-23">
+                  1996
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="dates-24" name="dates" type="checkbox" value="1995" {{ checked("dates", "1995") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="dates-24">
+                  1995
+                </label>
+              </div>
+            </div>
+
           </fieldset>
         </div>
 
@@ -91,6 +209,55 @@
 
       </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Your choices
+        </h2>
+        <div class="">
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Education stage</strong></p>
+          <a href="/funnel/step-2" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for feature in data['variables2'] %}
+              <li>{{ feature }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Categories</strong></p>
+          <a href="/funnel/step-3" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['variables3'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Years</strong></p>
+          <a href="/funnel/step-4" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['dates'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
     </div>
   </div>
 

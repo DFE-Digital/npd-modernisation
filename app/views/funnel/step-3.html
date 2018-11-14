@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  NPD Data Explorer
+  NPD Data Categories
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,20 +26,18 @@
 
       <form class="form" action="/funnel/step-4" method="post">
         <div class="govuk-form-group">
+          <h1 class="govuk-heading-xl">
+            NPD Data Categories
+            <span id="waste-hint" class="govuk-hint">
+              Find out more about the types of data within the National Pupil Database
+            </span>
+          </h1>
           <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <span class="govuk-caption-xl">Step 3 of 6</span>
-              <h1 class="govuk-fieldset__heading">
-                Choose your independent variables
-              </h1>
+              <h2 class="govuk-heading-m ">
+                Choose which categories you need
+              </h2>
             </legend>
-            <span id="waste-hint" class="govuk-hint">
-              Select the variables that you will be analysing
-            </span>
-
-            <div class="govuk-inset-text">
-              Lead times to gain access to the data are typically <strong>3-4 weeks</strong> as applications go through the Department for Education data governance process for unpublished data.
-            </div>
 
             <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
@@ -68,9 +66,9 @@
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-4" name="variables3" type="checkbox" value="Ethinicity" {{ checked("variables3", "Ethinicity") }}>
+                <input class="govuk-checkboxes__input" id="variable-4" name="variables3" type="checkbox" value="Ethnicity" {{ checked("variables3", "Ethnicity") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-4">
-                  Ethinicity
+                  Ethnicity
                   <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">
                     Pupils ethnic code as well as major and minor codes based on extended ethnicity code
                   </span>
@@ -162,6 +160,55 @@
 
       </form>
 
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Your choices
+        </h2>
+        <div class="">
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Education stage</strong></p>
+          <a href="/funnel/step-2" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for feature in data['variables2'] %}
+              <li>{{ feature }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Categories</strong></p>
+          <a href="/funnel/step-3" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['variables3'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Years</strong></p>
+          <a href="/funnel/step-4" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['dates'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
     </div>
   </div>
 

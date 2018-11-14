@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  NPD Data Explorer
+  NPD Data Categories
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,68 +26,49 @@
 
       <form class="form" action="/funnel/step-3" method="post">
         <div class="govuk-form-group">
+          <h1 class="govuk-heading-xl">
+            NPD Data Categories
+            <span id="waste-hint" class="govuk-hint">
+              Find out more about the types of data within the National Pupil Database
+            </span>
+          </h1>
           <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <span class="govuk-caption-xl">Step 2 of 6</span>
-              <h1 class="govuk-fieldset__heading">
-                Which stages of education will you need?
-              </h1>
+              <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+                Which stages of education do you need?
+              </h2>
             </legend>
 
-            <p>The United Kingdom's education system is split across years into Key Stages. Please choose which of these your research will be looking at.</p>
+            <p class="govuk-!-margin-bottom-6">The United Kingdom's education system is split across years into Key Stages. Please choose which of these your research will be looking at.</p>
+
 
             <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-7" name="variables2" type="checkbox" value="School Census" {{ checked("variables2", "School Census") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-1">
-                  School Census
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">Includes all pupils at all year groups in mainstream schools</span>
-                </label>
-              </div>
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="variable-1" name="variables2" type="checkbox" value="Early Years Foundation" {{ checked("variables2", "Early Years Foundation") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-1">
                   Early Years Foundation (EYFS)
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">2 to 4 year olds in preschool settings</span>
+                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">2 to 4 year olds in preschool settings</span>
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-2" name="variables2" type="checkbox" value="Key Stage 1" {{ checked("variables2", "Key Stage 1") }}>
+                <input class="govuk-checkboxes__input" id="variable-2" name="variables2" type="checkbox" value="Primary" {{ checked("variables2", "Primary") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-2">
-                  Key Stage 1
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">for children from 5 to 7 years, covering school years 1 and 2</span>
+                  Primary
+                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">for children from 5 to 11 years, covering Key Stage 1 and 2</span>
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-3" name="variables2" type="checkbox" value="Key Stage 2" {{ checked("variables2", "Key Stage 2") }}>
+                <input class="govuk-checkboxes__input" id="variable-3" name="variables2" type="checkbox" value="Secondary" {{ checked("variables2", "Secondary") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-3">
-                  Key Stage 2
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">for children from 7 to 11 years, covering school years 3, 4, 5 and 6</span>
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">(includes KS1 prior attainment)</span>
+                  Secondary
+                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">for children from 11 to 16 years, covering Key Stage 3 and 4</span>
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-4" name="variables2" type="checkbox" value="Key Stage 3" {{ checked("variables2", "Key Stage 3") }}>
+                <input class="govuk-checkboxes__input" id="variable-4" name="variables2" type="checkbox" value="Post 16" {{ checked("variables2", "Post 16") }}>
                 <label class="govuk-label govuk-checkboxes__label" for="variable-4">
-                  Key Stage 3
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">for children from 11 to 14 years, covering school years 7, 8 and 9</span>
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">(includes KS2 prior attainment)</span>
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-5" name="variables2" type="checkbox" value="Key Stage 4" {{ checked("variables2", "Key Stage 4") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-5">
-                  Key Stage 4
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">for children from 14 to 16 years, covering school years 10 and 11</span>
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">(includes KS2 prior attainment)</span>
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="variable-6" name="variables2" type="checkbox" value="Key Stage 5" {{ checked("variables2", "Key Stage 5") }}>
-                <label class="govuk-label govuk-checkboxes__label" for="variable-6">
-                  Key Stage 5
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">for pupils from 16 to 18 years, covering colleges and sixth form</span>
-                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">(includes KS4 prior attainment)</span>
+                  Post 16
+                  <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">for children from 16 to 18 years, covering Key Stage 5 and Further Education</span>
                 </label>
               </div>
             </div>
@@ -98,6 +79,54 @@
 
       </form>
 
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Your choices
+        </h2>
+        <div class="">
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Education stage</strong></p>
+          <a href="/funnel/step-2" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for feature in data['variables2'] %}
+              <li>{{ feature }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Categories</strong></p>
+          <a href="/funnel/step-3" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['variables3'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+
+          <hr class="govuk-section-break govuk-section-break--s govuk-!-margin-bottom-5 govuk-section-break--visible govuk-grid-column-full">
+
+          <p class="govuk-!-font-size-16 govuk-grid-column-two-thirds govuk-!-padding-left-0"><strong>Years</strong></p>
+          <a href="/funnel/step-4" class="govuk-!-font-size-16 govuk-grid-column-one-third">
+            Change <span class="govuk-visually-hidden">options</span>
+          </a>
+          <ul class="govuk-list govuk-!-padding-left-0 govuk-grid-column-full govuk-!-font-size-16">
+            {% for item in data['dates'] %}
+              <li>{{ item }}</li>
+            {% else %}
+              <li>Nothing selected</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </aside>
     </div>
   </div>
 
