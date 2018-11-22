@@ -26,7 +26,7 @@
   <h1 class="govuk-heading-xl">
     NPD Search & Filter
     <span id="hint" class="govuk-hint">
-      Search and filter the variables and datasets inside the NPD.
+      Search and filter the variables inside the NPD.
     </span>
   </h1>
 
@@ -63,11 +63,43 @@
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
 
+      <h3 class="govuk-heading-s">Categories</h3>
+
+      <div class="govuk-checkboxes govuk-checkboxes-small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="individual-1" name="individual" type="checkbox" value="carcasses" disabled>
+          <label class="govuk-label govuk-checkboxes__label" for="individual-1">
+            Attainment and exam information
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="individual-2" name="individual" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="individual-2">
+            Age
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="individual-3" name="individual" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="individual-3">
+            Absence & Exclusion
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="individual-4" name="individual" type="checkbox" value="farm" disabled>
+          <label class="govuk-label govuk-checkboxes__label" for="individual-4">
+            Ethnicity
+          </label>
+        </div>
+        <a href="#0">Show more</a>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
       <h3 class="govuk-heading-s">Education phase</h3>
 
       <div class="govuk-checkboxes govuk-checkboxes-small">
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="organisation-1" name="organisation" type="checkbox" value="carcasses">
+          <input class="govuk-checkboxes__input" id="organisation-1" name="organisation" type="checkbox" value="carcasses" disabled>
           <label class="govuk-label govuk-checkboxes__label" for="organisation-1">
             Early years
           </label>
@@ -160,7 +192,7 @@
     </div>
 
     <div class="govuk-grid-column-two-thirds govuk-results">
-      <h1 class="govuk-heading-l govuk-!-display-inline">Your results</h1>
+      <h1 class="govuk-heading-m govuk-!-display-inline">Results for 'Postcode'</h1>
 
       <div class="govuk-form-group govuk-!-display-inline-block right">
         <label class="govuk-label govuk-!-display-inline govuk-!-padding-right-2" for="sort">
