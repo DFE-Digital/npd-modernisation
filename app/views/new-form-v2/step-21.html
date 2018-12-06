@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-4">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/" method="post">
+
+        <div class="govuk-form-group">
+
+          <div class="govuk-box-highlight incomplete">
+            <h2 class="govuk-heading-l">Application complete</h2>
+            <p>Your unique reference number is <strong class="govuk-tag">76547</strong></p>
+            <p>We will look at your application as soon as possible.</p>
+            <p>There is currently a <strong>2 month</strong> lead time.</p>
+
+          </div>
+
+          <h1 class="govuk-heading-m">
+            Accessing the NPD data
+          </h1>
+
+          <p>Access to the National Pupil Database is provided by the Office for National Statistics (ONS)  Secure Research Service (SRS). These are either physical ONS datalabs (currently in Newport, London, Titchfield, Belfast or Glasgow), or SRS remote connectivity sites if your organisation has successfully applied for full connectivity, partial connectivity or safe room connectivity.</p>
+
+          <p>Please be aware that if you do not have connectivity within your organisation, you will only be able to use ONS SRS physical datalabs.</p>
+
+          <p><strong>If your application for access to the NPD is successful you will be notified of how to book your use of a physical datalab. There is no cost for using the labs, but they are only open Mon-Fri 9-5 and are closed on bank holidays.</strong></p>
+
+          <p>Please contact <a href="">research.support@ons.gov.uk</a> if your organisation wishes to apply for remote connectivity.</p>
+
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

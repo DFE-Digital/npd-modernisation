@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-18">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-20" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 16 of 17</span>
+          <h2 class="govuk-heading-l">Choosing outputs</h2>
+
+          <div class="govuk-inset-text">
+            Once research has concluded, you should be aware that:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>All outputs will be checked by the ONS checking service. DfE data will be subject to standard ONS disclosure rules.</li>
+              <li>It is an expectation of using the SRS that you intend to publish the findings of your research.</li>
+            </ul>
+          </div>
+
+          <h3 class="govuk-heading-m">Please choose your preferred file format for any NPD data outputs you may receive.</h3>
+          <span class="govuk-hint">Standard extracts are only available as tab delimited, for bespoke extract requests you may choose one file format.</span>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="outputs-1" name="outputs" type="checkbox" value="SPSS">
+              <label class="govuk-label govuk-checkboxes__label" for="outputs-1">
+                SPSS
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="outputs-2" name="outputs" type="checkbox" value="Tab delimited text file">
+              <label class="govuk-label govuk-checkboxes__label" for="outputs-2">
+                Tab delimited text file
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="outputs-3" name="outputs" type="checkbox" value="SQL database">
+              <label class="govuk-label govuk-checkboxes__label" for="outputs-3">
+                SQL database
+              </label>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

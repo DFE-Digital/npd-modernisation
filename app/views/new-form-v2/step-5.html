@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-4">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-6" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 2 of 17</span>
+          <h2 class="govuk-heading-l">Your research team</h2>
+
+          <div class="govuk-inset-text">
+            In order to access data in the ONS SRS, a researcher must have gone through the <a href="#0">ONS accreditation</a> process and have signed an <a href="#0">individual declaration form</a> which forms the basis of the DfE data sharing agreement.  Please insert contact details and evidence for each individual/researcher who require access to the data for the project.
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="ons-number">
+              Your ONS accreditation number
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="ons-number" name="ons-number" type="number" aria-describedby="ons-number-hint" value="{{ data['ons-number'] }}">
+          </div>
+
+          <h4 class="govuk-heading-s">Other researchers</h4>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="other-researcher">
+              Name of researcher
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="other-researcher" name="other-researcher" type="text" aria-describedby="other-researcher-hint" value="{{ data['other-researcher'] }}">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="other-researcher-email">
+              Their email address
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="other-researcher-email" name="other-researcher-email" type="email" aria-describedby="other-researcher-email-hint" value="{{ data['other-researcher-email'] }}">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="other-researcher-ons">
+              Their ONS accreditation number
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="other-researcher-ons" name="other-researcher-ons" type="number" aria-describedby="other-researcher-ons-hint" value="{{ data['other-researcher-ons'] }}">
+          </div>
+
+          <br><br>
+          <a href="#0" class="govuk-!-font-size-19">Add another researcher</a>
+
+
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

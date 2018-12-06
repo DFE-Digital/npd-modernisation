@@ -1,0 +1,194 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-9">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-11" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 7 of 17</span>
+          <h2 class="govuk-heading-l">Which data do you need?</h2>
+
+          <div style="display:none;" class="govuk-inset-text {{ checked("variables2", "School Census",  "Early Years Foundation", "Key Stage 1") }}">
+            You've already chosen options for this section, you can change them if you need to.
+          </div>
+
+          <h3 class="govuk-heading-m">Choose your categories</h3>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input " id="variable-1" name="variables3" type="checkbox" value="Age" {{ checked("variables3", "Age") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-1">
+                Age
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">Pupil ages (in years and months) at the start of the academic year</span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-2" name="variables3" type="checkbox" value="Absence Exclusion" {{ checked("variables3", "Absence Exclusion") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-2">
+                Absence & Exclusion
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Authorised and unauthorised absences by absence type, overall by academic year and broken down annually and by term, as well as records of persistent absentees. 2005 -2017<br>Summary and exclusion-level data per-pupil, including permanent exclusion records
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-3" name="variables3" type="checkbox" value="Attainment" {{ checked("variables3", "Attainment") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-3">
+                Attainment
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Attaintment details, multi-year discount flag, establishment and awarding body reference numbers
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-4" name="variables3" type="checkbox" value="Educational history" {{ checked("variables3", "Educational history") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-4">
+                Educational history
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Schools attended (Post 16 only)
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-5" name="variables3" type="checkbox" value="Education phase" {{ checked("variables3", "Education phase") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-5">
+                Education phase
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Educational phase, actual year group (not based on age)
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input " id="variable-6" name="variables3" type="checkbox" value="Ethnicity" {{ checked("variables3", "Ethnicity") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-6">
+                Ethnicity
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Ethnic Group (inc. minor and major categories)
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-7" name="variables3" type="checkbox" value="Funding" {{ checked("variables3", "Funding") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-7">
+                Funding
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Basis for EY funding, schools block funding
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-8" name="variables3" type="checkbox" value="Gender" {{ checked("variables3", "Gender") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-8">
+                Gender
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-9" name="variables3" type="checkbox" value="Language" {{ checked("variables3", "Language") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-9">
+                Language
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Language group (inc minor and major categories), English as an additional language
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-10" name="variables3" type="checkbox" value="Location" {{ checked("variables3", "Location") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-10">
+                Location
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Pupil and town postcode, pupil locality (neighbourhood, suburb, district, village, estate, settlement, or parish), local authority and establishment, administrative area, LSOA (lower layer super output area)
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-11" name="variables3" type="checkbox" value="Mobility" {{ checked("variables3", "Mobility") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-11">
+                Mobility
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Mobility indicator, distance to nearest/current school, nearest school in the local authority area
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-12" name="variables3" type="checkbox" value="SEN" {{ checked("variables3", "SEN") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-12">
+                SEN (Special Educationl Needs)
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Details (classification) of SEN, SEN type (primary and secondary), SEN provision (inc. major and SEN unit indicator), Statement and EHC plans (yes/no)
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-13" name="variables3" type="checkbox" value="SES" {{ checked("variables3", "SES") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-13">
+                SES (Socio-economic status)
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">
+                  Free school meals (inc. current and previous eligibility), Income deprivation affecting children indices (inc. rank and score)
+                </span>
+              </label>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

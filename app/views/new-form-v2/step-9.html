@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-8">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-10" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 6 of 17</span>
+          <h2 class="govuk-heading-l">Which data do you need?</h2>
+
+          <div style="display:none;" class="govuk-inset-text {{ checked("variables2", "School Census",  "Early Years Foundation", "Key Stage 1") }}">
+            You've already chosen options for this section, you can change them if you need to.
+          </div>
+
+          <h3 class="govuk-heading-m">Which stages of education will you need?</h3>
+
+          <p>The United Kingdom's education system is split across years into Key Stages. Please choose which of these your research will be looking at.</p>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-1" name="variables2" type="checkbox" value="Early Years Foundation" {{ checked("variables2", "Early Years Foundation") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-1">
+                Early Years Foundation (EYFS)
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">2 to 4 year olds in preschool settings</span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-2" name="variables2" type="checkbox" value="Primary" {{ checked("variables2", "Primary") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-2">
+                Primary
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">for children from 5 to 11 years, covering Key Stage 1 and 2</span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-3" name="variables2" type="checkbox" value="Secondary" {{ checked("variables2", "Secondary") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-3">
+                Secondary
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">for children from 11 to 16 years, covering Key Stage 3 and 4</span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="variable-4" name="variables2" type="checkbox" value="Post 16" {{ checked("variables2", "Post 16") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="variable-4">
+                Post 16
+                <span class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-16">for children from 16 to 18 years, covering Key Stage 5 and Further Education</span>
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+        
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

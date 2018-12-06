@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-11">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-13" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 9 of 17</span>
+          <h2 class="govuk-heading-l">Matching data</h2>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="student">
+              Are you matching DfE data with other data?
+            </label>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="matching-data-conditional-1" name="matching-data" type="radio" value="true" data-aria-controls="conditional-matching-data-conditional-1" {{ checked("matching-data", "true") }}>
+                <label class="govuk-label govuk-radios__label" for="matching-data-conditional-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-matching-data-conditional-1">
+                <div class="govuk-form-group">
+                  <p>You’ve chosen to access data which is sensitive and high risk in the following categories <strong>{{ data['variables3'] }}</strong>. Are you sure you want to match this sensitive data to a dataset of your own?</p>
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="matching-data-conditional-2" name="matching-data" type="radio" value="false" data-aria-controls="conditional-matching-data-conditional-2" {{ checked("matching-data", "false") }}>
+                <label class="govuk-label govuk-radios__label" for="matching-data-conditional-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m">Asking DfE to match data</h3>
+
+          <p>If you need the DfE to match data to a standard extract the application will have to be processed as a bespoke request which could increase the time it takes to approve the request.</p>
+
+          <div class="govuk-inset-text">
+            <p>Please explain which data you wish to provide to DfE in order to carry out the matching required.  Please consider the following:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>what data is being linked together</li>
+              <li>who you intend to do that linking</li>
+              <li>how the information risks around moving data have been minimised in the design of the matching process</li>
+              <li>how you can demonstrate that the various data owners are signed up to the data linking methodology you describe</li>
+            </ul>
+          </div>
+
+          <div class="govuk-character-count" data-module="character-count" data-maxwords="500">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="matching-data-count">
+                Enter your requirements below
+              </label>
+              <textarea class="govuk-textarea js-character-count " id="matching-data-count" name="matching-data-count" rows="7">{{ data['matching-data-count'] }}</textarea>
+            </div>
+
+            <span id="matching-data-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 500 words
+            </span>
+          </div>
+
+
+
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

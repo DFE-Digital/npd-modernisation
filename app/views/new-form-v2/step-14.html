@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-13">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-15" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 11 of 17</span>
+          <h2 class="govuk-heading-l">Processing the data</h2>
+
+          <h3 class="govuk-heading-m">What other condition(s) are you relying on for processing data?</h3>
+          <span class="govuk-hint">
+            Please tick all that apply
+          </span>
+
+          <div class="govuk-checkboxes" data-module="checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="gdpr-conditional-1" name="gdpr" type="checkbox" value="Legitimate interests" data-aria-controls="conditional-gdpr-conditional-1" {{ checked("gdpr", "Legitimate interests") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="gdpr-conditional-1">
+                Legitimate interests
+                <span id="gdpr-conditional-1" class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">
+                  The processing is necessary for the organisation’s legitimate interests or the legitimate interests of a third party unless there is a good reason to protect the individual’s individual data which overrides those legitimate interests.
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-gdpr-conditional-1">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-size-16" for="legitimate-interests-info">
+                  How does your organisation’s legitimate interests compare with the data rights of individuals and what measures you have in place to protect individual data rights
+                </label>
+                <textarea class="govuk-textarea" id="legitimate-interests-info" name="legitimate-interests-info" rows="5" aria-describedby="legitimate-interests-info-hint">{{ data['legitimate-interests-info'] }}</textarea>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="gdpr-conditional-2" name="gdpr" type="checkbox" value="Public task" data-aria-controls="conditional-gdpr-conditional-2" {{ checked("gdpr", "Public task") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="gdpr-conditional-2">
+                Public task
+                <span id="gdpr-conditional-1" class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">
+                  The processing is necessary for the organisation to perform a task in the public interest or for the organisation’s official functions, and the task or function has a clear basis in law.
+                </span>
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-gdpr-conditional-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-size-16" for="public-task-info">
+                  Provide an explanation of the Public Interest that the Task you’re doing meets, and the basis in law for this task.
+                </label>
+                <textarea class="govuk-textarea" id="public-task" name="public-task" rows="5" aria-describedby="public-task-hint">{{ data['public-task'] }}</textarea>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="gdpr-conditional-3" name="gdpr" type="checkbox" value="Contract" data-aria-controls="conditional-gdpr-conditional-3" {{ checked("gdpr", "Contract") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="gdpr-conditional-3">
+                Contract
+                <span id="gdpr-conditional-1" class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">
+                  The processing is necessary for a contract the organisation has with the individual, or because the individual has asked the organisation to take specific steps before entering into a contract.
+                </span>
+              </label>
+            </div>
+            <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-gdpr-conditional-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Mobile phone number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+              </div>
+            </div> -->
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="gdpr-conditional-4" name="gdpr" type="checkbox" value="Legal obligation" data-aria-controls="conditional-gdpr-conditional-4" {{ checked("gdpr", "Legal obligation") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="gdpr-conditional-4">
+                Legal obligation
+                <span id="gdpr-conditional-4" class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">
+                  The processing is necessary for the organisation to comply with the law (not including contractual obligations)
+                </span>
+              </label>
+            </div>
+            <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-gdpr-conditional-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Mobile phone number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+              </div>
+            </div> -->
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="gdpr-conditional-5" name="gdpr" type="checkbox" value="Vital interests" data-aria-controls="conditional-gdpr-conditional-5" {{ checked("gdpr", "Vital interests") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="gdpr-conditional-5">
+                Vital interests
+                <span id="gdpr-conditional-5" class="govuk-hint govuk-!-margin-bottom-0 govuk-!-font-size-14">
+                  The processing is necessary to protect someone’s life.
+                </span>
+              </label>
+            </div>
+            <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-gdpr-conditional-5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Mobile phone number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel">
+              </div>
+            </div> -->
+
+          </div>
+
+
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

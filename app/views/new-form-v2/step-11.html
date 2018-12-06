@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/new-form-v2/step-10">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form-v2/step-12" method="post">
+
+        <div class="govuk-form-group">
+          <span class="govuk-caption-xl">Step 8 of 17</span>
+          <h2 class="govuk-heading-l">Which data do you need?</h2>
+
+          <div style="display:none;" class="govuk-inset-text {{ checked("variables2", "School Census",  "Early Years Foundation", "Key Stage 1") }}">
+            You've already chosen options for this section, you can change them if you need to.
+          </div>
+
+          <h3 class="govuk-heading-m">Choose your dates</h3>
+
+          <p>The English school year generally runs from September to July of the following year. Most schools operate a three-term school year:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Autumn term - <strong>September to December</strong></li>
+            <li>Spring term - <strong>January to April</strong></li>
+            <li>Summer term - <strong>April to July</strong></li>
+          </ul>
+
+          <div class="govuk-checkboxes govuk-grid-column-one-third govuk-!-padding-left-0">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-1" name="dates" type="checkbox" value="2018" {{ checked("dates", "2018") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-1">
+                2018
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-2" name="dates" type="checkbox" value="2017" {{ checked("dates", "2017") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-2">
+                2017
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-3" name="dates" type="checkbox" value="2016" {{ checked("dates", "2016") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-3">
+                2016
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-4" name="dates" type="checkbox" value="2015" {{ checked("dates", "2015") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-4">
+                2015
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-5" name="dates" type="checkbox" value="2014" {{ checked("dates", "2014") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-5">
+                2014
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-6" name="dates" type="checkbox" value="2013" {{ checked("dates", "2013") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-6">
+                2013
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-7" name="dates" type="checkbox" value="2012" {{ checked("dates", "2012") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-7">
+                2012
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-8" name="dates" type="checkbox" value="2011" {{ checked("dates", "2011") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-8">
+                2011
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-9" name="dates" type="checkbox" value="2010" {{ checked("dates", "2010") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-9">
+                2010
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-10" name="dates" type="checkbox" value="2009" {{ checked("dates", "2009") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-10">
+                2009
+              </label>
+            </div>
+          </div>
+
+          <div class="govuk-checkboxes govuk-grid-column-one-third govuk-!-padding-left-0">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-11" name="dates" type="checkbox" value="2008" {{ checked("dates", "2008") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-11">
+                2008
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-12" name="dates" type="checkbox" value="2007" {{ checked("dates", "2007") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-12">
+                2007
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-13" name="dates" type="checkbox" value="2006" {{ checked("dates", "2006") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-13">
+                2006
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-14" name="dates" type="checkbox" value="2005" {{ checked("dates", "2005") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-14">
+                2005
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-15" name="dates" type="checkbox" value="2004" {{ checked("dates", "2004") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-15">
+                2004
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-16" name="dates" type="checkbox" value="2003" {{ checked("dates", "2003") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-16">
+                2003
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-17" name="dates" type="checkbox" value="2002" {{ checked("dates", "2002") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-17">
+                2002
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-18" name="dates" type="checkbox" value="2001" {{ checked("dates", "2001") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-18">
+                2001
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-19" name="dates" type="checkbox" value="2000" {{ checked("dates", "2000") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-19">
+                2000
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-20" name="dates" type="checkbox" value="1999" {{ checked("dates", "1999") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-20">
+                1999
+              </label>
+            </div>
+          </div>
+
+          <div class="govuk-checkboxes govuk-grid-column-one-third govuk-!-padding-left-0">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-21" name="dates" type="checkbox" value="1998" {{ checked("dates", "1998") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-21">
+                1998
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-22" name="dates" type="checkbox" value="1997" {{ checked("dates", "1997") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-22">
+                1997
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-23" name="dates" type="checkbox" value="1996" {{ checked("dates", "1996") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-23">
+                1996
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="dates-24" name="dates" type="checkbox" value="1995" {{ checked("dates", "1995") }}>
+              <label class="govuk-label govuk-checkboxes__label" for="dates-24">
+                1995
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-box-highlight incomplete">
+        <h2 class="govuk-heading-s">Apply for National Pupil Database data</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Applicant name:</strong>
+            <p class="govuk-!-margin-bottom-3">{{ data['applicant-name'] }}</p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Reference number:</strong>
+            <p class="govuk-!-margin-bottom-3"><strong class="govuk-tag">76547</strong></p>
+          </div>
+
+          <div class="govuk-grid-column-full">
+            <p class="govuk-!-margin-bottom-1"><strong>Email address:</strong>
+            <p class="govuk-!-margin-bottom-1">{{ data['applicant-email'] }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-border-wide alert-default govuk-!-padding-3">
+        <h2 class="govuk-heading-m">Need help?</h2>
+        <p class="govuk-!-margin-bottom-0 govuk-!-font-size-16">If you've got any questions you can contact us at <a href="#0">data.sharing@education.gov.uk</a></p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
