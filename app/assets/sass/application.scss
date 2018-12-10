@@ -11,6 +11,8 @@ $govuk-global-styles: true;
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/accessible-autocomplete.min";
+
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -958,4 +960,13 @@ nav {
   background: #8C8;
   border-radius: 5px;
   counter-increment: carousel-cell;
+}
+
+// Start page
+.start-categories {
+  min-height: 120px;
+
+  a {
+    font-weight: bold;
+  }
 }

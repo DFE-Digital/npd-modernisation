@@ -32,4 +32,39 @@ router.post('/new-form-v2/step-13', function (req, res) {
   }
 })
 
+// Search
+
+router.post('/filters/search', function (req, res) {
+
+  if (req.session.data['search'].includes('poverty'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('Poverty'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('deprivation'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('Deprivation'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('free school meals'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('socio-economic'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('socioeconomic'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('Socio-economic'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('Socioeconomic'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('IDACI'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('idaci'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('low'))  {
+    res.redirect('/filters/search')
+  } else if (req.session.data['search'].includes('income'))  {
+    res.redirect('/filters/search')
+  } else {
+    res.redirect('/filters/no-results')
+  }
+})
+
 module.exports = router
