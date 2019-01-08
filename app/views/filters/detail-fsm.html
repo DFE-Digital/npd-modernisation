@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/category">SES (Socio economic status)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/concept-list-fsm">FSM (Free school meals)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">FSM past 6 years</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        FSM past 6 years
+      </h1>
+
+      <p>Captures if a pupil has ever been recorded as eligible for free school meals on Census day in any termly or annual Census (including Alternative Provision Census and <abbr title="Pupil Referal Unit">PRU</abbr> Census where available) in the last 6 years up to the pupil’s current year (not including nursery).</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-full">
+        <form action="/filters/search" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Search
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Educational phases
+      </h2>
+
+      <p>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr>, <abbr>Post 16</abbr></p>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">
+        Collection points
+      </h2>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            All years census (School census)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          School Census data. This has information on pupils attending maintained schools. From Spring 2013/14, this includes local authority (LA) maintained PRUs and alternative provision (AP) academies, including AP Free Schools.
+        </div>
+      </details>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Awarding body data
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          An awarding body, in the United Kingdom, is an examination board which sets examinations and awards qualifications, such as GCSEs and A-levels.
+        </div>
+      </details>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">
+        Collected from
+      </h2>
+
+      <p>2009 - present</p>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">
+        Data type
+      </h2>
+
+      <p>Categorical (dichotomous)</p>
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-!-font-size-24">Data elements</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Title</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Values</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Data Package</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">EVERFSM_6</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2009/10 - present</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">EVERFSM_6_P</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2015/16 - present</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Read notes</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">FSM6_CLA</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2012/13 - 2014/15</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">FSM6_CLA</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2012/13 - present</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">FSM6CLA1A</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2014/15 - present</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row">FSM6</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2011/12 - present</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-full how-to-access govuk-!-padding-top-4">
+      <h2 class="govuk-heading-s">How can I access this data?</h2>
+
+      <p>To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
+      <p>If you are currently in the process of applying then you can copy and paste the Data titles into the application form.</p>
+    </div>
+  </div>
+
+
+
+</main>
+
+
+
+{% endblock %}

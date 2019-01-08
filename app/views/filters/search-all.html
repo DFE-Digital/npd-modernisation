@@ -16,7 +16,7 @@
   </p>
 </div>
 
-<a class="govuk-back-link" href="/filters/start">Back</a>
+<a class="govuk-back-link" href="/filters/home">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -36,6 +36,7 @@
           Search
         </label>
         <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+
       </div>
     </form>
     </div>
@@ -204,152 +205,124 @@
       </div>
 
       <nav role="navigation" aria-label="Pagination">
-        <div class="govuk-body govuk-!-font-size-14 pagination__summary govuk-!-margin-bottom-0">Showing 11 &ndash; 17 of 17 results</div>
+        <div class="govuk-body govuk-!-font-size-14 pagination__summary govuk-!-margin-bottom-0">Showing 1 &ndash; 6 of 6 results</div>
         <ul class="pagination govuk-!-margin-top-0">
-          <li class="pagination__item"><a class="pagination__link" href="/filters/search" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="/filters/search" aria-label="Page 1">1</a></li>
-          <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 2">2</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+          <!-- <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li> -->
+          <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 1, current page">1</a></li>
+          <!-- <li class="pagination__item"><a class="pagination__link" href="/filters/search-2" aria-label="Page 2">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="/filters/search-2" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li> -->
         </ul>
       </nav>
 
       <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">FSM</span>
+        <a href="/filters/detail-fsm" class="card__body">
+          <span class="govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-display-inline">FSM past 6 years</span>
           <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
         </a>
         <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Pupil eligible for free school meal.</p>
+          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Captures if a pupil has ever been recorded as eligible for free school meals in the last 6 years up to the pupil’s current year (not including nursery).</p>
 
-          <details class="govuk-details govuk-!-margin-bottom-0">
+          <!-- <details class="govuk-details govuk-!-margin-bottom-0">
             <summary class="govuk-details__summary govuk-!-font-size-14">
               <span class="govuk-details__summary-text">
-                More details
+                Overview
               </span>
             </summary>
             <div class="govuk-details__text govuk-!-padding-bottom-2">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Collection point:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Key stage 5</li>
+                    <li>School Census</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Collected from:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>20014/15</li>
+                    <li>2009 - present</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
+                    <li>Early years, KS1, KS2, KS3, KS4, KS5, Post 16</li>
                   </ul>
                 </div>
 
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data type:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Continuous</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data package:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>2</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Access:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Remote lab</li>
+                <div class="govuk-grid-column-full govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data elements:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
+                    <li>EVERFSM_6, EVERFSM_6_P, FSM6_CLA, FSM6CLA1A, FSM6</li>
                   </ul>
                 </div>
 
               </div>
             </div>
-          </details>
+          </details> -->
         </div>
       </div>
 
       <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">KS4_FSM</span>
+        <a href="/filters/detail-idaci" class="card__body">
+          <span class="govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-display-inline">IDACI rank</span>
           <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
         </a>
         <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Pupil eligible for free school meal (FSM) from KS4 file.</p>
+          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">IDACI rank derived from the pupil's postcode.</p>
 
-          <details class="govuk-details govuk-!-margin-bottom-0">
+          <!-- <details class="govuk-details govuk-!-margin-bottom-0">
             <summary class="govuk-details__summary govuk-!-font-size-14">
               <span class="govuk-details__summary-text">
-                More details
+                Overview
               </span>
             </summary>
             <div class="govuk-details__text govuk-!-padding-bottom-2">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Collection point:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Key stage 5</li>
+                    <li>School Census</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Collected from:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>2016/17</li>
+                    <li>2009 - present</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
+                    <li>Early years, KS1, KS2, KS3, KS4, KS5, Post 16</li>
                   </ul>
                 </div>
 
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data type:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Continuous</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data package:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>2</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Access:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Remote lab</li>
+                <div class="govuk-grid-column-full govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data elements:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
+                    <li>EVERFSM_6, EVERFSM_6_P, FSM6_CLA, FSM6CLA1A, FSM6</li>
                   </ul>
                 </div>
 
               </div>
             </div>
-          </details>
+          </details> -->
         </div>
       </div>
 
       <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">FSMEligibilityage15</span>
+        <a href="/filters/detail-fsm-3" class="card__body">
+          <span class="govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-display-inline">FSM past 3 years</span>
           <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
         </a>
         <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">FSM eligibility as recorded on PLASC/PRU/AP in the academic year according to the base_year the young person was 15 at the start of that academic year.</p>
+          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Captures if a pupil has ever been recorded as eligible for free school meals in the last 3 years up to the pupil’s current year (not including nursery).</p>
 
-          <details class="govuk-details govuk-!-margin-bottom-0">
+          <!-- <details class="govuk-details govuk-!-margin-bottom-0">
             <summary class="govuk-details__summary govuk-!-font-size-14">
               <span class="govuk-details__summary-text">
                 More details
@@ -360,21 +333,21 @@
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>YPMAD</li>
+                    <li>School Census</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>2016/17</li>
+                    <li>2009/10</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
+                    <li>Secondary, Post-16</li>
                   </ul>
                 </div>
 
@@ -401,19 +374,19 @@
 
               </div>
             </div>
-          </details>
+          </details> -->
         </div>
       </div>
 
       <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">SENStatusage15</span>
+        <a href="/filters/detail-idaci-score" class="card__body">
+          <span class="govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-display-inline">IDACI score</span>
           <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
         </a>
         <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">SEN status same sentiments for FSMeligibilityage 15 apply.</p>
+          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">IDACI score derived from the pupil's postcode.</p>
 
-          <details class="govuk-details govuk-!-margin-bottom-0">
+          <!-- <details class="govuk-details govuk-!-margin-bottom-0">
             <summary class="govuk-details__summary govuk-!-font-size-14">
               <span class="govuk-details__summary-text">
                 More details
@@ -424,149 +397,21 @@
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>YPMAD</li>
+                    <li>School Census</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>2016/17</li>
+                    <li>2009/10</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data type:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Text</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data package:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>4</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Access:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Remote lab</li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">PrimarySENtypeage15</span>
-          <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
-        </a>
-        <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Primary SENtype same sentiments as for FSMeligibilityage15 apply.</p>
-
-          <details class="govuk-details govuk-!-margin-bottom-0">
-            <summary class="govuk-details__summary govuk-!-font-size-14">
-              <span class="govuk-details__summary-text">
-                More details
-              </span>
-            </summary>
-            <div class="govuk-details__text govuk-!-padding-bottom-2">
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>YPMAD</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>2016/17</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data type:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Text</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data package:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>4</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Access:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
-                    <li>Remote lab</li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">SecondarySENtypeage15</span>
-          <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
-        </a>
-        <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Secondary SENtype same sentiments as for fsmeligibility age 15 apply.</p>
-
-          <details class="govuk-details govuk-!-margin-bottom-0">
-            <summary class="govuk-details__summary govuk-!-font-size-14">
-              <span class="govuk-details__summary-text">
-                More details
-              </span>
-            </summary>
-            <div class="govuk-details__text govuk-!-padding-bottom-2">
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>YPMAD</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>2016/17</li>
-                  </ul>
-                </div>
-
-                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
-                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
+                    <li>Secondary, Post-16</li>
                   </ul>
                 </div>
 
@@ -593,19 +438,19 @@
 
               </div>
             </div>
-          </details>
+          </details> -->
         </div>
       </div>
 
       <div class="card govuk-!-width-full">
-        <a href="/filters/detail" class="card__body">
-          <span class="govuk-heading-s govuk-!-margin-bottom-0 govuk-!-display-inline">EverFSMage10to15</span>
+        <a href="/filters/detail-fsm-all" class="card__body">
+          <span class="govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-display-inline">FSM</span>
           <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
         </a>
         <div class="card__footer govuk-body govuk-!-font-size-14">
-          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Recorded as FSM eligible in at least one School Census or PRU Census or AP Census from Age 10 up to Age 15 (by reference to base year)</p>
+          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">Captures if a pupil has ever been recorded as eligible for free school meals.</p>
 
-          <details class="govuk-details govuk-!-margin-bottom-0">
+          <!-- <details class="govuk-details govuk-!-margin-bottom-0">
             <summary class="govuk-details__summary govuk-!-font-size-14">
               <span class="govuk-details__summary-text">
                 More details
@@ -616,21 +461,21 @@
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>YPMAD</li>
+                    <li>School Census</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>2016/17</li>
+                    <li>2009/10</li>
                   </ul>
                 </div>
 
                 <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
                   <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
                   <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
-                    <li>Post-16</li>
+                    <li>Secondary, Post-16</li>
                   </ul>
                 </div>
 
@@ -657,18 +502,81 @@
 
               </div>
             </div>
-          </details>
+          </details> -->
         </div>
       </div>
 
+      <div class="card govuk-!-width-full">
+        <a href="/filters/detail-idaci-decile" class="card__body">
+          <span class="govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-0 govuk-!-display-inline">IDACI decile</span>
+          <span class="right govuk-!-display-inline"><strong class="govuk-tag">Socio-economic status</strong></span>
+        </a>
+        <div class="card__footer govuk-body govuk-!-font-size-14">
+          <p class="govuk-!-font-size-14 govuk-!-margin-bottom-2">IDACI decile rank derived from the pupil's postcode.</p>
+
+          <!-- <details class="govuk-details govuk-!-margin-bottom-0">
+            <summary class="govuk-details__summary govuk-!-font-size-14">
+              <span class="govuk-details__summary-text">
+                More details
+              </span>
+            </summary>
+            <div class="govuk-details__text govuk-!-padding-bottom-2">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Source:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
+                    <li>School Census</li>
+                  </ul>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Dates:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
+                    <li>2009/10</li>
+                  </ul>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Education phase:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-3">
+                    <li>Secondary, Post-16</li>
+                  </ul>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data type:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
+                    <li>Continuous</li>
+                  </ul>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Data package:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
+                    <li>4</li>
+                  </ul>
+                </div>
+
+                <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                  <p class="govuk-!-font-size-14 govuk-!-margin-bottom-0"><strong>Access:</strong></p>
+                  <ul class="govuk-list govuk-!-font-size-14 govuk-!-margin-bottom-0">
+                    <li>Remote lab</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </details> -->
+        </div>
+      </div>
 
       <nav role="navigation" aria-label="Pagination">
-        <div class="govuk-body govuk-!-font-size-14 pagination__summary govuk-!-margin-bottom-0">Showing 11 &ndash; 17 of 17 results</div>
+        <div class="govuk-body govuk-!-font-size-14 pagination__summary govuk-!-margin-bottom-0">Showing 1 &ndash; 6 of 6 results</div>
         <ul class="pagination govuk-!-margin-top-0">
-          <li class="pagination__item"><a class="pagination__link" href="/filters/search" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="/filters/search" aria-label="Page 1">1</a></li>
-          <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 2">2</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+          <!-- <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li> -->
+          <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 1, current page">1</a></li>
+          <!-- <li class="pagination__item"><a class="pagination__link" href="/filters/search-2" aria-label="Page 2">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="/filters/search-2" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li> -->
         </ul>
       </nav>
     </div>

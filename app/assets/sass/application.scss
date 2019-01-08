@@ -146,7 +146,7 @@ a.card__body {
   display: block;
   background-color: govuk-colour("grey-3");
   padding: 1em;
-  text-decoration: none;
+  text-decoration: underline;
 
   span {
     display: block;
@@ -974,5 +974,13 @@ nav {
 
   a {
     font-weight: bold;
+  }
+}
+
+.how-to-access {
+  background-color: govuk-colour("blue");
+
+  p, a, h2 {
+    color: white;
   }
 }
