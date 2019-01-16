@@ -22,10 +22,10 @@
       <a class="govuk-breadcrumbs__link" href="/filters/home">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/filters/category">SES (Socio economic status)</a>
+      <a class="govuk-breadcrumbs__link" href="/filters/category">Socio economic status (SES)</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/filters/concept-list-fsm">FSM (Free school meals)</a>
+      <a class="govuk-breadcrumbs__link" href="/filters/concept-list-fsm">Free school meals (FSM)</a>
     </li>
     <li class="govuk-breadcrumbs__list-item" aria-current="page">FSM past 6 years</li>
   </ol>
@@ -107,6 +107,12 @@
       </h2>
 
       <p>Categorical (dichotomous)</p>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">
+        Values
+      </h2>
+
+      <p>1/0 (true/false)</p>
     </div>
 
   </div>
@@ -114,58 +120,72 @@
 
   <div class="govuk-grid-row govuk-!-margin-top-6">
     <div class="govuk-grid-column-full">
-      <table class="govuk-table">
+      <table class="govuk-table govuk-!-font-size-16">
   <caption class="govuk-table__caption govuk-!-font-size-24">Data elements</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="col">Title</th>
+      <th class="govuk-table__header" scope="col">Name</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
       <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Values</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Data Package</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
       <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">EVERFSM_6</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">2009/10 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">EVERFSM_6_P</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">2015/16 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
       <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Read notes</a></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">FSM6_CLA</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">2012/13 - 2014/15</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">FSM6_CLA</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">2012/13 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">FSM6CLA1A</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">2014/15 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
     </tr>
     <tr class="govuk-table__row">
       <th class="govuk-table__header" scope="row">FSM6</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">2011/12 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
     </tr>
   </tbody>
@@ -175,7 +195,7 @@
 
   <div class="govuk-grid-row govuk-!-margin-top-6">
     <div class="govuk-grid-column-full how-to-access govuk-!-padding-top-4">
-      <h2 class="govuk-heading-s">How can I access this data?</h2>
+      <h2 class="govuk-heading-s">Accessing this data</h2>
 
       <p>To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
       <p>If you are currently in the process of applying then you can copy and paste the Data titles into the application form.</p>
