@@ -1,0 +1,1397 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/category-ethnicity">Ethnicity</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">
+      Ethnic code
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Ethnic code
+      </h1>
+
+      <p>The pupils ethnic code and/or type.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-full">
+        <form action="/filters/search" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Search
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Educational phases
+      </h2>
+
+      <p>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr>, <abbr>Post 16</abbr></p>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">
+        Collection points
+      </h2>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            All years census (School census)
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          School Census data. This has information on pupils attending maintained schools. From Spring 2013/14, this includes local authority (LA) maintained PRUs and alternative provision (AP) academies, including AP Free Schools.
+        </div>
+      </details>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">
+        Collected from
+      </h2>
+
+      <p>2002 - present</p>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-6">
+        Data type
+      </h2>
+
+      <p>Categorical (dichotomous)</p>
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">School census</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2002/03 -</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Alternate provision census</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2007/08 -</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Pupil referral unit census</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2009/2010 - 2012/2013</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Early years census</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2007/08 - </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Key stage 2</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WIRI</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WIRT</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WROM</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWBC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWBA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWAS</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AIND</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">APKN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">ABAN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BCRB</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BAFR</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">CHNE</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">OOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">UNCLA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWIRI</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWIRT</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWROM</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWBC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWBA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWAS</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAIND</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAPKN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMABAN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBCRB</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBAFR</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMCHNE</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMOOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMUNCLA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Key stage 3</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WIRI</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WIRT</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WROM</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWBC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWBA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWAS</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AIND</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">APKN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">ABAN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BCRB</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BAFR</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">CHNE</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">OOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">UNCLA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWIRI</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWIRT</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWROM</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWBC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWBA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWAS</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAIND</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAPKN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMABAN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBCRB</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBAFR</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMCHNE</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMOOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMUNCLA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Key stage 4</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">ETHNIC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">20014/15 - </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WIRI</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WIRT</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WROM</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">WOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWBC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWBA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MWAS</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">MOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AIND</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">APKN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">ABAN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">AOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BCRB</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BAFR</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">BOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">CHNE</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">OOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">UNCLA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWIRI</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWIRT</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWROM</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMWOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWBC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWBA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMWAS</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMMOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAIND</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAPKN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMABAN</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMAOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBCRB</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBAFR</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMBOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMCHNE</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMOOTH</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">FSMUNCLA</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2006/07- 2011/12</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Key stage 5</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">KS4_ETHNIC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2016/17 -</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Children in need</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">CIN_Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2008/09 only</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2009/10 -</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Looked after children</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">ETHNIC</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2005/06 -</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Absence</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2005/06 -</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Exclusions</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Ethnicity</th>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">2001/02 - 2004/05</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">D</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-full how-to-access govuk-!-padding-top-4">
+      <h2 class="govuk-heading-s">Accessing this data</h2>
+
+      <p>To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
+      <p>If you are currently in the process of applying then you can copy and paste the Data titles into the application form.</p>
+    </div>
+  </div>
+
+
+
+</main>
+
+
+
+{% endblock %}
