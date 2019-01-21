@@ -61,7 +61,7 @@ router.post('/filters/search', function (req, res) {
   } else if (req.session.data['search'].includes('IDACI'))  {
     res.redirect('/filters/search-idaci')
   } else if (req.session.data['search'].includes('idaci'))  {
-    res.redirect('/filters/search')
+    res.redirect('/filters/search-idaci')
   } else if (req.session.data['search'].includes('low'))  {
     res.redirect('/filters/search-idaci')
   } else if (req.session.data['search'].includes('income'))  {
