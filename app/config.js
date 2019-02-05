@@ -4,7 +4,11 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
+<<<<<<< HEAD
   serviceName: 'National Pupil Database (NPD)',
+=======
+  serviceName: 'Service name goes here',
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 
   // Default port that prototype runs on
   port: '3000',

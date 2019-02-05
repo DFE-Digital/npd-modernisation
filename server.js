@@ -3,7 +3,10 @@ const path = require('path')
 
 // NPM dependencies
 const bodyParser = require('body-parser')
+<<<<<<< HEAD
 const browserSync = require('browser-sync')
+=======
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 const dotenv = require('dotenv')
 const express = require('express')
 const nunjucks = require('nunjucks')
@@ -15,6 +18,10 @@ const cookieParser = require('cookie-parser')
 dotenv.config()
 
 // Local dependencies
+<<<<<<< HEAD
+=======
+const authentication = require('./lib/middleware/authentication/authentication.js')
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 const config = require('./app/config.js')
 const documentationRoutes = require('./docs/documentation_routes.js')
 const packageJson = require('./package.json')
@@ -51,6 +58,7 @@ documentationApp.use(handleCookies)
 
 // Set up configuration variables
 var releaseVersion = packageJson.version
+<<<<<<< HEAD
 var username = process.env.USERNAME
 var password = process.env.PASSWORD
 var env = process.env.NODE_ENV || 'development'
@@ -65,6 +73,15 @@ env = env.toLowerCase()
 useAuth = useAuth.toLowerCase()
 useHttps = useHttps.toLowerCase()
 useBrowserSync = useBrowserSync.toLowerCase()
+=======
+var env = (process.env.NODE_ENV || 'development').toLowerCase()
+var useAutoStoreData = process.env.USE_AUTO_STORE_DATA || config.useAutoStoreData
+var useCookieSessionStore = process.env.USE_COOKIE_SESSION_STORE || config.useCookieSessionStore
+var useHttps = process.env.USE_HTTPS || config.useHttps
+var gtmId = process.env.GOOGLE_TAG_MANAGER_TRACKING_ID
+
+useHttps = useHttps.toLowerCase()
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 
 var useDocumentation = (config.useDocumentation === 'true')
 
@@ -83,10 +100,15 @@ if (isSecure) {
   app.set('trust proxy', 1) // needed for secure cookies on heroku
 }
 
+<<<<<<< HEAD
 // Ask for username and password on production
 if (env === 'production' && useAuth === 'true') {
   app.use(utils.basicAuth(username, password))
 }
+=======
+// Authentication middleware
+app.use(authentication)
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 
 // Set up App
 var appViews = [
@@ -96,12 +118,28 @@ var appViews = [
   path.join(__dirname, '/lib/')
 ]
 
+<<<<<<< HEAD
 var nunjucksAppEnv = nunjucks.configure(appViews, {
   autoescape: true,
   express: app,
   noCache: true,
   watch: true
 })
+=======
+var nunjucksConfig = {
+  autoescape: true,
+  noCache: true,
+  watch: false // We are now setting this to `false` (it's by default false anyway) as having it set to `true` for production was making the tests hang
+}
+
+if (env === 'development') {
+  nunjucksConfig.watch = true
+}
+
+nunjucksConfig.express = app
+
+var nunjucksAppEnv = nunjucks.configure(appViews, nunjucksConfig)
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 
 // Add Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv)
@@ -125,12 +163,17 @@ if (useDocumentation) {
     path.join(__dirname, '/lib/')
   ]
 
+<<<<<<< HEAD
   var nunjucksDocumentationEnv = nunjucks.configure(documentationViews, {
     autoescape: true,
     express: documentationApp,
     noCache: true,
     watch: true
   })
+=======
+  nunjucksConfig.express = documentationApp
+  var nunjucksDocumentationEnv = nunjucks.configure(documentationViews, nunjucksConfig)
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
   // Nunjucks filters
   utils.addNunjucksFilters(nunjucksDocumentationEnv)
 
@@ -151,6 +194,7 @@ if (useV6) {
     path.join(__dirname, '/app/v6/views/'),
     path.join(__dirname, '/lib/v6') // for old unbranded template
   ]
+<<<<<<< HEAD
 
   var nunjucksV6Env = nunjucks.configure(v6Views, {
     autoescape: true,
@@ -158,6 +202,11 @@ if (useV6) {
     noCache: true,
     watch: true
   })
+=======
+  nunjucksConfig.express = v6App
+  var nunjucksV6Env = nunjucks.configure(v6Views, nunjucksConfig)
+
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
   // Nunjucks filters
   utils.addNunjucksFilters(nunjucksV6Env)
 
@@ -227,9 +276,15 @@ if (useAutoStoreData === 'true') {
 }
 
 // Clear all data in session if you open /prototype-admin/clear-data
+<<<<<<< HEAD
 app.get('/prototype-admin/clear-data', function (req, res) {
   req.session.data = {}
   res.render('prototype-admin/clear-data')
+=======
+app.post('/prototype-admin/clear-data', function (req, res) {
+  req.session.data = {}
+  res.render('prototype-admin/clear-data-success')
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 })
 
 // Redirect root to /docs when in promo mode.
@@ -350,6 +405,7 @@ app.use(function (err, req, res, next) {
 console.log('\nGOV.UK Prototype Kit v' + releaseVersion)
 console.log('\nNOTICE: the kit is for building prototypes, do not use it for production services.')
 
+<<<<<<< HEAD
 // Find a free port and start the server
 utils.findAvailablePort(app, function (port) {
   console.log('Listening on port ' + port + '   url: http://localhost:' + port)
@@ -371,4 +427,6 @@ utils.findAvailablePort(app, function (port) {
   }
 })
 
+=======
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 module.exports = app

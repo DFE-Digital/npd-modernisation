@@ -40,6 +40,7 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
+<<<<<<< HEAD
 {# TODO: Use the macro when data attributes can be passed to individual items: #}
 {# https://github.com/alphagov/govuk-frontend/issues/904 #}
 <header class="govuk-header " role="banner" data-module="header">
@@ -83,6 +84,35 @@
     </div>
   </div>
 </header>
+=======
+  {{ govukHeader({
+    serviceName: serviceName,
+    serviceUrl: "/",
+    navigation: [
+      {
+        href: "/docs/install",
+        text: "Install",
+        attributes: {
+          "data-install": "Install"
+        }
+      },
+      {
+        href: "/docs/tutorials-and-examples",
+        text: "Tutorials and examples",
+        attributes: {
+          "data-tutorials": "Tutorials and examples"
+        }
+      },
+      {
+        href: "/docs/about",
+        text: "About",
+        attributes: {
+          "data-about": "About"
+        }
+      }
+    ]
+  }) }}
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 {% endblock %}
 
 {% block footer %}
@@ -107,6 +137,13 @@
 {% endblock %}
 
 {% block bodyEnd %}
+<<<<<<< HEAD
   {% include "includes/scripts.html" %}
   <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+=======
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+>>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 {% endblock %}
