@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # 8.6.0
 
 Features:
@@ -68,7 +67,6 @@ New features:
 
 - [#600 Update GOV.UK Frontend to v2.1.0](https://github.com/alphagov/govuk-prototype-kit/pull/600)
 
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 # 8.0.0
 
 Breaking changes:

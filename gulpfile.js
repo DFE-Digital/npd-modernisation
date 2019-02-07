@@ -6,16 +6,6 @@
   its own file in `/gulp`. Any files in that directory
   get automatically required below.
   To add a new task, simply add a new task file that directory.
-<<<<<<< HEAD
-  `/gulp/tasks.js` specifies the default set of
-  tasks to run when you run `gulp`.
-*/
-
-const requireDir = require('require-dir')
-
-// Require all tasks in gulp/tasks, including subfolders
-requireDir('./gulp', {recurse: true})
-=======
 */
 
 const gulp = require('gulp')
@@ -50,4 +40,3 @@ gulp.task('default', gulp.series(
     'server'
   )
 ))
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37

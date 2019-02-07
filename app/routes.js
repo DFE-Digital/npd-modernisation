@@ -3,7 +3,6 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-<<<<<<< HEAD
 // Bundles
 router.post('/funnel/step-4', function (req, res) {
 
@@ -72,6 +71,5 @@ router.post('/filters/search', function (req, res) {
   }
 })
 
-=======
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
+
 module.exports = router

@@ -14,11 +14,7 @@ const config = require('./config.json')
 gulp.task('sass', function () {
   return gulp.src(config.paths.assets + '/sass/*.scss')
     .pipe(sourcemaps.init())
-<<<<<<< HEAD
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-=======
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
 })
@@ -26,11 +22,7 @@ gulp.task('sass', function () {
 gulp.task('sass-documentation', function () {
   return gulp.src(config.paths.docsAssets + '/sass/*.scss')
     .pipe(sourcemaps.init())
-<<<<<<< HEAD
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-=======
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
 })

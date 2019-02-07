@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-{% extends "layout.html" %}
 
-{% block pageTitle %}
-  Clear data
-{% endblock %}
-
-{% block content %}
-
-  <h1 class="govuk-heading-m">
-    Data cleared
-  </h1>
-
-  <p>
-    The session data has been cleared.
-  </p>
-
-  <p>
-    <a href="/">
-      Prototype home page
-    </a>
-  </p>
-=======
 
 {% extends "layout.html" %}
 
@@ -32,7 +10,7 @@
   {{ govukBackLink({
       "text": "Back",
       "href": "javascript: window.history.go(-1)"
-    }) 
+    })
   }}
 {% endblock %}
 
@@ -55,6 +33,5 @@
     </div>
   </div>
 </form>
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 
 {% endblock %}

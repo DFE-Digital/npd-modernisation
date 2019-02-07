@@ -5,17 +5,12 @@ $govuk-global-styles: true;
 @import "node_modules/govuk-frontend/all";
 
 // Patterns that aren't in Frontend
-<<<<<<< HEAD
-@import "patterns/check-your-answers";
-=======
 @import "patterns/step-by-step-navigation";
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
 @import "patterns/task-list";
 @import "patterns/related-items";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
-<<<<<<< HEAD
 @import "components/accessible-autocomplete.min";
 
 
@@ -25,6 +20,24 @@ abbr {
   cursor: help;
   text-decoration: none;
   border-bottom: 1px dashed black;
+}
+
+//tables
+
+.variable-description {
+  background: #f8f8f8;
+  padding: 0.5em;
+
+}
+
+a.help {
+  background-color: govuk-colour("blue");
+  border-radius: 20px;
+  padding: 3px 10px 2px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin-left: 8px;
 }
 
 // Alignment
@@ -989,7 +1002,5 @@ nav {
     color: white;
   }
 }
-=======
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
->>>>>>> cc8d92a2e8f42f0f36648db6414dec11c169bf37
