@@ -13,6 +13,11 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 @import "components/accessible-autocomplete.min";
 
+// Components for Find and Explore
+@import "components/tables";
+@import "components/tooltips";
+@import "components/categories";
+
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -21,108 +26,6 @@ abbr {
   text-decoration: none;
   border-bottom: 1px dashed black;
 }
-
-// tables
-
-.variable-description {
-  background: #f8f8f8;
-  padding: 1em 0.5em;
-  border-bottom: 1px solid $govuk-border-colour;
-}
-
-@include govuk-media-query($until: tablet) {
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  table tr {
-    display: block;
-  }
-
-  table td,
-  table th {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    text-align: right;
-  }
-
-  table td::before {
-    content: attr(data-label);
-    float: left;
-  }
-
-  .variable-description {
-    text-align: left;
-    margin: 0;
-    border-bottom: none;
-    margin-bottom: 2em !important;
-  }
-}
-
-// tooltips
-
-.tooltip {
-  position: relative;
-
-  a.help {
-    background-color: govuk-colour("blue");
-    border-radius: 20px;
-    padding: 3px 10px 0;
-    text-decoration: none;
-    color: white;
-    font-size: 19px;
-    margin-left: 8px;
-    position: relative;
-
-    &:focus + .tooltip-content,
-    &:hover + .tooltip-content {
-    	opacity: 1;
-      position: absolute;
-      //transform: translateY(-108px);
-    }
-  }
-
-  .tooltip-content {
-    opacity: 0;
-    border: 4px solid black;
-    padding: .5em;
-    background-color: white;
-    //transform: translateY(-104px);
-    transition: all .1s ease;
-    position: absolute;
-    pointer-events: none;
-    width: 250px;
-    z-index: 99;
-    text-align: left;
-  }
-
-  .tooltip-top-left {
-    bottom: 34px;
-    left: 0;
-  }
-
-  .tooltip-bottom-left {
-    top: 34px;
-    left: 0;
-  }
-
-  .tooltip-top-right {
-    bottom: 34px;
-    right: 0;
-  }
-
-}
-
-
-
-
 
 // Alignment
 
@@ -495,26 +398,7 @@ nav {
 }
 
 
-
-// Carousel
-
-.carousel-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
-}
-
 // Start page
-.start-categories {
-  min-height: 120px;
-
-  a {
-    font-weight: bold;
-  }
-}
 
 .how-to-access {
   background-color: govuk-colour("blue");

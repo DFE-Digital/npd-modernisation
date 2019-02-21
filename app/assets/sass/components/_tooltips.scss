@@ -1,0 +1,51 @@
+.tooltip {
+  position: relative;
+
+  a.help {
+    background-color: govuk-colour("blue");
+    border-radius: 20px;
+    padding: 3px 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    margin-left: 8px;
+    position: relative;
+
+    &:focus + .tooltip-content,
+    &:hover + .tooltip-content {
+    	opacity: 1;
+      position: absolute;
+      //transform: translateY(-108px);
+    }
+  }
+
+  .tooltip-content {
+    opacity: 0;
+    border: 4px solid black;
+    padding: .5em;
+    background-color: white;
+    //transform: translateY(-104px);
+    transition: all .1s ease;
+    position: absolute;
+    pointer-events: none;
+    width: 250px;
+    z-index: 99;
+    text-align: left;
+  }
+
+  .tooltip-top-left {
+    bottom: 34px;
+    left: 0;
+  }
+
+  .tooltip-bottom-left {
+    top: 34px;
+    left: 0;
+  }
+
+  .tooltip-top-right {
+    bottom: 34px;
+    right: 0;
+  }
+
+}

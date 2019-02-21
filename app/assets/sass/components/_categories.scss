@@ -1,0 +1,15 @@
+.start-categories {
+  height: 150px;
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+@include govuk-media-query($until: tablet) {
+  .start-categories {
+    height: 75px;
+  }
+}
