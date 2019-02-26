@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  How to apply for National Pupil Database Data
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  {% from "phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Organisations</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Department for Education</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">{% if serviceName %} {{ serviceName }} {% endif %}</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        How to apply for access to NPD data
+      </h1>
+
+      <div class="">
+        <p class="govuk-!-font-size-16">Published 25 September 2018 <br />
+          Last updated 5 February 2019 — <a href="">see all updates</a><br />
+          From: <a href="">Department for Education</a>
+      </div>
+
+      <div class="govuk-inset-text">
+        There's currently a 3 month lead time on processing applications
+      </div>
+
+      <p>We are working with the Office for National Statistics (ONS) to enable access to de-identified individual level data for research.</p>
+
+      <p>For most applications, Department for Education (DfE) data will now be provided though the <a href="">ONS Secure Research Service</a>.</p>
+
+      <p>Access to the Secure Research Service may not be suitable if your request meets one or more of the following conditions:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Data is being processed to fulfil an essential public task (the data used is essential to run education and children’s services)</li>
+        <li>You’re doing research funded by, commissioned by, or contracted to the DfE or other government departments and the Secure Research Service is not suitable</li>
+        <li>You have approval from DfE before 1 June 2018, with agreement you would receive an extract, and the Secure Research Service is not suitable</li>
+        <li>You want to re-use data already held by your requesting organisation and within the existing licence period</li>
+      </ul>
+
+      <h2 class="govuk-heading-l">The application process</h2>
+
+      <h2 class="govuk-heading-m">Prepare to apply</h2>
+
+      <p class="">You'll need to complete these steps before you can have access to the data.</p>
+
+      <ol class="govuk-list">
+        <li>
+          <a data-position="1.1" class="app-step-nav__link js-link" href="https://www.gov.uk/request-copy-criminal-record" target="_blank">Get a basic DBS check </a>
+        </li>
+        <li>
+          <a data-position="1.2" class="app-step-nav__link js-link" href="https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme" target="_blank">Register as an accredited researcher with the ONS </a>
+        </li>
+        <li>
+          <a data-position="1.3" class="app-step-nav__link js-link" href="https://www.ons.gov.uk/aboutus/whatwedo/paidservices/virtualmicrodatalaboratoryvml" target="_blank">Apply for access to the ONS Secure Research Service </a>
+        </li>
+      </ol>
+
+      <hr class="govuk-section-break govuk-section-break--l  govuk-section-break--visible ">
+
+      <h2 class="govuk-heading-m">Find out what information is available in the NPD</h2>
+
+      <p class="">You can use this to find out more about the types of data held within the NPD.</p>
+      <ul class="govuk-list">
+        <li>
+          <a data-position="1.2" class="app-step-nav__link js-link" href="/filters/step-1">Find variables and metadata</a>
+        </li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l  govuk-section-break--visible ">
+
+      <h2 class="govuk-heading-m">New or existing applications?</h2>
+
+      <p>If you have an application in process and have any questions, please email us at <a href="mailto:data.sharing@education.gov.uk">data.sharing@education.gov.uk</a> and we’ll get back to you as soon as possible.</p>
+
+      <p>When you are ready to make an application, please contact <a href="mailto:data.sharing@education.gov.uk">data.sharing@education.gov.uk</a> and we’ll:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>send you an <strong>application form</strong> and <strong>guidance</strong> to complete it – including the new  method for classifying data identification risk and sensitivity levels</li>
+        <li>help you through the Data Sharing Approval Panel (<abbr title="Data Sharing Approval Panel">DSAP</abbr>) approval process</li>
+        <li>provide the final agreement and declaration for you to sign</li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--l  govuk-section-break--visible ">
+
+      <h2 class="govuk-heading-m">Application review</h2>
+
+      <p class="">Your application will need to be reviewed by the DSAP panel before a decision can be made.</p>
+
+      <h3 class="govuk-heading-s">What is DSAP?</h3>
+      <p class="">DSAP is the Data Sharing Approval Panel and governs all requests for data across the DfE. The panel </p>
+
+      <hr class="govuk-section-break govuk-section-break--l  govuk-section-break--visible ">
+
+      <h2 class="govuk-heading-m">Application approved</h2>
+
+      <h3 class="govuk-heading-s">Application approved?</h3>
+      <p class="">You'll be sent an email detailing what to do next.</p>
+
+      <h2 class="govuk-heading-s">Accessing the data using the Secure Research Service</h2>
+
+      <p>Once you are an ONS approved researcher and your data application has been approved, there are 2 ways you can access DfE data for approved projects through the Secure Research Service. You can use:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Physical labs</strong> – you can book a session to access DfE data at 1 of 5 ONS locations across the UK
+          <li><strong>Remote access</strong> – once your organisation meets security standards and have organised connectivity with ONS, you can access data online using your own equipment subject to specified conditions</li>
+        </ul>
+      <p>For more details on how to become approved for remote access, please contact <a href="">research.support@ons.gov.uk</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--l  govuk-section-break--visible ">
+
+      <h3 class="govuk-heading-s">Application denied?</h3>
+      <p class="">If your application has been denied then you will be contacted to discuss the reasons why.</p>
+
+      <p>If you have any questions or queries regarding the data or the process of applying please get in touch with us at <a href="">data.sharing@education.gov.uk</a></p>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          More information
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li><a href="#">External shares</a></li>
+            <li><a href="#">Data protection: how we share pupil and workforce data</a></li>
+            <li><a href="#">Data collection and censuses for schools</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
