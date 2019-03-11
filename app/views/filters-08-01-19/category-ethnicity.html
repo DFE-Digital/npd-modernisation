@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters-21-01-19/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Ethnicity</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Ethnicity
+      </h1>
+
+      <p>Contains information relating to pupils and ethnicity.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-full">
+        <form action="/filters/search" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Search
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-8">
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="/filters-21-01-19/detail-ethnicity" class="govuk-body">Ethnic code</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The pupils ethnic code and/or type.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="#3" class="govuk-body">Ethnic group major</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Pupil's major ethnic group based on extended ethnicity code.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="#3" class="govuk-body">Ethnic group minor</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Pupil's minor ethnic group based on extended ethnicity code.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="#3" class="govuk-body">Ethnicity source</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Source of pupil's recorded ethnic code.</p>
+    </div>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+  <div class="govuk-grid-row">
+    <h3 class="govuk-grid-column-full govuk-heading-s">Related categories</h3>
+
+    <div class="govuk-grid-column-one-third start-categories">
+      <a href="#2" class="govuk-body govuk-!-font-size-16">Age</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Pupil ages (in years and months) at the start of the academic year</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third start-categories">
+      <a href="#2" class="govuk-body govuk-!-font-size-16">Absence & Exclusion</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Authorised and unauthorised absences by absence type, overall by academic year and broken down annually and by term.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third start-categories">
+      <a href="#2" class="govuk-body govuk-!-font-size-16">Attainment</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Attaintment details, multi-year discount flag, establishment and awarding body reference numbers</p>
+    </div>
+  </div>
+
+
+</main>
+
+<!-- <script type="text/javascript">
+      var searchterms = [
+        'Afghanistan'
+      ]
+</script>
+
+<script type="text/javascript">
+  var element = document.querySelector('#tt-default')
+  var id = 'autocomplete-default'
+  accessibleAutocomplete({
+    element: element,
+    id: id,
+    source: searchterms
+  })
+</script> -->
+
+
+{% endblock %}

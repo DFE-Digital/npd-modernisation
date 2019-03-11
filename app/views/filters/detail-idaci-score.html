@@ -39,70 +39,170 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        IDACI Score
+        IDACI score
       </h1>
 
       <p>Income deprivation affecting children indices (IDACI) score derived from the pupil's postcode.</p>
     </div>
 
     <div class="govuk-grid-column-one-third">
-      <div class="govuk-grid-column-full">
-        <form action="/filters/search" method="post" novalidate>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="search">
-            Search
-          </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+        <div class="govuk-grid-column-full how-to-access govuk-!-padding-top-4">
+          <h2 class="govuk-heading-s">Accessing this data</h2>
+
+          <p class="govuk-!-font-size-16">To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
+          <p class="govuk-!-font-size-16">You can use the button to copy the names of the data you will need.</p>
         </div>
-      </form>
+    </div>
+
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">
+        Information
+      </h2>
+
+      <h2 class="govuk-heading-s">
+        Source
+          <span class="tooltip">
+            <a href="#3" class="help" aria-describedby="source-tip" title="Help">?</a>
+            <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="source-tip">Details about where and how the data was collected.</span>
+          </span>
+      </h2>
+
+      <div class="govuk-tabs" data-module="tabs">
+        <h2 class="govuk-tabs__title">
+          Source
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#school-census">
+              School census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#ap-census">
+              Alternate provision census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#pru-census">
+              Pupil referal unit census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#ey-census">
+              Early years census
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="school-census">
+          <p>The School Census is a statutory data collection for all maintained (state-funded) schools in
+England. This includes nursery, primary, secondary, middle-deemed primary, middle-deemed
+secondary, local authority maintained special and non-maintained special schools, academies
+including free schools, studio schools and university technical colleges and city technology
+colleges</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="ap-census">
+          <p>Text and content</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="pru-census">
+          <p>Text and content</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="ey-census">
+          <p>Text and content</p>
+        </section>
       </div>
     </div>
 
   </div>
 
-  <div class="govuk-grid-row govuk-!-margin-top-9">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m">
-        Educational phases
-      </h2>
 
-      <p><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
-
-      <h2 class="govuk-heading-m govuk-!-margin-top-6">
-        Collection points
-      </h2>
-
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            All years census (School census)
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          School Census data. This has information on pupils attending maintained schools. From Spring 2013/14, this includes local authority (LA) maintained PRUs and alternative provision (AP) academies, including AP Free Schools.
-        </div>
-      </details>
-    </div>
+  <div class="govuk-grid-row govuk-!-margin-top-4">
 
     <div class="govuk-grid-column-one-third">
-      <h2 class="govuk-heading-m">
-        Collected from
-      </h2>
-
-      <p>2001 - present</p>
-
-      <h2 class="govuk-heading-m govuk-!-margin-top-6">
+      <h2 class="govuk-heading-s">
         Data type
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="data-tip" title="Help">?</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="data-tip">Dichotomous data has only two possible values when observed or measured. For example, true - false or male - female.</span>
+        </span>
       </h2>
 
       <p>Categorical (dichotomous)</p>
     </div>
 
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Derived from
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="derived-tip" title="Help">?</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="derived-tip">Is information derived from other sources. If so you may find that data useful.</span>
+        </span>
+      </h2>
+
+      -
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Number of records
+      </h2>
+
+      <p>195,400</p>
+    </div>
+
   </div>
 
+  <div class="govuk-grid-row govuk-!-margin-top-4">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Sensitivity
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="sensitivity-tip" title="Help">?</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="sensitivity-tip">Data is given a sensitivity scale. Items are rated from A to D with A being highly sensitive and D being low.</span>
+        </span>
+      </h2>
+
+      <p>E</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Identifiability
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="identifiability-tip" title="Help">?</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="identifiability-tip">Data is scored on identifiability scale from 1 to 5, the lower the number the higher the identifiability.</span>
+        </span>
+      </h2>
+
+      <p>4</p>
+    </div>
+
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
 
   <div class="govuk-grid-row govuk-!-margin-top-6">
+
     <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">
+        Variables
+      </h2>
+
       <table class="govuk-table govuk-!-font-size-16">
   <caption class="govuk-table__caption govuk-!-font-size-24">Data elements</caption>
   <thead class="govuk-table__head">
@@ -110,114 +210,117 @@
       <th class="govuk-table__header" scope="col">Name</th>
       <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
       <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Tier</th>
-      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Notes</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Collection term</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Educational phase</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Values
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="values-tip" title="Help">?</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-right" role="tooltip" id="values-tip">What are the values that are being captured.</span>
+        </span>
+      </th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_S</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2001/02 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <th data-label="Name" class="govuk-table__header" scope="row">IDACI_S</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">rank_[yy]</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2001 - 02 to present</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring, Summer, Autumn</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_S</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2009/10 - 2012/13</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">IDACI (Income Deprivation Affecting Children Indices) score derived from the pupil's postcode.</p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">IDACI_S</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">rank_[yy]</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2009 - 10 to 2012 - 13</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring, Summer, Autumn</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2006/07 - 2009/10</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Read notes</a></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">IDACI (Income Deprivation Affecting Children Indices) score derived from the pupil's postcode.</p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">KS3_IDACI</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">k3_idaci</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2006 - 07 to 2008 - 09</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">KS3_IDACI</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">k3_idaci</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2006/07 - 2007/08</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Deprivation indicator - IDACI score (as used in CVA).</p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">IDACI_Score</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2008 - 09</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring, Summer, Autumn</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_Score</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2008/2009 only</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Income Deprivation Affecting Children Indices. IDACI Score.</p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">IDACI_S_home</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2016 - 17 to present</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring, Summer, Autumn</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_S_home</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2016/17 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Income Deprivation Affecting Children Indices 2015. IDACI Score. Derived from home postcode of pupil</p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">IDACI_S_school</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2005 - 06 to 2015 - 16</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring, Summer, Autumn</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_S_school</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2016/17 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Income Deprivation Affecting Children Indices 2015. IDACI Score. Derived from school postcode.</p>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">IDACIscoreage15</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2016 - 17 to present</td>
+      <td data-label="Collection term" class="govuk-table__cell govuk-table__cell--numeric">Spring, Summer, Autumn</td>
+      <td data-label="Educational phase" class="govuk-table__cell govuk-table__cell--numeric"><abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">1/0</td>
     </tr>
     <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_S_10</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2005/06 - 2015/16</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+      <td class="" colspan="6">
+        <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">IDACI score as recorded on PLASC/PRU/AP in academic year when base year says they will be 15 at the start of it.</p>
+      </td>
     </tr>
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACI_S_15</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2014/15 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th class="govuk-table__header" scope="row">IDACIscoreage15</th>
-      <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2016/17 - present</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">E</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-    </tr>
+
   </tbody>
 </table>
-    </div>
-  </div>
-
-  <div class="govuk-grid-row govuk-!-margin-top-6">
-    <div class="govuk-grid-column-full how-to-access govuk-!-padding-top-4">
-      <h2 class="govuk-heading-s">Accessing this data</h2>
-
-      <p>To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
-      <p>If you are currently in the process of applying then you can copy and paste the Data titles into the application form.</p>
     </div>
   </div>
 
