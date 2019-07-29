@@ -74,12 +74,21 @@ abbr {
   a.help {
     background-color: govuk-colour("blue");
     border-radius: 20px;
-    padding: 3px 10px 0;
+    padding: 3px 12px 0;
     text-decoration: none;
     color: white;
     font-size: 19px;
     margin-left: 8px;
     position: relative;
+
+    span {
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden
+    }
 
     &:focus + .tooltip-content,
     &:hover + .tooltip-content {
@@ -470,28 +479,47 @@ nav {
 
 // Panels
 
-.panel-border-wide {
-    border-left-width: 10px;
-}
 .panel {
-  h2.govuk-heading-m {
-    margin-bottom: 0.6em;
-  }
+  box-sizing: border-box;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  padding: 0.7em;
+  margin-bottom: 0.78947em;
+}
+
+h2.govuk-heading-s {
+	font-size: 22px;
+	margin-bottom: 0.6em;
+	margin-top: 0.6em;
+}
+
+.panel-border-wide {
+  border-left-width: 10px;
 }
 
 .panel-border-wide.alert-default {
-  border-left: 10px solid govuk-colour("blue");
-  background-color: #eaf4f9;
+  border-color: #2b8cc4;
+  background-color: #dbeff9;
 }
 
 .panel-border-wide.alert-success {
   border-color: #28a197;
-  background-color: #eaf6f5;
+  background-color: #c6ece9;
 }
 
 .panel-border-wide.alert-error {
   border-color: #c42b2b;
-  background-color: #f9eaea;
+  background-color: #f3dede;
+}
+
+.govuk-panel--alert {
+  background: govuk-colour("red");
+  text-align: left;
+  padding: 10px;
+
+  .govuk-panel__body, h2 {
+    color: white;
+  }
 }
 
 
