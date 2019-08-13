@@ -4,12 +4,21 @@
   a.help {
     background-color: govuk-colour("blue");
     border-radius: 20px;
-    padding: 3px 10px 0;
+    padding: 3px 12px 0;
     text-decoration: none;
     color: white;
     font-size: 19px;
     margin-left: 8px;
     position: relative;
+
+    span {
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden
+    }
 
     &:focus + .tooltip-content,
     &:hover + .tooltip-content {

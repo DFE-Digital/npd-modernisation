@@ -4,6 +4,7 @@
   removes folders:
     - public
 */
+
 const del = require('del')
 const gulp = require('gulp')
 
