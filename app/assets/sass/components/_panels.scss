@@ -45,3 +45,8 @@ h2.govuk-heading-s {
     font-weight: bold;
   }
 }
+
+.govuk-panel--cta {
+  text-align: left;
+  background: govuk-colour("light-grey");
+}
