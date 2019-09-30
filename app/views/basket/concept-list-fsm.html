@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/category">Socio economic status (SES)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">Free school meals (FSM)</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Free school meals (FSM)
+      </h1>
+
+      <p>Information here about the types of data collected for FSM. Where is the data collected from and what can it be used for?</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-grid-column-full">
+        <form action="/filters/search" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="search">
+            Search
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-top-8">
+
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="/filters/detail-fsm-all" class="govuk-body">FSM </a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Captures if a pupil has ever been recorded as eligible for free school meals.</p>
+    </div>
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="/filters/detail-fsm" class="govuk-body">FSM past 6 years</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Captures if a pupil has ever been recorded as eligible for free school meals in the last 6 years up to the pupil’s current year (not including nursery).</p>
+    </div>
+
+    <div class="govuk-grid-column-one-half start-categories">
+      <a href="/filters/detail-fsm-3" class="govuk-body">FSM past 3 years</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Captures if a pupil has ever been recorded as eligible for free school meals in the last 3 years up to the pupil’s current year (not including nursery).</p>
+    </div>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+  <div class="govuk-grid-row">
+    <h3 class="govuk-grid-column-full govuk-heading-s">Related sub-categories</h3>
+
+    <div class="govuk-grid-column-one-third start-categories">
+      <a href="/filters/concept-list-idaci" class="govuk-body govuk-!-font-size-16">Income deprivation affecting children indices (IDACI)</a>
+      <p class="govuk-!-font-size-16 govuk-!-margin-top-1">IDACI is an index of deprivation used in the United Kingdom.</p>
+    </div>
+  </div>
+
+
+
+
+<!-- <script type="text/javascript">
+      var searchterms = [
+        'Afghanistan'
+      ]
+</script>
+
+<script type="text/javascript">
+  var element = document.querySelector('#tt-default')
+  var id = 'autocomplete-default'
+  accessibleAutocomplete({
+    element: element,
+    id: id,
+    source: searchterms
+  })
+</script> -->
+
+
+{% endblock %}

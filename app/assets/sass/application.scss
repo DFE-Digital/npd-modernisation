@@ -24,6 +24,8 @@ $govuk-global-styles: true;
 @import "components/checkboxes";
 @import "components/pagination";
 @import "components/panels";
+@import "components/npd-basket";
+@import "components/npd-modal";
 
 abbr {
   cursor: help;
@@ -135,7 +137,7 @@ abbr {
 
 // Start page
 .start-categories {
-  min-height: 120px;
+  min-height: 11em;
 
   a {
     font-weight: bold;

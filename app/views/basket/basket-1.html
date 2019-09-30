@@ -1,0 +1,478 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/category">Socio economic status (SES)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/concept-list-fsm">Free school meals (FSM)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">FSM past 6 years</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        FSM
+      </h1>
+
+      <p>Captures if a pupil has ever been recorded as eligible for free school meals on Census day in any termly or annual Census (including Alternative Provision Census and <abbr title="Pupil Referal Unit">PRU</abbr> Census where available) up to the pupil’s current year (not including nursery).</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third right">
+      <a class="npd-saved-data show-modal" href="">My metadata <span class="npd-counter"></span></a>
+    </div>
+
+    <!-- <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-full how-to-access">
+          <h2 class="govuk-heading-s">Accessing this data</h2>
+
+          <p class="govuk-!-font-size-16">To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
+          <p class="govuk-!-font-size-16">You can use the button to copy the names of the data you will need.</p>
+        </div>
+    </div> -->
+
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">
+        Information
+      </h2>
+
+      <h2 class="govuk-heading-s">
+        Source
+          <span class="tooltip">
+            <a href="#3" class="help" aria-describedby="source-tip" title="Information about the data source">i<span>nformation</a>
+            <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="source-tip">Details about where and how the data was collected.</span>
+          </span>
+      </h2>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Source
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#school-census">
+              School census
+            </a>
+          </li>
+          <!-- <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#ap-census">
+              Alternate provision census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#pru-census">
+              Pupil referal unit census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#ey-census">
+              Early years census
+            </a>
+          </li> -->
+        </ul>
+
+        <section class="govuk-tabs__panel" id="school-census">
+          <p>The School Census is a statutory data collection for all maintained (state-funded) schools in
+England. This includes nursery, primary, secondary, middle-deemed primary, middle-deemed
+secondary, local authority maintained special and non-maintained special schools, academies
+including free schools, studio schools and university technical colleges and city technology
+colleges</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="ap-census">
+          <p>Text and content</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="pru-census">
+          <p>Text and content</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="ey-census">
+          <p>Text and content</p>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-4">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Data type
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="data-tip" title="Informationabout data types">i<span>nformation</span></a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="data-tip">Dichotomous data has only two possible values when observed or measured. For example, true - false or male - female.</span>
+        </span>
+      </h2>
+
+      <p>Categorical (dichotomous)</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Derived from
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="derived-tip" title="Information about derived data">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="derived-tip">Is information derived from other sources. If so you may find that data useful.</span>
+        </span>
+      </h2>
+
+      -
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Number of records
+      </h2>
+
+      <p>100,100</p>
+    </div>
+
+  </div>
+
+  <!-- <div class="govuk-grid-row govuk-!-margin-top-4">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Sensitivity
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="sensitivity-tip" title="Help">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="sensitivity-tip">Data is given a sensitivity scale. Items are rated from A to D with A being highly sensitive and D being low.</span>
+        </span>
+      </h2>
+
+      <p>C</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Identification risk
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="identifiability-tip" title="Help">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="identifiability-tip">Data is scored on identifiability scale from 1 to 5, the lower the number the higher the identifiability.</span>
+        </span>
+      </h2>
+
+      <p>5</p>
+    </div>
+
+  </div> -->
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <form class="form" action="/basket/basket-1" method="post">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">
+        Variables
+      </h2>
+
+      <div class="govuk-inset-text">
+        If you are applying for access to NPD data from the DfE you can save any data elements you may need to add to your application form later.
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <button id="govuk-button" disabled="" aria-disabled="true" class="govuk-button right" data-module="govuk-button">
+        Add to my metadata
+      </button>
+    </div>
+
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table govuk-!-font-size-16">
+        <caption class="govuk-table__caption govuk-!-font-size-24">Data elements</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="selectAll" type="checkbox" value="all" onchange="checkAll(this)">
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity
+              <span class="tooltip">
+                <a href="#8" class="help" aria-describedby="sensitivity-tip" title="Information about data sensitivity">i<span>nformation</a>
+                <span class="visuallyhidden tooltip-content tooltip-top-right" role="tooltip" id="sensitivity-tip">Data is given a sensitivity scale. Items are rated from A to D with A being highly sensitive and D being low.</span>
+              </span>
+            </th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identification risk
+              <span class="tooltip">
+                <a href="#8" class="help" aria-describedby="identifiability-tip" title="Information about data identifiability">i<span>nformation</span></a>
+                <span class="visuallyhidden tooltip-content tooltip-top-right" role="tooltip" id="identifiability-tip">Data is scored on identifiability scale from 1 to 5, the lower the number the higher the identifiability.</span>
+              </span>
+            </th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col">Values</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="FSMeligible" {{ checked("averageScores", "FSMeligible") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">FSMeligible</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2009 - 10 to present</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Pupil recorded as eligible for Free School Meals on Census day. From 2012/13, set to 'true' if a pupil has an FSM period with a start date and end date blank or end date on or after census date which means they are FSM eligible on Census day.</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="EVERFSM_ALL"  {{ checked("averageScores", "EVERFSM_ALL") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">EVERFSM_ALL</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2009 - 10 to present</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Flag to indicate if pupil has ever been recorded as eligible for free school meals on Census day in any Spring Census up to the pupil's current year (not including nursery)</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="FSMeligibility" {{ checked("averageScores", "FSMeligibility") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">FSMeligibility</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2007 - 08 to 2014 - 15</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Pupil recorded as eligible for Free School Meals on Census day. From 2012/13, set to 'true' if a pupil has an FSM period with a start date and end date blank or end date on or after census date which means they are FSM eligible on Census day.</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="FSM_CLA" {{ checked("averageScores", "FSM_CLA") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">FSM_CLA</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2010 - 11 to 2011 - 12</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">The pupil is either eligible for free school meals or has been eligible for free school meals at some point in the last 6 years or has been looked after continuously for 6 months during the year  + aged 5-15</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="FSM" {{ checked("averageScores", "FSM") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">FSM</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2006 - 07 to present</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Is pupil known to be eligible for FSM?</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="KS3_FSM" {{ checked("averageScores", "KS3_FSM") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">KS3_FSM</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2011 - 12 to present</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Is pupil known to have been eligible for FSM on Census day in the last 6 years?</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="KS4_FSM" {{ checked("averageScores", "KS4_FSM") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">KS4_FSM</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2011 - 12 to present</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">Is pupil known to have been eligible for FSM on Census day in the last 6 years?</p>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" name="averageScores" type="checkbox" value="FSMEligibilityage15" {{ checked("averageScores", "FSMEligibilityage15") }}>
+                  <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+                </div>
+              </div>
+            </th>
+            <th data-label="Name" class="govuk-table__header" scope="row">FSMEligibilityage15</th>
+            <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2011 - 12 to present</td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="" colspan="7">
+              <p class="variable-description govuk-!-font-size-16 govuk-!-margin-bottom-0">FSM eligibility as recorded on PLASC/PRU/AP in the academic year according to the base_year the young person was 15 at the start of that academic year. </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+  </div>
+
+  <div class="npd-modal-overlay hidden">
+  <div class="npd-modal hidden" role="dialog" aria-labelledby="npd-modal-title" tabindex="-1">
+    <h2 class="govuk-heading-l" id="npd-modal-title">Your metadata</h2>
+
+    <div class="npd-modal-content" role="document">
+      <div class="govuk-grid-column-full how-to-access govuk-!-margin-bottom-4">
+        <h2 class="govuk-heading-s">Add this to your application</h2>
+
+        <p class="govuk-!-font-size-16">If you are <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">applying for access</a> to NPD data from the DfE you can copy and paste these titles into your application form.</p>
+      </div>
+
+      <h2 class="govuk-heading-s">Names</h2>
+
+      <ul class="npd-saved-items govuk-list" id="savedData">
+        {% for feature in data['averageScores'] %}
+          <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a>
+            <!-- <span class="right">
+              <a href="#0" class="npd-remove-data" onclick="delete req.session.data['averageScores'];">Remove</a>
+            </span> -->
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-row" id="copyButton">
+      <div class="govuk-grid-column-full">
+        <button class="govuk-button govuk-!-margin-bottom-1 right" data-module="govuk-button" onclick="copyToClipboard('#savedData')">
+          Copy all to clipboard
+        </button>
+      </div>
+    </div>
+
+    <button class="close-modal right">
+      <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M22.0909091,15.6563271 L31.1818182,24.7472362 C31.7272727,25.2926907 32,25.959357 32,26.7472362 C32,27.5351155 31.7272727,28.2320842 31.1818182,28.8381453 L29.1818182,30.8381453 C28.5757571,31.3835998 27.8787883,31.6563271 27.0909091,31.6563271 C26.3030298,31.6563271 25.6363636,31.3835998 25.0909091,30.8381453 L16,21.7472362 L6.90909091,30.8381453 C6.36363636,31.3835998 5.69697016,31.6563271 4.90909091,31.6563271 C4.12121166,31.6563271 3.42424289,31.3835998 2.81818182,30.8381453 L0.818181818,28.8381453 C0.272727273,28.2320842 0,27.5351155 0,26.7472362 C0,25.959357 0.272727273,25.2926907 0.818181818,24.7472362 L9.90909091,15.6563271 L0.818181818,6.56541802 C0.272727273,6.01996348 0,5.35329727 0,4.56541802 C0,3.77753877 0.272727273,3.08057 0.818181818,2.47450893 L2.81818182,0.474508932 C3.42424289,-0.0709456138 4.12121166,-0.343672886 4.90909091,-0.343672886 C5.69697016,-0.343672886 6.36363636,-0.0709456138 6.90909091,0.474508932 L16,9.56541802 L25.0909091,0.474508932 C25.6363636,-0.0709456138 26.3030298,-0.343672886 27.0909091,-0.343672886 C27.8787883,-0.343672886 28.5757571,-0.0709456138 29.1818182,0.474508932 L31.1818182,2.47450893 C31.7272727,3.08057 32,3.77753877 32,4.56541802 C32,5.35329727 31.7272727,6.01996348 31.1818182,6.56541802 L22.0909091,15.6563271 Z" id="" fill="#0B0C0C" fill-rule="nonzero"></path>
+          </g>
+      </svg>
+    </button>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

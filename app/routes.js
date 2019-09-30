@@ -34,40 +34,79 @@ router.post('/new-form-v2/step-13', function (req, res) {
 
 // Search
 
-router.post('/filters/search', function (req, res) {
+// router.post('/filters/search', function (req, res) {
+//
+//   if (req.session.data['search'].includes('poverty'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('Poverty'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('deprivation'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('Deprivation'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('free school meals'))  {
+//     res.redirect('/filters/search-fsm')
+//   } else if (req.session.data['search'].includes('fsm'))  {
+//     res.redirect('/filters/search-fsm')
+//   } else if (req.session.data['search'].includes('Free school meals'))  {
+//     res.redirect('/filters/search-fsm')
+//   } else if (req.session.data['search'].includes('socio-economic'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('socioeconomic'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('Socio-economic'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('Socioeconomic'))  {
+//     res.redirect('/filters/search-all')
+//   } else if (req.session.data['search'].includes('IDACI'))  {
+//     res.redirect('/filters/search-idaci')
+//   } else if (req.session.data['search'].includes('idaci'))  {
+//     res.redirect('/filters/search-idaci')
+//   } else if (req.session.data['search'].includes('low'))  {
+//     res.redirect('/filters/search-idaci')
+//   } else if (req.session.data['search'].includes('income'))  {
+//     res.redirect('/filters/search-idaci')
+//   } else {
+//     res.redirect('/filters/no-results')
+//   }
+// })
 
-  if (req.session.data['search'].includes('poverty'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('Poverty'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('deprivation'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('Deprivation'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('free school meals'))  {
-    res.redirect('/filters/search-fsm')
-  } else if (req.session.data['search'].includes('fsm'))  {
-    res.redirect('/filters/search-fsm')
-  } else if (req.session.data['search'].includes('Free school meals'))  {
-    res.redirect('/filters/search-fsm')
-  } else if (req.session.data['search'].includes('socio-economic'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('socioeconomic'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('Socio-economic'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('Socioeconomic'))  {
-    res.redirect('/filters/search-all')
-  } else if (req.session.data['search'].includes('IDACI'))  {
-    res.redirect('/filters/search-idaci')
-  } else if (req.session.data['search'].includes('idaci'))  {
-    res.redirect('/filters/search-idaci')
-  } else if (req.session.data['search'].includes('low'))  {
-    res.redirect('/filters/search-idaci')
-  } else if (req.session.data['search'].includes('income'))  {
-    res.redirect('/filters/search-idaci')
+router.post('/journey1/search', function (req, res) {
+
+  if (req.session.data['search'].includes('ks1'))  {
+    res.redirect('/journey1/search-ks1')
+  } else if (req.session.data['search'].includes('KS1_97-98_to_17-18.APS'))  {
+    res.redirect('/journey1/search-ks1')
+  } else if (req.session.data['search'].includes('science'))  {
+    res.redirect('/journey1/search-ks1')
+  } else if (req.session.data['search'].includes('attainment'))  {
+    res.redirect('/journey1/search-ks1')
+  } else if (req.session.data['search'].includes('ks4'))  {
+    res.redirect('/journey1/search-ks4')
+  } else if (req.session.data['search'].includes('gcse'))  {
+    res.redirect('/journey1/search-ks4')
+  } else if (req.session.data['search'].includes('equivalent'))  {
+    res.redirect('/journey1/search-ks4')
+  } else if (req.session.data['search'].includes('average'))  {
+    res.redirect('/journey1/search-all')
+  } else if (req.session.data['search'].includes('point'))  {
+    res.redirect('/journey1/search-all')
+  } else if (req.session.data['search'].includes('score'))  {
+    res.redirect('/journey1/search-all')
+  } else if (req.session.data['search'].includes('local'))  {
+    res.redirect('/journey1/search-lacode')
+  } else if (req.session.data['search'].includes('authority'))  {
+    res.redirect('/journey1/search-lacode')
+  } else if (req.session.data['search'].includes('code'))  {
+    res.redirect('/journey1/search-lacode')
+  } else if (req.session.data['search'].includes('establishment'))  {
+    res.redirect('/journey1/search-lacode')
+  } else if (req.session.data['search'].includes('pupil'))  {
+    res.redirect('/journey1/search-lacode')
+  } else if (req.session.data['search'].includes('postcode'))  {
+    res.redirect('/journey1/search-lacode')
   } else {
-    res.redirect('/filters/no-results')
+    res.redirect('/journey1/no-results')
   }
 })
 

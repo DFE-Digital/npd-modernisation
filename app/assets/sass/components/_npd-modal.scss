@@ -1,0 +1,50 @@
+.npd-modal-overlay {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.npd-modal {
+  position: relative;
+  z-index: 3;
+  top: 0;
+  background: govuk-colour("white");
+  margin: 2em auto 0 auto;
+  border: 2px solid govuk-colour("black");
+  padding: 1em;
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .close-modal {
+    background: none;
+    border: none;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    transform: scale(.5);
+    cursor: pointer;
+  }
+
+  .npd-copy-success {
+    border: 4px solid govuk-colour("yellow");
+    padding: .5em 1em;
+    clear: both;
+  }
+}

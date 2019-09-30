@@ -4,7 +4,33 @@
   border-bottom: 1px solid $govuk-border-colour;
 }
 
-@include govuk-media-query($until: tablet) {
+.govuk-table__header {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__item {
+  margin-top: -20px;
+}
+
+.govuk-checkboxes--small .govuk-checkboxes__label {
+  padding: 0;
+}
+
+table th:first-child {
+  word-break: break-all;
+  max-width: 400px;
+}
+
+.govuk-table__header--numeric {
+  white-space: nowrap;
+}
+
+.govuk-table__cell--numeric {
+  word-break: break-word;
+}
+
+@include govuk-media-query($until: desktop) {
   table thead {
     border: none;
     clip: rect(0 0 0 0);

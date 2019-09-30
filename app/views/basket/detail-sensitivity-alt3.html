@@ -1,0 +1,424 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/home">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/category">Socio economic status (SES)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/filters/concept-list-fsm">Free school meals (FSM)</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">FSM past 6 years</li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        FSM
+      </h1>
+
+      <p>Captures if a pupil has ever been recorded as eligible for free school meals on Census day in any termly or annual Census (including Alternative Provision Census and <abbr title="Pupil Referal Unit">PRU</abbr> Census where available) up to the pupil’s current year (not including nursery).</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <div class="govuk-grid-column-full how-to-access">
+          <h2 class="govuk-heading-s">Accessing this data</h2>
+
+          <p class="govuk-!-font-size-16">To view this data you will need to <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">apply for access via the DfE</a>.</p>
+          <p class="govuk-!-font-size-16">You can use the button to copy the names of the data you will need.</p>
+        </div>
+    </div>
+
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+
+  <div class="govuk-grid-row govuk-!-margin-top-9">
+
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">
+        Information
+      </h2>
+
+      <h2 class="govuk-heading-s">
+        Source
+          <span class="tooltip">
+            <a href="#3" class="help" aria-describedby="source-tip" title="Information about the data source">i<span>nformation</a>
+            <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="source-tip">Details about where and how the data was collected.</span>
+          </span>
+      </h2>
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Source
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#school-census">
+              School census
+            </a>
+          </li>
+          <!-- <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#ap-census">
+              Alternate provision census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#pru-census">
+              Pupil referal unit census
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#ey-census">
+              Early years census
+            </a>
+          </li> -->
+        </ul>
+
+        <section class="govuk-tabs__panel" id="school-census">
+          <p>The School Census is a statutory data collection for all maintained (state-funded) schools in
+England. This includes nursery, primary, secondary, middle-deemed primary, middle-deemed
+secondary, local authority maintained special and non-maintained special schools, academies
+including free schools, studio schools and university technical colleges and city technology
+colleges</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="ap-census">
+          <p>Text and content</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="pru-census">
+          <p>Text and content</p>
+        </section>
+
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="ey-census">
+          <p>Text and content</p>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-4">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Data type
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="data-tip" title="Informationabout data types">i<span>nformation</span></a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="data-tip">Dichotomous data has only two possible values when observed or measured. For example, true - false or male - female.</span>
+        </span>
+      </h2>
+
+      <p>Categorical (dichotomous)</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Derived from
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="derived-tip" title="Information about derived data">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="derived-tip">Is information derived from other sources. If so you may find that data useful.</span>
+        </span>
+      </h2>
+
+      -
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Number of records
+      </h2>
+
+      <p>100,100</p>
+    </div>
+
+  </div>
+
+  <!-- <div class="govuk-grid-row govuk-!-margin-top-4">
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Sensitivity
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="sensitivity-tip" title="Help">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="sensitivity-tip">Data is given a sensitivity scale. Items are rated from A to D with A being highly sensitive and D being low.</span>
+        </span>
+      </h2>
+
+      <p>C</p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">
+        Identifiability
+
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="identifiability-tip" title="Help">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="identifiability-tip">Data is scored on identifiability scale from 1 to 5, the lower the number the higher the identifiability.</span>
+        </span>
+      </h2>
+
+      <p>5</p>
+    </div>
+
+  </div> -->
+
+  <hr class="govuk-section-break govuk-section-break--xl  govuk-section-break--visible govuk-grid-column-full">
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">
+        Variables
+      </h2>
+
+      <table class="govuk-table govuk-!-font-size-16">
+  <caption class="govuk-table__caption govuk-!-font-size-24">Data elements</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Name</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="sensitivity-tip" title="Information about data sensitivity">i<span>nformation</a>
+          <span class="visuallyhidden tooltip-content tooltip-top-right" role="tooltip" id="sensitivity-tip">Data is given a sensitivity scale. Items are rated from A to D with A being highly sensitive and D being low.</span>
+        </span>
+      </th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability
+        <span class="tooltip">
+          <a href="#8" class="help" aria-describedby="identifiability-tip" title="Information about data identifiability">i<span>nformation</span></a>
+          <span class="visuallyhidden tooltip-content tooltip-top-right" role="tooltip" id="identifiability-tip">Data is scored on identifiability scale from 1 to 5, the lower the number the higher the identifiability.</span>
+        </span>
+      </th>
+      <th class="govuk-table__header govuk-table__header--numeric" scope="col">Values</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">FSMeligible</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2009 - 10 to present</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">Pupil recorded as eligible for Free School Meals on Census day. From 2012/13, set to 'true' if a pupil has an FSM period with a start date and end date blank or end date on or after census date which means they are FSM eligible on Census day.</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Spring</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">EVERFSM_ALL</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2009 - 10 to present</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">Flag to indicate if pupil has ever been recorded as eligible for free school meals on Census day in any Spring Census up to the pupil's current year (not including nursery)</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Spring</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">FSMeligibility</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2007 - 08 to 2014 - 15</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">Pupil recorded as eligible for Free School Meals on Census day. From 2012/13, set to 'true' if a pupil has an FSM period with a start date and end date blank or end date on or after census date which means they are FSM eligible on Census day.</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Spring</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">FSM_CLA</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2010 - 11 to 2011 - 12</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">3</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">The pupil is either eligible for free school meals or has been eligible for free school meals at some point in the last 6 years or has been looked after continuously for 6 months during the year  + aged 5-15</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Spring</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">FSM</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2006 - 07 to present</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">The pupil is either eligible for free school meals or has been eligible for free school meals at some point in the last 6 years or has been looked after continuously for 6 months during the year  + aged 5-15</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Spring</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">KS3_FSM</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2011 - 12 to present</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">Is pupil known to have been eligible for FSM on Census day in the last 6 years?</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Autumn</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">KS4_FSM</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2011 - 12 to present</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">Is pupil known to have been eligible for FSM on Census day in the last 6 years?</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Autumn</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th data-label="Name" class="govuk-table__header" scope="row">FSMEligibilityage15</th>
+      <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">-</td>
+      <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">2011 - 12 to present</td>
+      <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">C</td>
+      <td data-label="Identifiability" class="govuk-table__cell govuk-table__cell--numeric">5</td>
+      <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric"><a href="#0">Codeset</a></td>
+    </tr>
+    <tr class="govuk-table__row variable-description">
+      <td class="" colspan="6">
+        <div class="govuk-grid-column-full govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0">FSM eligibility as recorded on PLASC/PRU/AP in the academic year according to the base_year the young person was 15 at the start of that academic year.</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Collection term</strong></br>Spring</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half govuk-!-padding-top-2 govuk-!-padding-bottom-2">
+          <p class="govuk-!-font-size-16 govuk-!-margin-bottom-0"><strong>Educational phase</strong></br>Early years, <abbr title="Key stage 1">KS1</abbr>, <abbr title="Key stage 2">KS2</abbr>, <abbr title="Key stage 3">KS3</abbr>, <abbr>KS4</abbr>, <abbr>KS5</abbr></p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+
+
+
+
+
+
+
+{% endblock %}

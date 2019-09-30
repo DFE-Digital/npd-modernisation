@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/filters/home">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+  <h1 class="govuk-heading-xl govuk-!-width-two-thirds">
+    Find and explore data in the National Pupil Database
+  </h1>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+        <form action="/filters/search" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="search">
+            Search
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds govuk-results">
+      <p class="govuk-!-font-size-18 ">Sorry we couldn't find anything for <u><strong>{{ data['search'] }}</strong></u>, please try searching again</p>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+{% endblock %}

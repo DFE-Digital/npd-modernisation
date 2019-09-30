@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag ">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – we are improving how the metadata from the NPD Data Tables can be displayed and therefore the content might change. Your <a class="govuk-link" href="https://forms.gle/SzUbPugFPGoRWiX89">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/journey1/home">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+          Demographics
+      </li>
+</ol></div>
+{% endblock %}
+
+{% block content %}
+      <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Demographics
+    </h1>
+
+    <p>Information about pupils and their school including personal and family data, where they live, the school they go to and when they started there.  </p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+
+</div>
+
+
+<div class="govuk-grid-row">
+  <h3 class="govuk-grid-column-full govuk-heading-m">Sub-categories</h3>
+  <div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Specific pupil populations</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">If a pupil is in full-time employment, a boarder, gifted and talented, a part-time pupil, has parents in the services or is an asylum seeker. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Pupil reference numbers</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Includes unique pupil number, school unique reference number (URN), Ofsted URN, pupil index number, national centre number, census table ID and test serial number.   </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Pupil contact details</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The phone number of pupils. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Pupil name</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The name of pupils and where the information comes from. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">School information</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The type of school or institution, its description, whether the main language is English or Welsh and the school admissions policy. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">School registration details</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Includes pupil enrolment and early years registration, year groups and phases, time in education, early years funding, and school and census collection information. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Special educational needs</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The type of special educational need (SEN) including the learning difficulty or disability, and SEN provision and support. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Language</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The language a pupil speaks. Includes their first language, where English is not their first language and their minor and major language group. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="/journey1/location">Location and mobility</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Pupil and school address details including local authority, output area, constituency, how far the pupil travels to school and how they get there. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Socio-economic status</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Current and previous eligibility for free school meals and income deprivation affecting children index (IDACI) rank, score and decile by postcode.  </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Family</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">How many siblings a pupil has and the order they were born. Based on their address, and address and surname.</p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Ethnicity</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The ethnic code for pupils, where the information comes from and which of the 20 minor and 7 major ethnicity groups they belong to. </p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Gender</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">The gender of pupils and where the information comes from.</p>
+</div>
+<div class="govuk-grid-column-one-half start-categories">
+  <a class="govuk-body strong_link" href="#11">Age</a>
+  <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Pupil age including date, month and year of birth and age at the start of the academic year. </p>
+</div>
+
+</div>
+
+<div class="npd-modal-overlay hidden">
+<div class="npd-modal hidden" role="dialog" aria-labelledby="npd-modal-title" tabindex="-1">
+  <h2 class="govuk-heading-l" id="npd-modal-title">Your metadata</h2>
+
+  <div class="npd-modal-content" role="document">
+    <div class="govuk-grid-column-full how-to-access govuk-!-margin-bottom-4">
+      <h2 class="govuk-heading-s">Add this to your application</h2>
+
+      <p class="govuk-!-font-size-16">If you are <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">applying for access</a> to NPD data from the DfE you can copy and paste these titles into your application form.</p>
+    </div>
+
+    <h2 class="govuk-heading-s">Names</h2>
+
+    <ul class="npd-saved-items govuk-list" id="savedData">
+      {% for feature in data['ks1-average'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+      {% endfor %}
+      {% for feature in data['ks4-average'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+      {% endfor %}
+      {% for feature in data['lacode'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-row" id="copyButton">
+    <div class="govuk-grid-column-full">
+      <button class="govuk-button govuk-!-margin-bottom-1 right" data-module="govuk-button" onclick="copyToClipboard('#savedData')">
+        Copy all to clipboard
+      </button>
+    </div>
+  </div>
+
+  <button class="close-modal right">
+    <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M22.0909091,15.6563271 L31.1818182,24.7472362 C31.7272727,25.2926907 32,25.959357 32,26.7472362 C32,27.5351155 31.7272727,28.2320842 31.1818182,28.8381453 L29.1818182,30.8381453 C28.5757571,31.3835998 27.8787883,31.6563271 27.0909091,31.6563271 C26.3030298,31.6563271 25.6363636,31.3835998 25.0909091,30.8381453 L16,21.7472362 L6.90909091,30.8381453 C6.36363636,31.3835998 5.69697016,31.6563271 4.90909091,31.6563271 C4.12121166,31.6563271 3.42424289,31.3835998 2.81818182,30.8381453 L0.818181818,28.8381453 C0.272727273,28.2320842 0,27.5351155 0,26.7472362 C0,25.959357 0.272727273,25.2926907 0.818181818,24.7472362 L9.90909091,15.6563271 L0.818181818,6.56541802 C0.272727273,6.01996348 0,5.35329727 0,4.56541802 C0,3.77753877 0.272727273,3.08057 0.818181818,2.47450893 L2.81818182,0.474508932 C3.42424289,-0.0709456138 4.12121166,-0.343672886 4.90909091,-0.343672886 C5.69697016,-0.343672886 6.36363636,-0.0709456138 6.90909091,0.474508932 L16,9.56541802 L25.0909091,0.474508932 C25.6363636,-0.0709456138 26.3030298,-0.343672886 27.0909091,-0.343672886 C27.8787883,-0.343672886 28.5757571,-0.0709456138 29.1818182,0.474508932 L31.1818182,2.47450893 C31.7272727,3.08057 32,3.77753877 32,4.56541802 C32,5.35329727 31.7272727,6.01996348 31.1818182,6.56541802 L22.0909091,15.6563271 Z" id="" fill="#0B0C0C" fill-rule="nonzero"></path>
+        </g>
+    </svg>
+  </button>
+</div>
+</div>
+
+{% endblock %}
