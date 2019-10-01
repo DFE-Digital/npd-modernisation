@@ -75,24 +75,36 @@ router.post('/journey1/search', function (req, res) {
 
   if (req.session.data['search'].includes('ks1'))  {
     res.redirect('/journey1/search-ks1')
+  } else if (req.session.data['search'].includes('KS1'))  {
+    res.redirect('/journey1/search-ks1')
   } else if (req.session.data['search'].includes('KS1_97-98_to_17-18.APS'))  {
     res.redirect('/journey1/search-ks1')
   } else if (req.session.data['search'].includes('science'))  {
     res.redirect('/journey1/search-ks1')
   } else if (req.session.data['search'].includes('attainment'))  {
     res.redirect('/journey1/search-ks1')
-  } else if (req.session.data['search'].includes('ks4'))  {
+  } else if (req.session.data['search'].includes('KS4'))  {
+    res.redirect('/journey1/search-ks4')
+  }  else if (req.session.data['search'].includes('ks4'))  {
     res.redirect('/journey1/search-ks4')
   } else if (req.session.data['search'].includes('gcse'))  {
+    res.redirect('/journey1/search-ks4')
+  }  else if (req.session.data['search'].includes('GCSE'))  {
     res.redirect('/journey1/search-ks4')
   } else if (req.session.data['search'].includes('equivalent'))  {
     res.redirect('/journey1/search-ks4')
   } else if (req.session.data['search'].includes('average'))  {
     res.redirect('/journey1/search-all')
+  } else if (req.session.data['search'].includes('key stage'))  {
+    res.redirect('/journey1/search-all')
   } else if (req.session.data['search'].includes('point'))  {
     res.redirect('/journey1/search-all')
   } else if (req.session.data['search'].includes('score'))  {
     res.redirect('/journey1/search-all')
+  } else if (req.session.data['search'].includes('lea'))  {
+    res.redirect('/journey1/search-lacode')
+  } else if (req.session.data['search'].includes('LEA'))  {
+    res.redirect('/journey1/search-lacode')
   } else if (req.session.data['search'].includes('local'))  {
     res.redirect('/journey1/search-lacode')
   } else if (req.session.data['search'].includes('authority'))  {
