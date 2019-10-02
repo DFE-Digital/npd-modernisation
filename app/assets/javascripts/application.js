@@ -101,7 +101,7 @@ function copyToClipboard(element) {
   document.execCommand("copy");
   $temp.remove();
 
-  $('<div class="npd-copy-success govuk-!-margin-bottom-1 govuk-!-margin-top-2"><h2 class="govuk-heading-s">Items copied</h2><p class="govuk-!-font-size-16">Those data items are in your clipboard, head to your application and paste them into the Data section.</p> </div>').insertAfter('#copyButton').fadeIn(500).delay(5500).fadeOut(500);
+  $('<div class="npd-copy-success govuk-!-margin-bottom-1 govuk-!-margin-top-2"><h2 class="govuk-heading-s">Items copied</h2><p class="govuk-!-font-size-16">Those data items are in your clipboard, head to your application and paste them into the Data section.</p> </div>').insertAfter('#copyButton').delay(5000).fadeOut();
 
 }
 
