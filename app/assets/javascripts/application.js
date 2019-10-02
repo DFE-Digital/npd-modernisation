@@ -67,7 +67,6 @@ $(document).ready(function() {
         elem.hide();
         $('.npd-modal-overlay').hide();
         $('html').removeClass("noscroll");
-        $('.npd-copy-success').hide();
       };
     });
   };
@@ -89,13 +88,17 @@ $(document).ready(function() {
     $('.npd-modal').hide();
     $('.npd-modal-overlay').hide();
     $('html').removeClass("noscroll");
-    $('.npd-copy-success').hide();
   });
 
 
 });
 
 // Copy and paste
+
+$('.copy').click(function(e){
+    e.preventDefault();
+});
+
 function copyToClipboard(element) {
   var $temp = $("<input type='text'>");
   $("body").append($temp);
@@ -105,7 +108,12 @@ function copyToClipboard(element) {
 
   $('<div class="npd-copy-success govuk-!-margin-bottom-1 govuk-!-margin-top-2"><h2 class="govuk-heading-s">Items copied</h2><p class="govuk-!-font-size-16">Those data items are in your clipboard, head to your application and paste them into the Data section.</p> </div>')
   .insertAfter('#copyButton')
+  .fadeIn()
+  .delay(5000)
+  .fadeOut();
 }
+
+
 
 // Check all checkboxes
 function checkAll(ele) {
