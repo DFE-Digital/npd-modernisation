@@ -6,6 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 53;
 }
 
 .hidden {
@@ -22,7 +23,7 @@
 
 .npd-modal {
   position: relative;
-  z-index: 3;
+  z-index: 54;
   top: 0;
   background: govuk-colour("white");
   margin: 2em auto 0 auto;

@@ -30,6 +30,14 @@ table th:first-child {
   word-break: break-word;
 }
 
+table thead th {
+  position: sticky;
+  top: 55px;
+  background: #FFF;
+  border-bottom: 2px solid $govuk-border-colour;
+  z-index: 51;
+}
+
 @include govuk-media-query($until: desktop) {
   table thead {
     border: none;

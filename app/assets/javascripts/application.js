@@ -140,23 +140,28 @@ function checkAll(ele) {
      if ($(this).is(':checked')) {
 
          $('#govuk-button').removeAttr('disabled'); //enable input
+         $('#govuk-button-fixed').removeAttr('disabled');
 
      } else {
          $('#govuk-button').attr('disabled', true); //disable input
+         $('#govuk-button-fixed').attr('disabled', true);
      }
  });
 
 $('input[name="selectAll"]').click(function(){
      if($(this).is(":checked")) {
          $('#govuk-button').attr('disabled', false);
+         $('#govuk-button-fixed').attr('disabled', false);
      }
  });
 
  $(document).ready(function() {
     if ($('input').is(':checked')) {
         $('#govuk-button').attr('disabled', false); //enable input
+        $('#govuk-button-fixed').attr('disabled', false);
     } else {
         $('#govuk-button').attr('disabled', true); //disable input
+        $('#govuk-button-fixed').attr('disabled', true);
     }
 });
 
@@ -171,3 +176,14 @@ $('input[name="selectAll"]').click(function(){
          //Do stuff when clicked
      });
  });
+
+ // Metadata menu panel
+
+ $(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 600) {
+    $('.metadataMenu').fadeIn(100);
+  } else {
+    $('.metadataMenu').fadeOut(100);
+  }
+});

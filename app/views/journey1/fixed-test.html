@@ -1,0 +1,752 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag ">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – we are improving how the metadata from the NPD Data Tables can be displayed and therefore the content might change. Your <a class="govuk-link" href="https://forms.gle/SzUbPugFPGoRWiX89">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/journey1/home">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/journey1/demographics">Demographics</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/journey1/location">Location and mobility</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/journey1/local">Local authority</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/journey1/pupil">Pupil</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+          Local authority&nbsp;code
+      </li>
+</ol></div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Local authority&nbsp;code
+    </h1>
+
+    <p>LA number based on pupil postcode</p>
+  </div>
+
+    <div class="govuk-grid-column-one-third right">
+      <a class="npd-saved-data show-modal" href="">My metadata <span class="npd-counter"></span></a>
+    </div>
+
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-4">
+  <div class="govuk-grid-column-one-third">
+  <h2 class="govuk-heading-s">
+    Data Type
+    <span class="tooltip">
+  <a href="#data-type-tip" class="help" aria-describedby="data-type-tip" title="Help">
+    i<span>nformation about data type</span>
+  </a>
+  <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="data-type-tip">
+    Categorical variables contain a finite number of categories or distinct groups. For example, categorical predictors include gender, material type, and payment method.
+  </span>
+</span>
+
+  </h2>
+  <p>
+    Categorical
+  </p>
+</div>
+
+
+  <div class="govuk-grid-column-one-third">
+  <h2 class="govuk-heading-s">
+    Collected from
+    <span class="tooltip">
+  <a href="#earliest-collected-tip" class="help" aria-describedby="earliest-collected-tip" title="Help">
+    i<span>nformation about collected from</span>
+  </a>
+  <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="earliest-collected-tip">
+    The earliest academic year data was collected from.
+  </span>
+</span>
+
+  </h2>
+  <p>
+    2008 - 09
+  </p>
+</div>
+
+</div>
+<form class="form" action="/journey1/fixed-test" method="post">
+<div class="govuk-grid-row metadataMenu">
+  <div class="govuk-grid-column-two-thirds">
+    <button id="govuk-button-fixed" disabled="" aria-disabled="true" class="govuk-button govuk-!-margin-bottom-4" data-module="govuk-button">
+      Save to my metadata
+    </button>
+  </div>
+
+  <div class="govuk-grid-column-one-third right">
+    <a class="npd-saved-data show-modal" href="">My metadata <span class="npd-counter"></span></a>
+  </div>
+</div>
+
+
+<div class="govuk-grid-row govuk-!-margin-top-6">
+
+
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-l">
+        Variables
+      </h2>
+
+      <button id="govuk-button" disabled="" aria-disabled="true" class=" govuk-button" data-module="govuk-button">
+        Save to my metadata
+      </button>
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-inset-text">
+        You can use the checkboxes below to save any items you may want to add to your application
+      </div>
+    </div>
+
+  <div class="govuk-grid-column-full">
+    <table class="govuk-table govuk-!-font-size-16">
+      <caption class="govuk-table__caption govuk-!-font-size-24">Data elements</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">
+            <div class="govuk-checkboxes govuk-checkboxes--small fixed-checkbox">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" name="selectAll" type="checkbox" value="all" onchange="checkAll(this)">
+                <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+              </div>
+            </div>
+          </th>
+          <th data-label="Name" class="govuk-table__header" scope="col">Name</th>
+          <th data-label="Old name" class="govuk-table__header govuk-table__header--numeric" scope="col">Old name</th>
+          <th data-label="Date collected" class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+          <th data-label="Sensitivity" class="govuk-table__header govuk-table__header--numeric" scope="col">
+            Sensitivity
+            <span class="tooltip">
+              <a href="#sensitivity-tip" class="help" aria-describedby="sensitivity-tip" title="Help">
+                i<span>nformation about sensitivity</span>
+              </a>
+              <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="sensitivity-tip">
+                Data is given a sensitivity scale. Items are rated from A to E with A being highly sensitive and E being low.
+              </span>
+            </span>
+          </th>
+          <th data-label="Identification risk" class="govuk-table__header govuk-table__header--numeric" scope="col">
+            Identifiability
+            <span class="tooltip">
+              <a href="#identifiability-tip" class="help" aria-describedby="identifiability-tip" title="Help">
+                i<span>nformation about identifiability</span>
+              </a>
+              <span class="visuallyhidden tooltip-content tooltip-top-left" role="tooltip" id="identifiability-tip">
+                Data is scored on identifiability scale from 1 to 5, the lower the number the higher the identifiability.
+              </span>
+            </span>
+          </th>
+          <th data-label="Value" class="govuk-table__header govuk-table__header--numeric" scope="col">Values</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable1" {{ checked("lacode", "Variable1") }}>
+                <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+              </div>
+            </div>
+          </th>
+  <th data-label="Name" class="govuk-table__header" scope="row">
+    Variable1
+  </th>
+  <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+  </td>
+  <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+    2009 - 10
+    to
+    2012 - 13
+  </td>
+  <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+    E
+  </td>
+  <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+    5
+  </td>
+  <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+  </td>
+</tr>
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell" colspan="7">
+    <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+      LA number based on pupil postcode
+    </p>
+  </td>
+</tr>
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable2" {{ checked("lacode", "Variable2") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+  <th data-label="Name" class="govuk-table__header" scope="row">
+    Variable2
+  </th>
+  <td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+  </td>
+  <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+    2008 - 09
+    to
+    present
+  </td>
+  <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+    E
+  </td>
+  <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+    5
+  </td>
+  <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+  </td>
+</tr>
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell" colspan="7">
+    <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+      LA number based on pupil postcode
+    </p>
+  </td>
+</tr>
+
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable3" {{ checked("lacode", "Variable3") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable3
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2009 - 10
+to
+2012 - 13
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable4" {{ checked("lacode", "Variable4") }}>
+<label class="govuk-label govuk-checkboxes__label" for="all"></label>
+</div>
+</div>
+</th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable4
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2008 - 09
+to
+present
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable5" {{ checked("lacode", "Variable5") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable5
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2009 - 10
+to
+2012 - 13
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable6" {{ checked("lacode", "Variable6") }}>
+<label class="govuk-label govuk-checkboxes__label" for="all"></label>
+</div>
+</div>
+</th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable6
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2008 - 09
+to
+present
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable7" {{ checked("lacode", "Variable7") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable7
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2009 - 10
+to
+2012 - 13
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable8" {{ checked("lacode", "Variable8") }}>
+<label class="govuk-label govuk-checkboxes__label" for="all"></label>
+</div>
+</div>
+</th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable8
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2008 - 09
+to
+present
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable9" {{ checked("lacode", "Variable9") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable9
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2009 - 10
+to
+2012 - 13
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable10" {{ checked("lacode", "Variable10") }}>
+<label class="govuk-label govuk-checkboxes__label" for="all"></label>
+</div>
+</div>
+</th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable10
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2008 - 09
+to
+present
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable11" {{ checked("lacode", "Variable11") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable11
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2009 - 10
+to
+2012 - 13
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable12" {{ checked("lacode", "Variable12") }}>
+<label class="govuk-label govuk-checkboxes__label" for="all"></label>
+</div>
+</div>
+</th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable12
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2008 - 09
+to
+present
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+  <th class="govuk-table__header" scope="col">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable13" {{ checked("lacode", "Variable13") }}>
+        <label class="govuk-label govuk-checkboxes__label" for="all"></label>
+      </div>
+    </div>
+  </th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable13
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2009 - 10
+to
+2012 - 13
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" name="lacode" type="checkbox" value="Variable14" {{ checked("lacode", "Variable14") }}>
+<label class="govuk-label govuk-checkboxes__label" for="all"></label>
+</div>
+</div>
+</th>
+<th data-label="Name" class="govuk-table__header" scope="row">
+Variable14
+</th>
+<td data-label="Old name" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+<td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+2008 - 09
+to
+present
+</td>
+<td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+E
+</td>
+<td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+5
+</td>
+<td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
+
+</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell" colspan="7">
+<p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+LA number based on pupil postcode
+</p>
+</td>
+</tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="govuk-grid-column-full govuk-!-padding-0">
+  <div class="govuk-body-s govuk-!-margin-0 govuk-!-padding-bottom-0">
+    Can't find what you're looking for?
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLDp6pa7GOanfRW72C495z1JbAG1jYwZiGTn2yUYPGcMBwdA/viewform">
+      Click here to download the latest version of the Data Tables
+    </a>
+  </div>
+</div>
+
+<div class="npd-modal-overlay hidden">
+<div class="npd-modal hidden" role="dialog" aria-labelledby="npd-modal-title" tabindex="-1">
+  <h2 class="govuk-heading-l" id="npd-modal-title">Your metadata</h2>
+
+  <div class="npd-modal-content" role="document">
+    <div class="govuk-grid-column-full how-to-access govuk-!-margin-bottom-4">
+      <h2 class="govuk-heading-s">Add this to your application</h2>
+
+      <p class="govuk-!-font-size-16">If you are <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">applying for access</a> to NPD data from the DfE you can copy and paste these titles into your application form.</p>
+    </div>
+
+    <h2 class="govuk-heading-s">Names</h2>
+
+    <ul class="npd-saved-items govuk-list" id="savedData">
+      {% for feature in data['ks1-average'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+      {% endfor %}
+      {% for feature in data['ks4-average'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+      {% endfor %}
+      {% for feature in data['lacode'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-row" id="copyButton">
+    <div class="govuk-grid-column-full">
+      <button class="copy govuk-button govuk-!-margin-bottom-1 right" data-module="govuk-button" onclick="copyToClipboard('#savedData')">
+        Copy all to clipboard
+      </button>
+    </div>
+  </div>
+
+  <button class="close-modal right">
+    <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path d="M22.0909091,15.6563271 L31.1818182,24.7472362 C31.7272727,25.2926907 32,25.959357 32,26.7472362 C32,27.5351155 31.7272727,28.2320842 31.1818182,28.8381453 L29.1818182,30.8381453 C28.5757571,31.3835998 27.8787883,31.6563271 27.0909091,31.6563271 C26.3030298,31.6563271 25.6363636,31.3835998 25.0909091,30.8381453 L16,21.7472362 L6.90909091,30.8381453 C6.36363636,31.3835998 5.69697016,31.6563271 4.90909091,31.6563271 C4.12121166,31.6563271 3.42424289,31.3835998 2.81818182,30.8381453 L0.818181818,28.8381453 C0.272727273,28.2320842 0,27.5351155 0,26.7472362 C0,25.959357 0.272727273,25.2926907 0.818181818,24.7472362 L9.90909091,15.6563271 L0.818181818,6.56541802 C0.272727273,6.01996348 0,5.35329727 0,4.56541802 C0,3.77753877 0.272727273,3.08057 0.818181818,2.47450893 L2.81818182,0.474508932 C3.42424289,-0.0709456138 4.12121166,-0.343672886 4.90909091,-0.343672886 C5.69697016,-0.343672886 6.36363636,-0.0709456138 6.90909091,0.474508932 L16,9.56541802 L25.0909091,0.474508932 C25.6363636,-0.0709456138 26.3030298,-0.343672886 27.0909091,-0.343672886 C27.8787883,-0.343672886 28.5757571,-0.0709456138 29.1818182,0.474508932 L31.1818182,2.47450893 C31.7272727,3.08057 32,3.77753877 32,4.56541802 C32,5.35329727 31.7272727,6.01996348 31.1818182,6.56541802 L22.0909091,15.6563271 Z" id="" fill="#0B0C0C" fill-rule="nonzero"></path>
+        </g>
+    </svg>
+  </button>
+</div>
+</div>
+{% endblock %}
