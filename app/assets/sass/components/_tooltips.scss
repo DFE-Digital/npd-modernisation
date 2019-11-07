@@ -24,7 +24,6 @@
     &:hover + .tooltip-content {
     	opacity: 1;
       position: absolute;
-      //transform: translateY(-108px);
     }
   }
 
@@ -33,14 +32,13 @@
     border: 4px solid black;
     padding: .5em;
     background-color: white;
-    //transform: translateY(-104px);
-    transition: all .1s ease;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     width: 250px;
     z-index: 99;
     text-align: left;
     white-space: normal;
+    float: left;
   }
 
   .tooltip-top-left {

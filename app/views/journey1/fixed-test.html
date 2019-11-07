@@ -42,7 +42,15 @@
 {% block content %}
 
 <div class="govuk-grid-row">
+  <!-- <div class="govuk-grid-column-full govuk-!-margin-top-0 govuk-panel govuk-panel--alert">
+    <h2 class="govuk-heading-s govuk-!-margin-top-0">These data items might not be available for research purposes</h2>
+
+    <p class="govuk-panel__body govuk-!-font-size-16 govuk-!-margin-bottom">
+      The data in some or all of these variables has an <strong>identification risk of 1 or 2</strong>. As a researcher, this data is only available if you meet one or more of <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">4 exemptions</a> following a successful application.
+    </p>
+  </div> -->
   <div class="govuk-grid-column-two-thirds">
+
     <h1 class="govuk-heading-l">
       Local authority&nbsp;code
     </h1>
@@ -51,8 +59,12 @@
   </div>
 
     <div class="govuk-grid-column-one-third right">
-      <a class="npd-saved-data show-modal" href="">My metadata <span class="npd-counter"></span></a>
+      <a class="npd-saved-data show-modal govuk-!-margin-bottom-4" href="">My list <span class="npd-counter"></span></a>
     </div>
+
+
+
+
 
 </div>
 
@@ -96,15 +108,14 @@
 
 </div>
 <form class="form" action="/journey1/fixed-test" method="post">
-<div class="govuk-grid-row metadataMenu">
-  <div class="govuk-grid-column-two-thirds">
+
+<div class="metadataMenu">
     <button id="govuk-button-fixed" disabled="" aria-disabled="true" class="govuk-button govuk-!-margin-bottom-4" data-module="govuk-button">
-      Save to my metadata
+      Save to my list
     </button>
-  </div>
 
   <div class="govuk-grid-column-one-third right">
-    <a class="npd-saved-data show-modal" href="">My metadata <span class="npd-counter"></span></a>
+    <a class="npd-saved-data show-modal" href="">My list <span class="npd-counter"></span></a>
   </div>
 </div>
 
@@ -118,14 +129,14 @@
       </h2>
 
       <button id="govuk-button" disabled="" aria-disabled="true" class=" govuk-button" data-module="govuk-button">
-        Save to my metadata
+        Save to my list
       </button>
 
     </div>
 
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-inset-text">
-        You can use the checkboxes below to save any items you may want to add to your application
+        You can use the checkboxes below to save any items you may be interested in.
       </div>
     </div>
 

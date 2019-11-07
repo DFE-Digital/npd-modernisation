@@ -181,9 +181,11 @@ $('input[name="selectAll"]').click(function(){
 
  $(document).scroll(function() {
   var y = $(this).scrollTop();
-  if (y > 600) {
+  if (y > 540) {
     $('.metadataMenu').fadeIn(100);
   } else {
     $('.metadataMenu').fadeOut(100);
   }
 });
+
+// check tooltip position

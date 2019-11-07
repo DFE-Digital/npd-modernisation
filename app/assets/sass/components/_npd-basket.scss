@@ -1,3 +1,5 @@
+
+
 .metadataMenu {
   position: fixed;
   top: 0;
@@ -7,7 +9,16 @@
   padding: 10px 0 0 0;
   display: none;
   z-index: 50;
+  box-sizing: border-box;
 }
+
+@include govuk-media-query($until: desktop) {
+  .metadataMenu {
+    padding: 10px 30px 0 0
+  }
+}
+
+
 
 
 .npd-saved-data {
