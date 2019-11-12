@@ -45,5 +45,12 @@
 
 .saved {
   background: govuk-colour("orange");
-  color: govuk-colour("white");
+
+  &:visited {
+    color: white;
+  }
+
+  &:focus {
+    color: govuk-colour("black");
+  }
 }
