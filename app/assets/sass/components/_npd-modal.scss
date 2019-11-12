@@ -31,7 +31,9 @@
   padding: 1em;
   max-width: 700px;
   width: 100%;
+  max-height: 100vh;
   box-sizing: border-box;
+  overflow: scroll;
 
   .close-modal {
     background: none;

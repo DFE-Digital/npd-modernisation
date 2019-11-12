@@ -19,6 +19,11 @@
 }
 
 
+.npd-saved-items li {
+  clear: both;
+}
+
+
 
 
 .npd-saved-data {
@@ -36,4 +41,9 @@
     background: govuk-colour("green");
 
   }
+}
+
+.saved {
+  background: govuk-colour("yellow");
+  color: govuk-colour("black");
 }
