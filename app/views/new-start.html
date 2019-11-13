@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Pupil Database - Application
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/new-form/step-2" method="post">
+
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-xl">
+            Find and explore data in the National Pupil Database
+          </h1>
+
+          <p>Welcome to the Find and explore data in the National Pupil Database tool.</p>
+
+          <p>Anyone can use it to find what sorts of data the Department holds in the National Pupil Database (NPD).</p>
+
+          <p>The NPD is the Department’s store of data it has collected on education. It is collected at various points in the year, each distinct dataset covering an aspect of education and childcare, sometimes coming in from external organisations (exam bodies for example).</p>
+
+          <p>It allows the Department to inform policy and assess how it is performing. If you are a researcher who would like to apply to use data within the NPD, please <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">find the guidance here</a>.</p>
+
+          <h2 class="govuk-heading-m">How to use the tool</h2>
+
+          <p>There are two ways you can explore the type of data the NPD holds:</p>
+
+          <h3 class="govuk-heading-s">Browsing via categories</h3>
+
+          <p>We have arranged the data items (think of these as the actual bits of data we collect from educational establishments) into concepts. Each concept holds data items that have the same core value: so the concept <strong>‘Authorised absence due to study leave’</strong> contains all the data items we collect on that subject – 6 in total.</p>
+          <p>Each concept is itself placed in a hierarchy of categories – these are containers that help you browse, logically, to the concept you’re interested in. The top four categories are: Attainment, Demographics, Absence and Exclusion, and Children in need and children looked after. You can also find concepts using a simple text search. These methods should be particularly useful if you are new to the NPD.</p>
+
+          <h3 class="govuk-heading-s">Browsing via datasets</h3>
+
+          <p>You can also choose to view the data-items as we hold them in the NPD. This is as 23 lists of data items based on DFE collections – for example the School Census. This method might be more useful if you are an experienced user of the NPD.</p>
+
+          <h3 class="govuk-heading-s">Saving a list of favourite data items</h3>
+          <p>If you’d like to keep a list of the data items you are interested in you can use the ‘My List’ function by ticking data items you’d like to copy to your device’s temporary memory and selecting ‘Save to my list’.
+
+
+          <br>
+
+
+        </div>
+
+
+
+        <a href="/journey1/home" role="button" draggable="false" class="govuk-button govuk-button--start">
+          Start now
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
+
+      </form>
+
+      <!-- <div class="govuk-tabs govuk-!-margin-top-6" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#past-day">
+              More information
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-week">
+              Other ways to explore the data
+            </a>
+          </li>
+        </ul>
+
+        <section class="govuk-tabs__panel" id="past-day">
+          <p>Accredited researchers and third-party researchers can apply for access to data.</p>
+
+          <p>Data can be accessed through the Office for National Statistics’ <a href="">Secure Research Service</a>.</p>
+
+
+        </section>
+        <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+          <p>Download the <a href="">2018 version of the data table</a>.</p>
+
+          <p>Contact us for help at <a href="">data.sharing@education.gov.uk</a></p>
+          <p>Emails are monitored Monday to Friday, 9am to 5pm</p>
+
+
+
+        </section>
+      </div> -->
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+        <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Related content
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="#">
+                  An introduction to the National Pupil Database
+                </a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">
+                  Apply for National Pupil Database data
+                </a>
+              </li>
+              <li>
+                <a href="#" class="govuk-link">
+                  Become an ONS accredited researcher
+                </a>
+              </li>
+              <li>
+                <a href="#" class="govuk-link">
+                  Register to become an approved research centre
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+      </div>
+  </div>
+
+{% endblock %}
