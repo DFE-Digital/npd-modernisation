@@ -45,6 +45,7 @@
 
 .saved {
   background: govuk-colour("orange");
+  white-space: nowrap;
 
   &:visited {
     color: white;

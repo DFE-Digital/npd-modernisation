@@ -1,0 +1,30 @@
+.datasets {
+  background: govuk-colour("light-grey");
+
+  .dataset-block {
+    min-height: 10em;
+
+    a {
+      font-weight: bold;
+      display: inline-block;
+      height: 30px;
+    }
+  }
+
+  @include govuk-media-query($until: tablet) {
+    .dataset-block {
+      min-height: 7em;
+    }
+  }
+}
+
+.dataset-value {
+  font-size: 16px;
+  font-weight: normal;
+  color: govuk-colour("black");
+  display: inline-block;
+}
+
+.description-alert {
+  color: govuk-colour("red");
+}

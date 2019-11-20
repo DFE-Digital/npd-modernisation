@@ -21,11 +21,13 @@ $govuk-global-styles: true;
 @import "components/tables";
 @import "components/tooltips";
 @import "components/cards";
+@import "components/categories";
 @import "components/checkboxes";
 @import "components/pagination";
 @import "components/panels";
 @import "components/npd-basket";
 @import "components/npd-modal";
+@import "components/datasets";
 
 abbr {
   cursor: help;
@@ -132,14 +134,5 @@ abbr {
     display: inline-block;
     background: govuk-colour("mid-grey", $legacy: "grey-2");
     box-shadow: 3px -3px 0 #fff, 6px -6px 0 govuk-colour("mid-grey", $legacy: "grey-2");
-  }
-}
-
-// Start page
-.start-categories {
-  min-height: 11em;
-
-  a {
-    font-weight: bold;
   }
 }

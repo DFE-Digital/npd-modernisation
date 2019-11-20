@@ -1,7 +1,10 @@
+.categories {
+  position: sticky;
+  top: 0;
+}
+
 .start-categories {
-  height: 150px;
-  margin-bottom: 1em;
-  overflow: hidden;
+  min-height: 11em;
 
   a {
     font-weight: bold;
@@ -10,6 +13,6 @@
 
 @include govuk-media-query($until: tablet) {
   .start-categories {
-    height: 75px;
+    min-height: 7em;
   }
 }
