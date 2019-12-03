@@ -1,0 +1,299 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag ">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – we are improving how the metadata from the NPD Data Tables can be displayed and therefore the content might change. Your <a class="govuk-link" href="https://forms.gle/SzUbPugFPGoRWiX89">feedback</a> will help us to
+      improve it.
+    </span>
+  </p>
+</div>
+
+<a href="/export-csv/home-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <!-- <div class="govuk-grid-column-full govuk-!-margin-top-0 govuk-panel govuk-panel--alert">
+    <h2 class="govuk-heading-s govuk-!-margin-top-0">These data items might not be available for research purposes</h2>
+
+    <p class="govuk-panel__body govuk-!-font-size-16 govuk-!-margin-bottom">
+      The data in some or all of these variables has an <strong>identification risk of 1 or 2</strong>. As a researcher, this data is only available if you meet one or more of <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">4 exemptions</a> following a successful application.
+    </p>
+  </div> -->
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      My list
+    </h1>
+
+    <p>You can export these data items into a CSV file. If you’re <a href="#188">applying for access</a> to DfE data, please attach the file to an email along with your completed application form.</p>
+
+    <p>Please complete the <strong>‘Years required’</strong> field and then click <strong>‘Export to CSV’</strong>.</p>
+  </div>
+</div>
+
+
+<form class="form" action="/export-csv/list" method="post">
+
+  <div class="metadataMenu">
+    <button id="govuk-button-fixed" disabled="" aria-disabled="true" class="govuk-button govuk-!-margin-bottom-4" data-module="govuk-button">
+      Save to my list
+    </button>
+
+    <div class="govuk-grid-column-one-third right">
+      <a class="npd-saved-data show-modal" href="">My list <span class="npd-counter"></span></a>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+
+    <div class="govuk-grid-column-full">
+      <table class="govuk-table govuk-!-font-size-16 ">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th data-label="Name" class="govuk-table__header" scope="col">Name</th>
+            <th data-label="Dataset" class="govuk-table__header" scope="col">Dataset</th>
+            <th data-label="Date collected" class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
+            <th data-label="Sensitivity" class="govuk-table__header govuk-table__header--numeric" scope="col">
+              Sensitivity
+            </th>
+            <th data-label="Identification risk" class="govuk-table__header govuk-table__header--numeric" scope="col">
+              Identifiability
+            </th>
+            <th data-label="" class="govuk-table__header govuk-table__header--numeric" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th data-label="Name" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_EXAMYEAR_EN</a>
+            </th>
+            <th data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_95-96_to_17-18</a>
+            </th>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+              2004 - 05 to 2011 - 12
+            </td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+              E
+            </td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+              5
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric">
+              <a href="#302">remove</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" colspan="3">
+              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+                English examination year. Replaces <strong>k2_en</strong>.
+              </p>
+            </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric"  colspan="3">
+              <strong>Years required</strong>
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2004 - 05</option>
+                <option value="">2005 - 06</option>
+                <option value="">2006 - 07</option>
+                <option value="">2007 - 08</option>
+                <option value="">2008 - 09</option>
+                <option value="">2009 - 10</option>
+              </select>
+              to
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2005 - 06</option>
+                <option value="">2006 - 07</option>
+                <option value="">2007 - 08</option>
+                <option value="">2008 - 09</option>
+                <option value="">2009 - 10</option>
+                <option value="">2010 - 11</option>
+                <option value="">2011 - 12</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th data-label="Name" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_EXAMYEAR_RE</a>
+            </th>
+            <th data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_95-96_to_17-18</a>
+            </th>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+              2004 - 05 to present
+            </td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+              E
+            </td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+              5
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric">
+              <a href="#302">remove</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-width-one-half" colspan="3">
+              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+                Reading examination year.
+              </p>
+            </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric"  colspan="3">
+              <strong>Years required</strong>
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2004 - 05</option>
+                <option value="">2005 - 06</option>
+                <option value="">2006 - 07</option>
+                <option value="">2007 - 08</option>
+                <option value="">2008 - 09</option>
+                <option value="">2009 - 10</option>
+              </select>
+              to
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2005 - 06</option>
+                <option value="">2006 - 07</option>
+                <option value="">2007 - 08</option>
+                <option value="">2008 - 09</option>
+                <option value="">2009 - 10</option>
+                <option value="">2010 - 11</option>
+                <option value="">2011 - 12</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th data-label="Name" class="govuk-table__header" scope="row">
+              <a href="#324">EVERFSM_6_[term][yy]</a>
+            </th>
+            <th data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
+            </th>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+              2004 - 05 to present
+            </td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+              E
+            </td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+              5
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric">
+              <a href="#302">remove</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-width-one-half" colspan="3">
+              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+                Flag to indicate if pupil has ever been recorded as eligible for free school meals on Census day in any termly or annual Census (including Alternative Provision Census and PRU Census where available) in the last 6 years up to the pupil’s current year (not including nursery)
+              </p>
+            </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric"  colspan="3">
+              <strong>Years required</strong>
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2004 - 05</option>
+                <option value="">2005 - 06</option>
+                <option value="">2006 - 07</option>
+                <option value="">2007 - 08</option>
+                <option value="">2008 - 09</option>
+                <option value="">2009 - 10</option>
+              </select>
+              to
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2005 - 06</option>
+                <option value="">2006 - 07</option>
+                <option value="">2007 - 08</option>
+                <option value="">2008 - 09</option>
+                <option value="">2009 - 10</option>
+                <option value="">2010 - 11</option>
+                <option value="">2011 - 12</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th data-label="Name" class="govuk-table__header" scope="row">
+              <a href="#324">HomeLA_[term][yy]</a>
+            </th>
+            <th data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
+            </th>
+            <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
+              2010 - 11 to present
+            </td>
+            <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
+              E
+            </td>
+            <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
+              5
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric">
+              <a href="#302">remove</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-!-width-one-half" colspan="3">
+              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
+                LA number based on pupil postcode
+              </p>
+            </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric"  colspan="3">
+              <strong>Years required</strong>
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2010 - 11</option>
+                <option value="">2011 - 12</option>
+                <option value="">2012 - 13</option>
+                <option value="">2013 - 14</option>
+                <option value="">2014 - 15</option>
+                <option value="">2015 - 16</option>
+                <option value="">2016 - 17</option>
+                <option value="">2017 - 18</option>
+                <option value="">2018 - 19</option>
+              </select>
+              to
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+                <option value="-">-</option>
+                <option value="">2011 - 12</option>
+                <option value="">2012 - 13</option>
+                <option value="">2013 - 14</option>
+                <option value="">2014 - 15</option>
+                <option value="">2015 - 16</option>
+                <option value="">2016 - 17</option>
+                <option value="">2017 - 18</option>
+                <option value="">2018 - 19</option>
+              </select>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+      <div class="govuk-grid-row govuk-body">
+        <div class="govuk-grid-column-two-thirds">
+          <button class="govuk-button" onclick="exportTableToCSV('findandexplore.csv')">Export to CSV file</button> or <a href="#333">remove all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

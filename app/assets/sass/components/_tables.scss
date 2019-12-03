@@ -10,6 +10,10 @@
   vertical-align: middle;
 }
 
+td.govuk-table__cell {
+  vertical-align: middle;
+}
+
 .govuk-checkboxes--small .govuk-checkboxes__item {
   margin-top: -20px;
 }
@@ -29,6 +33,10 @@ table th:first-child {
 
 .govuk-table__cell--numeric {
   word-break: break-word;
+}
+
+.govuk-table__header {
+  white-space: nowrap;
 }
 
 table thead th {
@@ -55,6 +63,10 @@ table thead th {
     display: block;
   }
 
+  table th:first-child {
+    max-width: 100%;
+  }
+
   table td,
   table th {
     border-bottom: 1px solid #ddd;
@@ -62,7 +74,13 @@ table thead th {
     text-align: right;
   }
 
-  table td::before {
+  table a {
+    display: block;
+    text-align: right;
+  }
+
+  table td::before,
+  table th::before {
     content: attr(data-label);
     float: left;
   }
