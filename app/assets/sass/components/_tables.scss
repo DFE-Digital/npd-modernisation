@@ -47,6 +47,25 @@ table thead th {
   z-index: 51;
 }
 
+th:nth-child(n+6),
+td:nth-child(n+6) {
+  display: none;
+}
+
+.list2 {
+
+  th:nth-child(n+5),
+  td:nth-child(n+5) {
+    display: none;
+  }
+
+  select {
+    width: 90px;
+  }
+}
+
+
+
 @include govuk-media-query($until: desktop) {
   table thead {
     border: none;

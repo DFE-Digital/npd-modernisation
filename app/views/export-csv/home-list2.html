@@ -1,0 +1,261 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+NPD search and filter
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag ">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – we are improving how the metadata from the NPD Data Tables can be displayed and therefore the content might change. Your <a class="govuk-link" href="https://forms.gle/SzUbPugFPGoRWiX89">feedback</a> will help us to
+      improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Find and explore data in the National Pupil Database</h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third right">
+      <a class="npd-saved-data" href="/export-csv/list2">My list <span class="npd-counter-new">4</span></a>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="/journey1/search" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="search">
+            Search
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="search" type="text" value=""><button type="submit" class="govuk-button govuk-button-search">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-top-4 datasets">
+      <h3 class="govuk-grid-column-full govuk-heading-m">Datasets</h3>
+
+      <h4 class="govuk-grid-column-full govuk-heading-s">Census information</h4>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Alternative Provision Census <span class="govuk-body dataset-value">(65)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Alternative Provision census data on children in Alternative Provision i.e. a school not maintained by an LA but which the authority is paying full tuition fees for.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Early Years Census <span class="govuk-body dataset-value">(132)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Early years census data. This has information on children attending any private, voluntary and independent (PVI) sector nursery with one or more children receiving funding from the Department.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">School Census <span class="govuk-body dataset-value">(123)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">School Census data for all pupils attending maintained schools. Collected from Spring 2013/14, this includes local authority (LA) maintained PRUs and alternative provision (AP) academies, including AP Free Schools.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Pupil Referral Unit Census <span class="govuk-body dataset-value">(60)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Pupil Referral Unit census data. This has information on children attending local authority (LA) maintained PRUs and alternative provision (AP) academies, including AP Free Schools. </p>
+      </div>
+
+      <h4 class="govuk-grid-column-full govuk-heading-s">Absence and Exclusions</h4>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Absence <span class="govuk-body dataset-value">(213)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on pupil absences derived from the termly School Census.
+</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Exclusions 2001-02 to 2004-05 <span class="govuk-body dataset-value">(20)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Information on all recorded authorised and unauthorised absence and exclusion. Includes reasons, dates and the amount of time missed in sessions. </p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Exclusions 2005-06 onwards <span class="govuk-body dataset-value">(91)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on pupil exclusions as collected in the termly School Census (new format).</p>
+      </div>
+
+      <h4 class="govuk-grid-column-full govuk-heading-s">Childrens services</h4>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Children in Need <span class="govuk-body dataset-value">(110)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information covering all children who are referred to children’s social care services.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Children Looked After <span class="govuk-body dataset-value">(30)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on children looked after by local authorities in England.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Independent Specialist Providers <span class="govuk-body dataset-value">(86)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on Independent Specialist Providers.</p>
+      </div>
+
+      <h4 class="govuk-grid-column-full govuk-heading-s">Educational stages</h4>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Early Years Foundation Stage Profile <span class="govuk-body dataset-value">(180)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Early Years Foundation Stage Profile data of children in the final year of the Foundation Stage (Reception year).</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Key Stage 1 <span class="govuk-body dataset-value">(127)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Key stage 1 attainment data of learners by the end of year 2 of schooling.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="/dataset-view/detail">Key Stage 2 <span class="govuk-body dataset-value">(511)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Key stage 2 attainment data of learners by the end of year 6 of schooling.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Key Stage 3 <span class="govuk-body dataset-value">(290)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Key stage 3 attainment data of learners by the end of year 9 of schooling.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Key Stage 4 <span class="govuk-body dataset-value">(1311)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Key stage 4 attainment data (all methodologies) of learners by the end of year 11 of schooling.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Key Stage 5 <span class="govuk-body dataset-value">(290)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Key stage 5 attainment data of post-16 learners in school sixth forms and FE colleges.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Post-16 Learning Aims <span class="govuk-body dataset-value">(31)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on post-16 learning aims as collected in the School Census.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Phonics <span class="govuk-body dataset-value">(36)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Phonics Screening data of learners by the end year 1 of schooling.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Year 7 tests <span class="govuk-body dataset-value">(68)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Year 7 progress tests data of learners by the end of year 7 of schooling.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Young Person’s Matched Administrative Dataset <span class="govuk-body dataset-value">(304)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on level of achievement at age 19</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">National Client Caseload Information <span class="govuk-body dataset-value">(90)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information from the National Client Caseload Information System on employment destinations.</p>
+      </div>
+
+      <h4 class="govuk-grid-column-full govuk-heading-s">Childrens services</h4>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">AP Pupil Addresses <span class="govuk-body dataset-value">(16)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on pupil addresses as collected in the Alternative Provision Census.</p>
+      </div>
+
+      <div class="govuk-grid-column-one-half dataset-block">
+        <a class="govuk-body strong_link" href="#11">Pupil Addresses <span class="govuk-body dataset-value">(15)</span></a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">This has information on pupil addresses as collected in the School Census.</p>
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third govuk-!-padding-top-4 categories">
+      <h3 class="govuk-grid-column-full govuk-heading-m">Categories</h3>
+
+      <div class="govuk-grid-column-full start-categories">
+        <a class="govuk-body strong_link" href="#11">Absence and exclusion</a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Information on all recorded authorised and unauthorised absence and exclusion. Includes reasons, dates and the amount of time missed in sessions. </p>
+      </div>
+      <div class="govuk-grid-column-full start-categories">
+        <a class="govuk-body strong_link" href="/journey1/attainment">Attainment</a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Information on pupil performance including school and exam registration, foundation stage profiles, value-added calculations, prior attainment, predicted scores, exam results and pupil
+          inclusion.</p>
+      </div>
+      <div class="govuk-grid-column-full start-categories">
+        <a class="govuk-body strong_link" href="/journey1/demographics">Demographics</a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Information about pupils and their school including personal and family data, where they live, the school they go to and when they started there. </p>
+      </div>
+      <div class="govuk-grid-column-full start-categories">
+        <a class="govuk-body strong_link" href="#11">Childrens services</a>
+        <p class="govuk-!-font-size-16 govuk-!-margin-top-1">Information on children in need (CIN) referred to children's services and children looked after (CLA) who’re in education and looked after by local authorities. </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="npd-modal-overlay hidden">
+  <div class="npd-modal hidden" role="dialog" aria-labelledby="npd-modal-title" tabindex="-1">
+    <h2 class="govuk-heading-l" id="npd-modal-title">Your metadata</h2>
+
+    <div class="npd-modal-content" role="document">
+      <div class="govuk-grid-column-full how-to-access govuk-!-margin-bottom-4">
+        <h2 class="govuk-heading-s">Add this to your application</h2>
+
+        <p class="govuk-!-font-size-16">If you are <a href="https://www.gov.uk/guidance/how-to-access-department-for-education-dfe-data-extracts">applying for access</a> to NPD data from the DfE you can copy and paste these titles into your
+          application form.</p>
+      </div>
+
+      <h2 class="govuk-heading-s">Names</h2>
+
+      <ul class="npd-saved-items govuk-list" id="savedData">
+        {% for feature in data['ks1-average'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+        {% endfor %}
+        {% for feature in data['ks4-average'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+        {% endfor %}
+        {% for feature in data['lacode'] %}
+        <li class="govuk-!-font-size-16"><a href="">{{ feature }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-row" id="copyButton">
+      <div class="govuk-grid-column-full">
+        <button class="govuk-button govuk-!-margin-bottom-1 right" data-module="govuk-button" onclick="copyToClipboard('#savedData')">
+          Copy all to clipboard
+        </button>
+      </div>
+    </div>
+
+    <button class="close-modal right">
+      <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path
+            d="M22.0909091,15.6563271 L31.1818182,24.7472362 C31.7272727,25.2926907 32,25.959357 32,26.7472362 C32,27.5351155 31.7272727,28.2320842 31.1818182,28.8381453 L29.1818182,30.8381453 C28.5757571,31.3835998 27.8787883,31.6563271 27.0909091,31.6563271 C26.3030298,31.6563271 25.6363636,31.3835998 25.0909091,30.8381453 L16,21.7472362 L6.90909091,30.8381453 C6.36363636,31.3835998 5.69697016,31.6563271 4.90909091,31.6563271 C4.12121166,31.6563271 3.42424289,31.3835998 2.81818182,30.8381453 L0.818181818,28.8381453 C0.272727273,28.2320842 0,27.5351155 0,26.7472362 C0,25.959357 0.272727273,25.2926907 0.818181818,24.7472362 L9.90909091,15.6563271 L0.818181818,6.56541802 C0.272727273,6.01996348 0,5.35329727 0,4.56541802 C0,3.77753877 0.272727273,3.08057 0.818181818,2.47450893 L2.81818182,0.474508932 C3.42424289,-0.0709456138 4.12121166,-0.343672886 4.90909091,-0.343672886 C5.69697016,-0.343672886 6.36363636,-0.0709456138 6.90909091,0.474508932 L16,9.56541802 L25.0909091,0.474508932 C25.6363636,-0.0709456138 26.3030298,-0.343672886 27.0909091,-0.343672886 C27.8787883,-0.343672886 28.5757571,-0.0709456138 29.1818182,0.474508932 L31.1818182,2.47450893 C31.7272727,3.08057 32,3.77753877 32,4.56541802 C32,5.35329727 31.7272727,6.01996348 31.1818182,6.56541802 L22.0909091,15.6563271 Z"
+            id="" fill="#0B0C0C" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

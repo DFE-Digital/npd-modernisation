@@ -17,7 +17,7 @@ NPD search and filter
   </p>
 </div>
 
-<a href="/export-csv/home-group" class="govuk-back-link">Back</a>
+<a href="/export-csv/home-list3" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -43,7 +43,7 @@ NPD search and filter
 </div>
 
 
-<form class="form" action="/export-csv/group-text" method="post">
+<form class="form" action="/export-csv/list3" method="post">
 
   <div class="metadataMenu">
     <button id="govuk-button-fixed" disabled="" aria-disabled="true" class="govuk-button govuk-!-margin-bottom-4" data-module="govuk-button">
@@ -59,137 +59,121 @@ NPD search and filter
   <div class="govuk-grid-row govuk-!-margin-top-6">
 
     <div class="govuk-grid-column-full">
-      <table class="govuk-table govuk-!-font-size-16 ">
-        <caption class="govuk-table__caption govuk-heading-m"><a href="#222">KS2_95-96_to_17-18M</a></caption>
+      <table class="govuk-table govuk-!-font-size-16 list2">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="col">Name</th>
             <th data-label="Date collected" class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
-            <th data-label="Sensitivity" class="govuk-table__header govuk-table__header--numeric" scope="col">
-              Sensitivity
-            </th>
-            <th data-label="Identification risk" class="govuk-table__header govuk-table__header--numeric" scope="col">
-              Identifiability
-            </th>
-            <th data-label="Years required" class="govuk-table__header govuk-table__header--numeric" scope="col">Years required</th>
+            <th data-label="Years required" class="govuk-table__header govuk-table__header--numeric align-left" scope="col">Years required</th>
             <th data-label="" class="govuk-table__header govuk-table__header--numeric" scope="col"></th>
+            <th data-label="Dataset" class="govuk-table__header" scope="col">Dataset</th>
+            <th data-label="Sensitivity" class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
+            <th data-label="Identification risk" class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="row">
-              <a href="#222">KS2_EXAMYEAR_EN</a>
+              <a href="#324">KS2_EXAMYEAR_EN</a>
             </th>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
               2004 - 05 to 2011 - 12
             </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left">
+              <input class="govuk-input govuk-!-width-full govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range" name="date-range" type="text" placeholder="eg: 2001 to 2005 or 2012, 2013, 2017">
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
+              <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_95-96_to_17-18</a>
+            </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
             </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-              to
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-            </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <a href="#302">remove</a>
-            </td>
           </tr>
 
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="row">
-              <a href="#222">KS2_EXAMYEAR_RE</a>
+              <a href="#324">KS2_EXAMYEAR_RE</a>
             </th>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
               2004 - 05 to present
             </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" >
+              <input class="govuk-input govuk-!-width-full govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range1" name="date-range1" type="text" placeholder="eg: 2001 to 2005 or 2012, 2013, 2017">
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
+              <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_95-96_to_17-18</a>
+            </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
             </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-              to
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-            </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <a href="#302">remove</a>
-            </td>
           </tr>
 
-        </tbody>
-      </table>
-
-      <table class="govuk-table govuk-!-font-size-16 ">
-        <caption class="govuk-table__caption govuk-heading-m"><a href="#222">SC_PUPIL_01-02_to_17-18</a></caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th data-label="Name" class="govuk-table__header" scope="col">Name</th>
-            <th data-label="Date collected" class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
-            <th data-label="Sensitivity" class="govuk-table__header govuk-table__header--numeric" scope="col">
-              Sensitivity
-            </th>
-            <th data-label="Identification risk" class="govuk-table__header govuk-table__header--numeric" scope="col">
-              Identifiability
-            </th>
-            <th data-label="Years required" class="govuk-table__header govuk-table__header--numeric" scope="col">Years required</th>
-            <th data-label="" class="govuk-table__header govuk-table__header--numeric" scope="col"></th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="row">
-              <a href="#222">EVERFSM_6_[term][yy]</a>
+              <a href="#324">EVERFSM_6_[term][yy]</a>
             </th>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
               2004 - 05 to present
             </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" >
+              <input class="govuk-input govuk-!-width-full govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range" name="date-range" type="text" placeholder="eg: 2001 to 2005 or 2012, 2013, 2017">
+              </div>
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
+              <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
+            </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
             </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-              to
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-            </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <a href="#302">remove</a>
-            </td>
           </tr>
 
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="row">
-              <a href="#222">HomeLA_[term][yy]</a>
+              <a href="#324">HomeLA_[term][yy]</a>
             </th>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
               2010 - 11 to present
             </td>
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" >
+              <input class="govuk-input govuk-!-width-full govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range" name="date-range" type="text" placeholder="eg: 2001 to 2005 or 2012, 2013, 2017">
+              </div>
+            </td>
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
+              <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
+            </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
             </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-              to
-              <input class="govuk-input govuk-input--width-5 govuk-!-font-size-14" id="width-4" name="width-4" type="text">
-            </td>
-            <td data-label="Value" class="govuk-table__cell govuk-table__cell--numeric">
-              <a href="#302">remove</a>
-            </td>
           </tr>
 
         </tbody>
       </table>
+
+
 
       <div class="govuk-grid-row govuk-body">
         <div class="govuk-grid-column-two-thirds">

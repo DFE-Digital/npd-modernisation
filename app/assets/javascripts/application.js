@@ -218,6 +218,7 @@ function downloadCSV(csv, filename) {
 
 function exportTableToCSV(filename) {
     var csv = [];
+    var rows = document.querySelectorAll("caption");
     var rows = document.querySelectorAll("table tr");
 
     for (var i = 0; i < rows.length; i++) {

@@ -17,7 +17,7 @@ NPD search and filter
   </p>
 </div>
 
-<a href="/export-csv/home-list" class="govuk-back-link">Back</a>
+<a href="/export-csv/home-list2" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -43,7 +43,7 @@ NPD search and filter
 </div>
 
 
-<form class="form" action="/export-csv/list" method="post">
+<form class="form" action="/export-csv/list2" method="post">
 
   <div class="metadataMenu">
     <button id="govuk-button-fixed" disabled="" aria-disabled="true" class="govuk-button govuk-!-margin-bottom-4" data-module="govuk-button">
@@ -59,14 +59,14 @@ NPD search and filter
   <div class="govuk-grid-row govuk-!-margin-top-6">
 
     <div class="govuk-grid-column-full">
-      <table class="govuk-table govuk-!-font-size-16 ">
+      <table class="govuk-table govuk-!-font-size-16 list2">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="col">Name</th>
-            <th data-label="Dataset" class="govuk-table__header" scope="col">Dataset</th>
             <th data-label="Date collected" class="govuk-table__header govuk-table__header--numeric" scope="col">Date collected</th>
             <th data-label="Years required" class="govuk-table__header govuk-table__header--numeric align-left govuk-!-padding-left-4" scope="col">Years required</th>
             <th data-label="" class="govuk-table__header govuk-table__header--numeric" scope="col"></th>
+            <th data-label="Dataset" class="govuk-table__header" scope="col">Dataset</th>
             <th data-label="Sensitivity" class="govuk-table__header govuk-table__header--numeric" scope="col">Sensitivity</th>
             <th data-label="Identification risk" class="govuk-table__header govuk-table__header--numeric" scope="col">Identifiability</th>
           </tr>
@@ -76,13 +76,10 @@ NPD search and filter
             <th data-label="Name" class="govuk-table__header" scope="row">
               <a href="#324">KS2_EXAMYEAR_EN</a>
             </th>
-            <td data-label="Dataset" class="govuk-table__header" scope="row">
-              <a href="#324">KS2_95-96_to_17-18</a>
-            </td>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
-              2004 - 05 to 2011 - 12
+              2004 - 05 to <br /> 2011 - 12
             </td>
-            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" rowspan="2">
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left">
               <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-4 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2004 - 05</option>
@@ -94,7 +91,7 @@ NPD search and filter
                 <option value="">2010 - 11</option>
               </select>
               to
-              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2005 - 06</option>
                 <option value="">2006 - 07</option>
@@ -104,28 +101,20 @@ NPD search and filter
                 <option value="">2010 - 11</option>
                 <option value="">2011 - 12</option>
               </select>
-              <div class="govuk-form-group govuk-!-font-size-14 govuk-!-margin-top-1 govuk-!-margin-left-4 govuk-!-margin-bottom-0">
-                <label class="govuk-label govuk-!-font-size-14" for="date-range">
-                  Date ranges
-                </label>
-                <input class="govuk-input govuk-!-width-full govuk-!-font-size-14" id="date-range" name="date-range" type="text" placeholder="eg: 2001 to 2004 and 2005 to 2008">
-              </div>
+              or
+              <input class="govuk-input govuk-!-width-one-third govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range" name="date-range" type="text" placeholder="enter a range of dates">
             </td>
-            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" rowspan="2">
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
               <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_95-96_to_17-18</a>
             </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-width-one-half" colspan="3">
-              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
-                English examination year. Replaces <strong>k2_en</strong>.
-              </p>
             </td>
           </tr>
 
@@ -133,13 +122,10 @@ NPD search and filter
             <th data-label="Name" class="govuk-table__header" scope="row">
               <a href="#324">KS2_EXAMYEAR_RE</a>
             </th>
-            <td data-label="Dataset" class="govuk-table__header" scope="row">
-              <a href="#324">KS2_95-96_to_17-18</a>
-            </td>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
-              2004 - 05 to present
+              2004 - 05 to <br /> present
             </td>
-            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" rowspan="2">
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" >
               <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-4 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2004 - 05</option>
@@ -158,7 +144,7 @@ NPD search and filter
                 <option value="">2017 - 18</option>
               </select>
               to
-              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2005 - 06</option>
                 <option value="">2006 - 07</option>
@@ -175,28 +161,20 @@ NPD search and filter
                 <option value="">2017 - 18</option>
                 <option value="">2018 - 19</option>
               </select>
-              <div class="govuk-form-group govuk-!-font-size-14 govuk-!-margin-top-1 govuk-!-margin-left-4 govuk-!-margin-bottom-0">
-                <label class="govuk-label govuk-!-font-size-14" for="date-range1">
-                  Date ranges
-                </label>
-                <input class="govuk-input govuk-!-width-full govuk-!-font-size-14" id="date-range1" name="date-range1" type="text" placeholder="eg: 2001 to 2004 and 2005 to 2008">
-              </div>
+              or
+              <input class="govuk-input govuk-!-width-one-third govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range1" name="date-range1" type="text" placeholder="enter a range of dates">
             </td>
-            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" rowspan="2">
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
               <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">KS2_95-96_to_17-18</a>
             </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-width-one-half" colspan="3">
-              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
-                Reading examination year.
-              </p>
             </td>
           </tr>
 
@@ -204,13 +182,10 @@ NPD search and filter
             <th data-label="Name" class="govuk-table__header" scope="row">
               <a href="#324">EVERFSM_6_[term][yy]</a>
             </th>
-            <td data-label="Dataset" class="govuk-table__header" scope="row">
-              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
-            </td>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
-              2004 - 05 to present
+              2004 - 05 to <br /> present
             </td>
-            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" rowspan="2">
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" >
               <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-4 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2004 - 05</option>
@@ -229,7 +204,7 @@ NPD search and filter
                 <option value="">2017 - 18</option>
               </select>
               to
-              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2005 - 06</option>
                 <option value="">2006 - 07</option>
@@ -246,15 +221,15 @@ NPD search and filter
                 <option value="">2017 - 18</option>
                 <option value="">2018 - 19</option>
               </select>
-              <div class="govuk-form-group govuk-!-font-size-14 govuk-!-margin-top-1 govuk-!-margin-left-4 govuk-!-margin-bottom-0">
-                <label class="govuk-label govuk-!-font-size-14" for="date-range">
-                  Date ranges
-                </label>
-                <input class="govuk-input govuk-!-width-full govuk-!-font-size-14" id="date-range" name="date-range" type="text" placeholder="eg: 2001 to 2004 and 2005 to 2008">
+              or
+              <input class="govuk-input govuk-!-width-one-third govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range" name="date-range" type="text" placeholder="enter a range of dates">
               </div>
             </td>
-            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" rowspan="2">
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
               <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
             </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
@@ -263,25 +238,15 @@ NPD search and filter
               5
             </td>
           </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-width-one-half" colspan="3">
-              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
-                Flag to indicate if pupil has ever been recorded as eligible for free school meals on Census day in any termly or annual Census (including Alternative Provision Census and PRU Census where available) in the last 6 years up to the pupil’s current year (not including nursery)
-              </p>
-            </td>
-          </tr>
 
           <tr class="govuk-table__row">
             <th data-label="Name" class="govuk-table__header" scope="row">
               <a href="#324">HomeLA_[term][yy]</a>
             </th>
-            <td data-label="Dataset" class="govuk-table__header" scope="row">
-              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
-            </td>
             <td data-label="Date collected" class="govuk-table__cell govuk-table__cell--numeric">
-              2010 - 11 to present
+              2010 - 11 to <br /> present
             </td>
-            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" rowspan="2">
+            <td data-label="Years required" class="govuk-table__cell govuk-table__cell--numeric align-left" >
               <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-4 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2010 - 11</option>
@@ -295,7 +260,7 @@ NPD search and filter
                 <option value="">2018 - 19</option>
               </select>
               to
-              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2" id="sort" name="sort">
+              <select class="govuk-select govuk-!-font-size-14 govuk-!-margin-left-2 govuk-!-margin-right-2" id="sort" name="sort">
                 <option value="-">-</option>
                 <option value="">2011 - 12</option>
                 <option value="">2012 - 13</option>
@@ -306,28 +271,21 @@ NPD search and filter
                 <option value="">2017 - 18</option>
                 <option value="">2018 - 19</option>
               </select>
-              <div class="govuk-form-group govuk-!-font-size-14 govuk-!-margin-top-1 govuk-!-margin-left-4 govuk-!-margin-bottom-0">
-                <label class="govuk-label govuk-!-font-size-14" for="date-range">
-                  Date ranges
-                </label>
-                <input class="govuk-input govuk-!-width-full govuk-!-font-size-14" id="date-range" name="date-range" type="text" placeholder="eg: 2001 to 2004 and 2005 to 2008">
+              or
+              <input class="govuk-input govuk-!-width-one-third govuk-!-font-size-14 govuk-!-margin-left-2" id="date-range" name="date-range" type="text" placeholder="enter a range of dates">
               </div>
             </td>
-            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" rowspan="2">
+            <td data-label="" class="govuk-table__cell govuk-table__cell--numeric" >
               <a href="#302">remove</a>
+            </td>
+            <td data-label="Dataset" class="govuk-table__header" scope="row">
+              <a href="#324">SC_PUPIL_01-02_to_17-18</a>
             </td>
             <td data-label="Sensitivity" class="govuk-table__cell govuk-table__cell--numeric">
               E
             </td>
             <td data-label="Identification risk" class="govuk-table__cell govuk-table__cell--numeric">
               5
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell" colspan="3">
-              <p class="variable-description govuk-background__gray-4 govuk-!-font-size-16 govuk-!-margin-bottom-0">
-                English examination year. Replaces <strong>k2_en</strong>.
-              </p>
             </td>
           </tr>
 
